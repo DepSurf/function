@@ -1,0 +1,243 @@
+# Function: <code>devlink_port_region_get_by_name</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/devlink.c (ffffffff81a604ac)
+Location: net/core/devlink.c:382
+Inline: True
+Inline callers:
+  - net/core/devlink.c:devlink_port_region_create
+  - net/core/devlink.c:devlink_nl_cmd_region_read_dumpit
+  - net/core/devlink.c:devlink_nl_cmd_region_new
+  - net/core/devlink.c:devlink_nl_cmd_region_del
+  - net/core/devlink.c:devlink_nl_cmd_region_get_doit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/devlink.c (ffffffff81a424fc)
+Location: net/core/devlink.c:385
+Inline: True
+Inline callers:
+  - net/core/devlink.c:devlink_port_region_create
+  - net/core/devlink.c:devlink_nl_cmd_region_read_dumpit
+  - net/core/devlink.c:devlink_nl_cmd_region_new
+  - net/core/devlink.c:devlink_nl_cmd_region_del
+  - net/core/devlink.c:devlink_nl_cmd_region_get_doit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/devlink.c (ffffffff81afabac)
+Location: net/core/devlink.c:460
+Inline: True
+Inline callers:
+  - net/core/devlink.c:devlink_port_region_create
+  - net/core/devlink.c:devlink_nl_cmd_region_read_dumpit
+  - net/core/devlink.c:devlink_nl_cmd_region_new
+  - net/core/devlink.c:devlink_nl_cmd_region_del
+  - net/core/devlink.c:devlink_nl_cmd_region_get_doit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/devlink.c (ffffffff81c7f6ec)
+Location: net/core/devlink.c:663
+Inline: True
+Inline callers:
+  - net/core/devlink.c:devlink_port_region_create
+  - net/core/devlink.c:devlink_nl_cmd_region_read_dumpit
+  - net/core/devlink.c:devlink_nl_cmd_region_new
+  - net/core/devlink.c:devlink_nl_cmd_region_del
+  - net/core/devlink.c:devlink_nl_cmd_region_get_doit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/devlink.c (ffffffff81e38793)
+Location: net/core/devlink.c:817
+Inline: True
+Inline callers:
+  - net/core/devlink.c:devlink_port_region_create
+  - net/core/devlink.c:devlink_nl_cmd_region_read_dumpit
+  - net/core/devlink.c:devlink_nl_cmd_region_new
+  - net/core/devlink.c:devlink_nl_cmd_region_del
+  - net/core/devlink.c:devlink_nl_cmd_region_get_doit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/devlink/leftover.c (ffffffff820398e8)
+Location: net/devlink/leftover.c:570
+Inline: True
+Inline callers:
+  - net/devlink/leftover.c:devlink_port_region_create
+  - net/devlink/leftover.c:devlink_nl_cmd_region_read_dumpit
+  - net/devlink/leftover.c:devlink_nl_cmd_region_new
+  - net/devlink/leftover.c:devlink_nl_cmd_region_del
+  - net/devlink/leftover.c:devlink_nl_cmd_region_get_doit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/devlink/region.c (ffffffff82110518)
+Location: net/devlink/region.c:47
+Inline: True
+Inline callers:
+  - net/devlink/region.c:devlink_port_region_create
+  - net/devlink/region.c:devlink_nl_region_read_dumpit
+  - net/devlink/region.c:devlink_nl_region_new_doit
+  - net/devlink/region.c:devlink_nl_region_del_doit
+  - net/devlink/region.c:devlink_nl_region_get_doit
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

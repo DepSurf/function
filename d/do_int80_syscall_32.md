@@ -1,0 +1,627 @@
+# Function: <code>do_int80_syscall_32</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81003c00)
+Location: arch/x86/entry/common.c:340
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81003c00-ffffffff81003caf: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81003bd0)
+Location: arch/x86/entry/common.c:332
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81003bd0-ffffffff81003c88: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81003a60)
+Location: arch/x86/entry/common.c:336
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81003a60-ffffffff81003b18: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81003ba0)
+Location: arch/x86/entry/common.c:340
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81003ba0-ffffffff81003cc5: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81004380)
+Location: arch/x86/entry/common.c:345
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81004380-ffffffff8100447e: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff810043b0)
+Location: arch/x86/entry/common.c:345
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810043b0-ffffffff810044ae: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff810045a0)
+Location: arch/x86/entry/common.c:351
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810045a0-ffffffff810046c5: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81004600)
+Location: arch/x86/entry/common.c:352
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81004600-ffffffff81004725: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81bbc770)
+Location: arch/x86/entry/common.c:443
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81bbc770-ffffffff81bbc78e: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81c34d90)
+Location: arch/x86/entry/common.c:82
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81c34d90-ffffffff81c34de6: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81c271d0)
+Location: arch/x86/entry/common.c:83
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81c271d0-ffffffff81c27252: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81d45220)
+Location: arch/x86/entry/common.c:119
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81d45220-ffffffff81d452b0: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81f131a0)
+Location: arch/x86/entry/common.c:119
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81f131a0-ffffffff81f13239: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff820ba1e0)
+Location: arch/x86/entry/common.c:119
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff820ba1e0-ffffffff820ba279: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff821399f0)
+Location: arch/x86/entry/common.c:119
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff821399f0-ffffffff82139a8a: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81004600)
+Location: arch/x86/entry/common.c:352
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81004600-ffffffff81004725: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81002bd0)
+Location: arch/x86/entry/common.c:352
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81002bd0-ffffffff81002d6f: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff810045c0)
+Location: arch/x86/entry/common.c:352
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810045c0-ffffffff810046e5: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void do_int80_syscall_32(struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/entry/common.c (ffffffff81004700)
+Location: arch/x86/entry/common.c:352
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81004700-ffffffff81004825: do_int80_syscall_32 (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

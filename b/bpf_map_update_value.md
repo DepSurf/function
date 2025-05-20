@@ -1,0 +1,302 @@
+# Function: <code>bpf_map_update_value</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Selective Inline, Transformation ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff811fc4c0)
+Location: kernel/bpf/syscall.c:151
+Inline: True
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff811fc4c0-ffffffff811fc677: bpf_map_update_value.isra.0 (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Selective Inline, Transformation ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff811fb9b0)
+Location: kernel/bpf/syscall.c:154
+Inline: True
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff811fb9b0-ffffffff811fbbf1: bpf_map_update_value.isra.0 (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Selective Inline, Transformation ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff811fc6d0)
+Location: kernel/bpf/syscall.c:155
+Inline: True
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff811fc6d0-ffffffff811fc911: bpf_map_update_value.isra.0 (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Selective Inline, Transformation ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff8122e040)
+Location: kernel/bpf/syscall.c:174
+Inline: True
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff8122e040-ffffffff8122e281: bpf_map_update_value.isra.0 (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Selective Inline, Transformation ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff812701b0)
+Location: kernel/bpf/syscall.c:178
+Inline: True
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff812701b0-ffffffff81270430: bpf_map_update_value.isra.0 (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+int bpf_map_update_value(struct bpf_map *map, struct file *map_file, void *key, void *value, __u64 flags);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff812c4c20)
+Location: kernel/bpf/syscall.c:178
+Inline: False
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff812c4c20-ffffffff812c4ea0: bpf_map_update_value (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+int bpf_map_update_value(struct bpf_map *map, struct file *map_file, void *key, void *value, __u64 flags);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff812ebd40)
+Location: kernel/bpf/syscall.c:151
+Inline: False
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff812ebd40-ffffffff812ebfc0: bpf_map_update_value (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+int bpf_map_update_value(struct bpf_map *map, struct file *map_file, void *key, void *value, __u64 flags);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/syscall.c (ffffffff8130a290)
+Location: kernel/bpf/syscall.c:158
+Inline: False
+Direct callers:
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:map_update_elem
+```
+**Symbols:**
+
+```
+ffffffff8130a290-ffffffff8130a4e1: bpf_map_update_value (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

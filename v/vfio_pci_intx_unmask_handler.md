@@ -1,0 +1,390 @@
+# Function: <code>vfio_pci_intx_unmask_handler</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (ffffffff817d8380)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+Direct callers:
+  - drivers/vfio/pci/vfio_pci_intrs.c:vfio_pci_intx_unmask
+```
+**Symbols:**
+
+```
+ffffffff817d8380-ffffffff817d843e: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (ffffffff818a5e90)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff818a5e90-ffffffff818a5f4e: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (ffffffff818b4da0)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff818b4da0-ffffffff818b4e5e: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (ffffffff81898230)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81898230-ffffffff818982f2: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Transformation ⚠️</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (0)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8192bf30-ffffffff8192c031: vfio_pci_intx_unmask_handler (STB_LOCAL)
+ffffffff81d12288-ffffffff81d122db: vfio_pci_intx_unmask_handler.cold (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Transformation ⚠️</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (0)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+Direct callers:
+  - drivers/vfio/pci/vfio_pci_intrs.c:vfio_pci_set_intx_unmask
+  - drivers/vfio/pci/vfio_pci_intrs.c:vfio_pci_set_intx_unmask
+```
+**Symbols:**
+
+```
+ffffffff81a82690-ffffffff81a8278a: vfio_pci_intx_unmask_handler (STB_LOCAL)
+ffffffff81edcfbc-ffffffff81edd021: vfio_pci_intx_unmask_handler.cold (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (c000000000ab7d00)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+Direct callers:
+  - drivers/vfio/pci/vfio_pci_intrs.c:vfio_pci_intx_unmask
+```
+**Symbols:**
+
+```
+c000000000ab7d00-c000000000ab7e24: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (ffffffff81782430)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+Direct callers:
+  - drivers/vfio/pci/vfio_pci_intrs.c:vfio_pci_intx_unmask
+```
+**Symbols:**
+
+```
+ffffffff81782430-ffffffff817824ee: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (ffffffff817cd200)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+Direct callers:
+  - drivers/vfio/pci/vfio_pci_intrs.c:vfio_pci_intx_unmask
+```
+**Symbols:**
+
+```
+ffffffff817cd200-ffffffff817cd2be: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+int vfio_pci_intx_unmask_handler(void *opaque, void *unused);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/vfio/pci/vfio_pci_intrs.c (ffffffff817e74a0)
+Location: drivers/vfio/pci/vfio_pci_intrs.c:74
+Inline: False
+Direct callers:
+  - drivers/vfio/pci/vfio_pci_intrs.c:vfio_pci_intx_unmask
+```
+**Symbols:**
+
+```
+ffffffff817e74a0-ffffffff817e755e: vfio_pci_intx_unmask_handler (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+No changes between <code>amd64</code> and <code>ppc64el</code> ✅
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

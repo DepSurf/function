@@ -1,0 +1,169 @@
+# Function: <code>remap_dfa_accept</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/apparmor/policy_compat.c (ffffffff81632871)
+Location: security/apparmor/policy_compat.c:273
+Inline: True
+Inline callers:
+  - security/apparmor/policy_compat.c:aa_compat_map_file
+  - security/apparmor/policy_compat.c:aa_compat_map_policy
+  - security/apparmor/policy_compat.c:aa_compat_map_xmatch
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/apparmor/policy_compat.c (ffffffff816e7671)
+Location: security/apparmor/policy_compat.c:273
+Inline: True
+Inline callers:
+  - security/apparmor/policy_compat.c:aa_compat_map_file
+  - security/apparmor/policy_compat.c:aa_compat_map_policy
+  - security/apparmor/policy_compat.c:aa_compat_map_xmatch
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/apparmor/policy_compat.c (ffffffff81720df7)
+Location: security/apparmor/policy_compat.c:281
+Inline: True
+Inline callers:
+  - security/apparmor/policy_compat.c:aa_compat_map_file
+  - security/apparmor/policy_compat.c:aa_compat_map_policy
+  - security/apparmor/policy_compat.c:aa_compat_map_xmatch
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/apparmor/policy_compat.c (ffffffff8175f917)
+Location: security/apparmor/policy_compat.c:286
+Inline: True
+Inline callers:
+  - security/apparmor/policy_compat.c:aa_compat_map_file
+  - security/apparmor/policy_compat.c:aa_compat_map_policy
+  - security/apparmor/policy_compat.c:aa_compat_map_xmatch
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

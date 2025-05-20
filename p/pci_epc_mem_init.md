@@ -1,0 +1,352 @@
+# Function: <code>pci_epc_mem_init</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t phys_base, size_t size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff814d2de0)
+Location: drivers/pci/endpoint/pci-epc-mem.c:35
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff814d2de0-ffffffff814d2e89: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff8165a340)
+Location: drivers/pci/endpoint/pci-epc-mem.c:118
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8165a340-ffffffff8165a38c: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff8167a5b0)
+Location: drivers/pci/endpoint/pci-epc-mem.c:118
+Inline: False
+Direct callers:
+  - drivers/pci/controller/dwc/pcie-designware-ep.c:dw_pcie_ep_init
+```
+**Symbols:**
+
+```
+ffffffff8167a5b0-ffffffff8167a5fc: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff8165d0b0)
+Location: drivers/pci/endpoint/pci-epc-mem.c:118
+Inline: False
+Direct callers:
+  - drivers/pci/controller/dwc/pcie-designware-ep.c:dw_pcie_ep_init
+```
+**Symbols:**
+
+```
+ffffffff8165d0b0-ffffffff8165d0fc: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff816cfaf0)
+Location: drivers/pci/endpoint/pci-epc-mem.c:118
+Inline: False
+Direct callers:
+  - drivers/pci/controller/dwc/pcie-designware-ep.c:dw_pcie_ep_init
+```
+**Symbols:**
+
+```
+ffffffff816cfaf0-ffffffff816cfb3c: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff817f8940)
+Location: drivers/pci/endpoint/pci-epc-mem.c:118
+Inline: False
+Direct callers:
+  - drivers/pci/controller/dwc/pcie-designware-ep.c:dw_pcie_ep_init
+```
+**Symbols:**
+
+```
+ffffffff817f8940-ffffffff817f8998: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff81924700)
+Location: drivers/pci/endpoint/pci-epc-mem.c:118
+Inline: False
+Direct callers:
+  - drivers/pci/controller/dwc/pcie-designware-ep.c:dw_pcie_ep_init
+```
+**Symbols:**
+
+```
+ffffffff81924700-ffffffff81924758: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff819683a0)
+Location: drivers/pci/endpoint/pci-epc-mem.c:118
+Inline: False
+Direct callers:
+  - drivers/pci/controller/dwc/pcie-designware-ep.c:dw_pcie_ep_init
+```
+**Symbols:**
+
+```
+ffffffff819683a0-ffffffff819683f8: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+int pci_epc_mem_init(struct pci_epc *epc, phys_addr_t base, size_t size, size_t page_size);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/pci/endpoint/pci-epc-mem.c (ffffffff819b1ad0)
+Location: drivers/pci/endpoint/pci-epc-mem.c:128
+Inline: False
+Direct callers:
+  - drivers/pci/controller/dwc/pcie-designware-ep.c:dw_pcie_ep_init
+```
+**Symbols:**
+
+```
+ffffffff819b1ad0-ffffffff819b1b28: pci_epc_mem_init (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

@@ -1,0 +1,201 @@
+# Function: <code>mc146818_get_time_callback</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void mc146818_get_time_callback(unsigned char seconds, void *param_in);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/rtc/rtc-mc146818-lib.c (ffffffff81b2b140)
+Location: drivers/rtc/rtc-mc146818-lib.c:102
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81b2b140-ffffffff81b2b1f7: mc146818_get_time_callback (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void mc146818_get_time_callback(unsigned char seconds, void *param_in);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/rtc/rtc-mc146818-lib.c (ffffffff81cbeef0)
+Location: drivers/rtc/rtc-mc146818-lib.c:102
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81cbeef0-ffffffff81cbefa7: mc146818_get_time_callback (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void mc146818_get_time_callback(unsigned char seconds, void *param_in);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/rtc/rtc-mc146818-lib.c (ffffffff81d26850)
+Location: drivers/rtc/rtc-mc146818-lib.c:102
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81d26850-ffffffff81d26907: mc146818_get_time_callback (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void mc146818_get_time_callback(unsigned char seconds, void *param_in);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/rtc/rtc-mc146818-lib.c (ffffffff81ddc5c0)
+Location: drivers/rtc/rtc-mc146818-lib.c:111
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81ddc5c0-ffffffff81ddc677: mc146818_get_time_callback (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

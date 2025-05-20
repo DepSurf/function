@@ -1,0 +1,344 @@
+# Function: <code>hv_alloc_hyperv_page</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/hyperv/hv_init.c (ffffffff8102d800)
+Location: arch/x86/hyperv/hv_init.c:48
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102d800-ffffffff8102d817: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/hyperv/hv_init.c (ffffffff8102fa20)
+Location: arch/x86/hyperv/hv_init.c:55
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102fa20-ffffffff8102fa37: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/hyperv/hv_init.c (ffffffff81030650)
+Location: arch/x86/hyperv/hv_init.c:58
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81030650-ffffffff81030667: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/hv/hv_common.c (ffffffff81deb340)
+Location: drivers/hv/hv_common.c:98
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81deb340-ffffffff81deb35f: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/hv/hv_common.c (ffffffff81ea15e0)
+Location: drivers/hv/hv_common.c:99
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81ea15e0-ffffffff81ea15ff: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/hyperv/hv_init.c (ffffffff8102d960)
+Location: arch/x86/hyperv/hv_init.c:48
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102d960-ffffffff8102d977: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/hyperv/hv_init.c (ffffffff8101d0a0)
+Location: arch/x86/hyperv/hv_init.c:48
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101d0a0-ffffffff8101d0b7: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/hyperv/hv_init.c (ffffffff8102d7c0)
+Location: arch/x86/hyperv/hv_init.c:48
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102d7c0-ffffffff8102d7d7: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void *hv_alloc_hyperv_page();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/hyperv/hv_init.c (ffffffff8102e5b0)
+Location: arch/x86/hyperv/hv_init.c:48
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102e5b0-ffffffff8102e5c7: hv_alloc_hyperv_page (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

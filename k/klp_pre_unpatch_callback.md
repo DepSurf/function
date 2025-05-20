@@ -1,0 +1,431 @@
+# Function: <code>klp_pre_unpatch_callback</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff811019dc)
+Location: kernel/livepatch/core.h:32
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:__klp_disable_patch
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff81109dcc)
+Location: kernel/livepatch/core.h:32
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:__klp_disable_patch
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff8111559c)
+Location: kernel/livepatch/core.h:32
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:__klp_disable_patch
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff8111f59a)
+Location: kernel/livepatch/core.h:43
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff8112bcea)
+Location: kernel/livepatch/core.h:43
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff8113a339)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff81134e29)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff81135ca9)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff81158466)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff81181952)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff811bcb9f)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff811d00a0)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff811e4cf0)
+Location: kernel/livepatch/core.h:44
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (c0000000001ef47c)
+Location: kernel/livepatch/core.h:43
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff811242ca)
+Location: kernel/livepatch/core.h:43
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff81116d2a)
+Location: kernel/livepatch/core.h:43
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff811221ba)
+Location: kernel/livepatch/core.h:43
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/livepatch/core.c (ffffffff8112e7ca)
+Location: kernel/livepatch/core.h:43
+Inline: True
+Inline callers:
+  - kernel/livepatch/core.c:klp_cleanup_module_patches_limited
+  - kernel/livepatch/core.c:enabled_store
+```
+</details>
+</li>
+</ul>
+
+## Differences

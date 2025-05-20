@@ -1,0 +1,262 @@
+# Function: <code>trace_event_raw_event_mptcp_subflow_get_send</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void trace_event_raw_event_mptcp_subflow_get_send(void *__data, struct mptcp_subflow_context *subflow);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/mptcp/protocol.c (ffffffff81baa280)
+Location: include/trace/events/mptcp.h:18
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81baa280-ffffffff81baa44e: trace_event_raw_event_mptcp_subflow_get_send (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Transformation ⚠️</summary>
+
+```c
+void trace_event_raw_event_mptcp_subflow_get_send(void *__data, struct mptcp_subflow_context *subflow);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In net/mptcp/protocol.c (0)
+Location: include/trace/events/mptcp.h:18
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81c7bee0-ffffffff81c7c0cc: trace_event_raw_event_mptcp_subflow_get_send (STB_LOCAL)
+ffffffff81d43792-ffffffff81d437f2: trace_event_raw_event_mptcp_subflow_get_send.cold (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Transformation ⚠️</summary>
+
+```c
+void trace_event_raw_event_mptcp_subflow_get_send(void *__data, struct mptcp_subflow_context *subflow);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In net/mptcp/protocol.c (0)
+Location: include/trace/events/mptcp.h:18
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81e211e0-ffffffff81e213bb: trace_event_raw_event_mptcp_subflow_get_send (STB_LOCAL)
+ffffffff81f10256-ffffffff81f102b6: trace_event_raw_event_mptcp_subflow_get_send.cold (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Transformation ⚠️</summary>
+
+```c
+void trace_event_raw_event_mptcp_subflow_get_send(void *__data, struct mptcp_subflow_context *subflow);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In net/mptcp/protocol.c (0)
+Location: include/trace/events/mptcp.h:18
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81ff86a0-ffffffff81ff887b: trace_event_raw_event_mptcp_subflow_get_send (STB_LOCAL)
+ffffffff820b6530-ffffffff820b6590: trace_event_raw_event_mptcp_subflow_get_send.cold (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Transformation ⚠️</summary>
+
+```c
+void trace_event_raw_event_mptcp_subflow_get_send(void *__data, struct mptcp_subflow_context *subflow);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In net/mptcp/protocol.c (0)
+Location: include/trace/events/mptcp.h:18
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff82074b80-ffffffff82074d50: trace_event_raw_event_mptcp_subflow_get_send (STB_LOCAL)
+ffffffff821379e1-ffffffff82137a2c: trace_event_raw_event_mptcp_subflow_get_send.cold (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Transformation ⚠️</summary>
+
+```c
+void trace_event_raw_event_mptcp_subflow_get_send(void *__data, struct mptcp_subflow_context *subflow);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In net/mptcp/protocol.c (0)
+Location: include/trace/events/mptcp.h:18
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff82148fa0-ffffffff82149170: trace_event_raw_event_mptcp_subflow_get_send (STB_LOCAL)
+ffffffff8221979e-ffffffff822197e9: trace_event_raw_event_mptcp_subflow_get_send.cold (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

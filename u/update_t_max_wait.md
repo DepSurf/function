@@ -1,0 +1,497 @@
+# Function: <code>update_t_max_wait</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:129
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:129
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:129
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:130
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:130
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:149
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:149
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:149
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:149
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (ffffffff8153d934)
+Location: fs/jbd2/transaction.c:146
+Inline: True
+Inline callers:
+  - fs/jbd2/transaction.c:start_this_handle
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (ffffffff815dc1a4)
+Location: fs/jbd2/transaction.c:146
+Inline: True
+Inline callers:
+  - fs/jbd2/transaction.c:start_this_handle
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (ffffffff81613c59)
+Location: fs/jbd2/transaction.c:146
+Inline: True
+Inline callers:
+  - fs/jbd2/transaction.c:start_this_handle
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (ffffffff8164ca49)
+Location: fs/jbd2/transaction.c:146
+Inline: True
+Inline callers:
+  - fs/jbd2/transaction.c:start_this_handle
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/jbd2/transaction.c (0)
+Location: fs/jbd2/transaction.c:125
+Inline: True
+```
+</details>
+</li>
+</ul>
+
+## Differences

@@ -1,0 +1,537 @@
+# Function: <code>trace_ext4_da_reserve_space</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff812970ff)
+Location: include/trace/events/ext4.h:1187
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_get_block_prep
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff812c4728)
+Location: include/trace/events/ext4.h:1187
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_get_block_prep
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff812d9dd8)
+Location: include/trace/events/ext4.h:1187
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_get_block_prep
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff812fdcf8)
+Location: include/trace/events/ext4.h:1178
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_get_block_prep
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff813224d8)
+Location: include/trace/events/ext4.h:1179
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_get_block_prep
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff8135151c)
+Location: include/trace/events/ext4.h:1179
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_get_block_prep
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff8136a0d8)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff81393549)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff813abef9)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff813f8249)
+Location: include/trace/events/ext4.h:1225
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff81409ee9)
+Location: include/trace/events/ext4.h:1236
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff814100b9)
+Location: include/trace/events/ext4.h:1236
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff81463210)
+Location: include/trace/events/ext4.h:1236
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff814e0e5c)
+Location: include/trace/events/ext4.h:1242
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff8157a41c)
+Location: include/trace/events/ext4.h:1244
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff815b1fac)
+Location: include/trace/events/ext4.h:1251
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff815eaddc)
+Location: include/trace/events/ext4.h:1248
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffff80001047e9c8)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (c063e8e4)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (c0000000005a0acc)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffe000309404)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff813a44d9)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff81394f69)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff813a1d39)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/ext4/inode.c (ffffffff813b38f9)
+Location: include/trace/events/ext4.h:1200
+Inline: True
+Inline callers:
+  - fs/ext4/inode.c:ext4_da_reserve_space
+```
+</details>
+</li>
+</ul>
+
+## Differences

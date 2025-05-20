@@ -1,0 +1,120 @@
+# Function: <code>alloc_new_range</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+int alloc_new_range(struct dma_ops_domain *dma_dom, bool populate, gfp_t gfp);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/amd_iommu.c (ffffffff815307b0)
+Location: drivers/iommu/amd_iommu.c:1375
+Inline: False
+Direct callers:
+  - drivers/iommu/amd_iommu.c:__map_single
+  - drivers/iommu/amd_iommu.c:amd_iommu_domain_alloc
+```
+**Symbols:**
+
+```
+ffffffff815307b0-ffffffff81530b7f: alloc_new_range (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+</ul>

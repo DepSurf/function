@@ -1,0 +1,148 @@
+# Function: <code>cmd_db_magic_matches</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: ✅</summary>
+
+```c
+bool cmd_db_magic_matches(const struct cmd_db_header *header);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/soc/qcom/cmd-db.c (ffff80001081ad08)
+Location: drivers/soc/qcom/cmd-db.c:95
+Inline: False
+Direct callers:
+  - drivers/soc/qcom/cmd-db.c:cmd_db_dev_probe
+  - drivers/soc/qcom/cmd-db.c:cmd_db_get_header
+```
+**Symbols:**
+
+```
+ffff80001081ad08-ffff80001081ad40: cmd_db_magic_matches (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: ✅</summary>
+
+```c
+bool cmd_db_magic_matches(const struct cmd_db_header *header);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/soc/qcom/cmd-db.c (c0937a98)
+Location: drivers/soc/qcom/cmd-db.c:95
+Inline: False
+Direct callers:
+  - drivers/soc/qcom/cmd-db.c:cmd_db_dev_probe
+  - drivers/soc/qcom/cmd-db.c:cmd_db_get_header
+```
+**Symbols:**
+
+```
+c0937a98-c0937b08: cmd_db_magic_matches (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Arch</b>
+<ul>
+</ul>

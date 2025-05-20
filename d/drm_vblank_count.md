@@ -1,0 +1,129 @@
+# Function: <code>drm_vblank_count</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Selective Inline ⚠️</summary>
+
+```c
+u64 drm_vblank_count(struct drm_device *dev, unsigned int pipe);
+```
+
+**Collision:** Unique Global
+
+**Inline:** Selective
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/gpu/drm/drm_vblank.c (ffffffff81cb5945)
+Location: drivers/gpu/drm/drm_vblank.c:365
+Inline: True
+Inline callers:
+  - drivers/gpu/drm/drm_vblank.c:drm_crtc_vblank_count
+Direct callers:
+  - drivers/gpu/drm/drm_vblank.c:drm_wait_vblank_ioctl
+  - drivers/gpu/drm/drm_vblank.c:drm_wait_vblank_ioctl
+  - drivers/gpu/drm/drm_vblank.c:drm_wait_vblank_ioctl
+  - drivers/gpu/drm/drm_vblank.c:drm_wait_one_vblank
+  - drivers/gpu/drm/drm_vblank.c:drm_wait_one_vblank
+  - drivers/gpu/drm/drm_vblank.c:drm_wait_one_vblank
+  - drivers/gpu/drm/drm_vblank.c:drm_crtc_accurate_vblank_count
+  - drivers/gpu/drm/drm_vblank_work.c:drm_vblank_work_schedule
+  - drivers/gpu/drm/drm_vblank_work.c:drm_vblank_work_schedule
+```
+**Symbols:**
+
+```
+ffffffff81cb59d0-ffffffff81cb5a4c: drm_vblank_count (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+</ul>

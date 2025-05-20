@@ -1,0 +1,120 @@
+# Function: <code>make_24x7_request</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: ✅</summary>
+
+```c
+int make_24x7_request(struct hv_24x7_request_buffer *request_buffer, struct hv_24x7_data_result_buffer *result_buffer);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/powerpc/perf/hv-24x7.c (c00000000012da60)
+Location: arch/powerpc/perf/hv-24x7.c:1081
+Inline: False
+Direct callers:
+  - arch/powerpc/perf/hv-24x7.c:h_24x7_event_commit_txn
+  - arch/powerpc/perf/hv-24x7.c:single_24x7_request
+```
+**Symbols:**
+
+```
+c00000000012da60-c00000000012db40: make_24x7_request (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Arch</b>
+<ul>
+</ul>

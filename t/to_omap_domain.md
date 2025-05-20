@@ -1,0 +1,115 @@
+# Function: <code>to_omap_domain</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/omap-iommu.c (c09c2f1c)
+Location: drivers/iommu/omap-iommu.c:71
+Inline: True
+Inline callers:
+  - drivers/iommu/omap-iommu.c:omap_iommu_iova_to_phys
+  - drivers/iommu/omap-iommu.c:omap_iommu_domain_free
+  - drivers/iommu/omap-iommu.c:omap_iommu_detach_dev
+  - drivers/iommu/omap-iommu.c:omap_iommu_attach_dev
+  - drivers/iommu/omap-iommu.c:omap_iommu_unmap
+  - drivers/iommu/omap-iommu.c:omap_iommu_map
+  - drivers/iommu/omap-iommu.c:omap_iommu_domain_activate
+  - drivers/iommu/omap-iommu.c:omap_iommu_domain_deactivate
+  - drivers/iommu/omap-iommu.c:iommu_fault_handler
+```
+</details>
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

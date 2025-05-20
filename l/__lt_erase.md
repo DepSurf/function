@@ -1,0 +1,740 @@
+# Function: <code>__lt_erase</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff811052a4)
+Location: include/linux/rbtree_latch.h:98
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff8110cb84)
+Location: include/linux/rbtree_latch.h:98
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff811145c4)
+Location: include/linux/rbtree_latch.h:98
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81115764)
+Location: include/linux/rbtree_latch.h:98
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff8118f2c6)
+Location: include/linux/rbtree_latch.h:98
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_prog_kallsyms_del
+  - kernel/bpf/core.c:bpf_prog_kallsyms_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81120d14)
+Location: include/linux/rbtree_latch.h:99
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff8119d736)
+Location: include/linux/rbtree_latch.h:99
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_prog_kallsyms_del
+  - kernel/bpf/core.c:bpf_prog_kallsyms_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff8112e644)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811b1e72)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81139f44)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811c0722)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81145674)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811d1262)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81151184)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811dd7f2)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81166f3d)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+```
+```
+In kernel/bpf/core.c (ffffffff811fa0c3)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff811635ed)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+```
+```
+In kernel/bpf/core.c (ffffffff811f90f3)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff811641b5)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+```
+```
+In kernel/bpf/core.c (ffffffff811f9ed3)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff811898c3)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:load_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:do_init_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+  - kernel/module.c:free_module
+```
+```
+In kernel/bpf/core.c (ffffffff8122b5a3)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module/tree_lookup.c (ffffffff81190de4)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff8126d003)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module/tree_lookup.c (ffffffff811ce3d4)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff812c2143)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module/tree_lookup.c (ffffffff811e2584)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff812e9003)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module/tree_lookup.c (ffffffff811f8314)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module/tree_lookup.c:mod_tree_remove
+  - kernel/module/tree_lookup.c:mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff81307373)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/bpf/core.c:bpf_ksym_del
+  - kernel/bpf/core.c:bpf_ksym_del
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffff8000101c0070)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffff80001025e484)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (c0407794)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (c0491bec)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (c000000000225ce0)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (c0000000003031d4)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffe00014247e)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffe00019c88a)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff811497a4)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811d5e12)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff8113ca54)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811c8bd2)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81147654)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811d3be2)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/module.c (ffffffff81154264)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+Inline callers:
+  - kernel/module.c:__mod_tree_remove
+  - kernel/module.c:__mod_tree_remove
+```
+```
+In kernel/bpf/core.c (ffffffff811e1ed2)
+Location: include/linux/rbtree_latch.h:100
+Inline: True
+```
+</details>
+</li>
+</ul>
+
+## Differences

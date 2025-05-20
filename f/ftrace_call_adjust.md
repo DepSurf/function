@@ -1,0 +1,491 @@
+# Function: <code>ftrace_call_adjust</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:21
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:21
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:24
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:24
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:25
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:25
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:25
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:29
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:28
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:28
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:28
+Inline: True
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/arm64/include/asm/ftrace.h:44
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (c04515d4)
+Location: arch/arm/include/asm/ftrace.h:21
+Inline: True
+Inline callers:
+  - kernel/trace/ftrace.c:ftrace_process_locs
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/powerpc/include/asm/ftrace.h:53
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/riscv/include/asm/ftrace.h:16
+Inline: True
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/trace/ftrace.c (0)
+Location: arch/x86/include/asm/ftrace.h:22
+Inline: True
+```
+</details>
+</li>
+</ul>
+
+## Differences

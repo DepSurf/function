@@ -1,0 +1,299 @@
+# Function: <code>uv_read_global_mmr64</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/tlb_uv.c (ffffffff828c844a)
+Location: arch/x86/include/asm/uv/uv_hub.h:661
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff81098d54)
+Location: arch/x86/include/asm/uv/uv_hub.h:661
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/tlb_uv.c (ffffffff82ceb758)
+Location: arch/x86/include/asm/uv/uv_hub.h:607
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff8109e3ca)
+Location: arch/x86/include/asm/uv/uv_hub.h:607
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff81099f57)
+Location: arch/x86/include/asm/uv/uv_hub.h:588
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff8109a742)
+Location: arch/x86/include/asm/uv/uv_hub.h:588
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810aa825)
+Location: arch/x86/include/asm/uv/uv_hub.h:588
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810c0253)
+Location: arch/x86/include/asm/uv/uv_hub.h:588
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810dc1b3)
+Location: arch/x86/include/asm/uv/uv_hub.h:588
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810e7783)
+Location: arch/x86/include/asm/uv/uv_hub.h:594
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810efb12)
+Location: arch/x86/include/asm/uv/uv_hub.h:594
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/platform/uv/tlb_uv.c (ffffffff828c9487)
+Location: arch/x86/include/asm/uv/uv_hub.h:661
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff8109a224)
+Location: arch/x86/include/asm/uv/uv_hub.h:661
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+</ul>
+
+## Differences

@@ -1,0 +1,297 @@
+# Function: <code>__traceiter_mm_vmscan_lru_isolate</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+int __traceiter_mm_vmscan_lru_isolate(void *__data, int highest_zoneidx, int order, long unsigned int nr_requested, long unsigned int nr_scanned, long unsigned int nr_skipped, long unsigned int nr_taken, isolate_mode_t isolate_mode, int lru);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8126c9d0)
+Location: include/trace/events/vmscan.h:267
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8126c9d0-ffffffff8126ca4d: __traceiter_mm_vmscan_lru_isolate (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+int __traceiter_mm_vmscan_lru_isolate(void *__data, int highest_zoneidx, int order, long unsigned int nr_requested, long unsigned int nr_scanned, long unsigned int nr_skipped, long unsigned int nr_taken, isolate_mode_t isolate_mode, int lru);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff81271720)
+Location: include/trace/events/vmscan.h:267
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81271720-ffffffff8127179d: __traceiter_mm_vmscan_lru_isolate (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+int __traceiter_mm_vmscan_lru_isolate(void *__data, int highest_zoneidx, int order, long unsigned int nr_requested, long unsigned int nr_scanned, long unsigned int nr_skipped, long unsigned int nr_taken, isolate_mode_t isolate_mode, int lru);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff812aeca0)
+Location: include/trace/events/vmscan.h:267
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff812aeca0-ffffffff812aed1d: __traceiter_mm_vmscan_lru_isolate (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+int __traceiter_mm_vmscan_lru_isolate(void *__data, int highest_zoneidx, int order, long unsigned int nr_requested, long unsigned int nr_scanned, long unsigned int nr_skipped, long unsigned int nr_taken, isolate_mode_t isolate_mode, int lru);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff81309310)
+Location: include/trace/events/vmscan.h:281
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81309310-ffffffff813093ab: __traceiter_mm_vmscan_lru_isolate (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+int __traceiter_mm_vmscan_lru_isolate(void *__data, int highest_zoneidx, int order, long unsigned int nr_requested, long unsigned int nr_scanned, long unsigned int nr_skipped, long unsigned int nr_taken, isolate_mode_t isolate_mode, int lru);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff813731d0)
+Location: include/trace/events/vmscan.h:281
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813731d0-ffffffff8137326b: __traceiter_mm_vmscan_lru_isolate (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+int __traceiter_mm_vmscan_lru_isolate(void *__data, int highest_zoneidx, int order, long unsigned int nr_requested, long unsigned int nr_scanned, long unsigned int nr_skipped, long unsigned int nr_taken, isolate_mode_t isolate_mode, int lru);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff813a5410)
+Location: include/trace/events/vmscan.h:281
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813a5410-ffffffff813a54ab: __traceiter_mm_vmscan_lru_isolate (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+int __traceiter_mm_vmscan_lru_isolate(void *__data, int highest_zoneidx, int order, long unsigned int nr_requested, long unsigned int nr_scanned, long unsigned int nr_skipped, long unsigned int nr_taken, int lru);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff813cef90)
+Location: include/trace/events/vmscan.h:281
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813cef90-ffffffff813cf021: __traceiter_mm_vmscan_lru_isolate (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+<details>
+<summary>Changed between <code>6.5</code> and <code>6.8</code> ⚠️</summary>
+<ul>
+<li>
+<b>Param removed. </b>
+<code>isolate_mode_t isolate_mode</code>
+</li>
+<li>
+<b>Param reordered. </b>
+<code>__data, highest_zoneidx, order, nr_requested, nr_scanned, nr_skipped, nr_taken, isolate_mode, lru</code> ➡️ <code>__data, highest_zoneidx, order, nr_requested, nr_scanned, nr_skipped, nr_taken, lru</code>
+</li>
+</ul>
+</details>
+</li>
+</ul>

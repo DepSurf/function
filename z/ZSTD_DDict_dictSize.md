@@ -1,0 +1,213 @@
+# Function: <code>ZSTD_DDict_dictSize</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+size_t ZSTD_DDict_dictSize(const ZSTD_DDict *ddict);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/zstd/decompress/zstd_ddict.c (ffffffff81750670)
+Location: lib/zstd/decompress/zstd_ddict.c:49
+Inline: False
+Direct callers:
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressBegin_usingDDict
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressMultiFrame
+```
+**Symbols:**
+
+```
+ffffffff81750670-ffffffff81750685: ZSTD_DDict_dictSize (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+size_t ZSTD_DDict_dictSize(const ZSTD_DDict *ddict);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/zstd/decompress/zstd_ddict.c (ffffffff818747f0)
+Location: lib/zstd/decompress/zstd_ddict.c:49
+Inline: False
+Direct callers:
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressBegin_usingDDict
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressMultiFrame
+```
+**Symbols:**
+
+```
+ffffffff818747f0-ffffffff81874805: ZSTD_DDict_dictSize (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+size_t ZSTD_DDict_dictSize(const ZSTD_DDict *ddict);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/zstd/decompress/zstd_ddict.c (ffffffff818b5550)
+Location: lib/zstd/decompress/zstd_ddict.c:49
+Inline: False
+Direct callers:
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressBegin_usingDDict
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressMultiFrame
+```
+**Symbols:**
+
+```
+ffffffff818b5550-ffffffff818b5565: ZSTD_DDict_dictSize (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+size_t ZSTD_DDict_dictSize(const ZSTD_DDict *ddict);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/zstd/decompress/zstd_ddict.c (ffffffff81907110)
+Location: lib/zstd/decompress/zstd_ddict.c:49
+Inline: False
+Direct callers:
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressBegin_usingDDict
+  - lib/zstd/decompress/zstd_decompress.c:ZSTD_decompressMultiFrame
+```
+**Symbols:**
+
+```
+ffffffff81907110-ffffffff81907125: ZSTD_DDict_dictSize (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

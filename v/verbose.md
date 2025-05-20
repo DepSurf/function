@@ -1,0 +1,7370 @@
+# Function: <code>verbose</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+void verbose(const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81173a30)
+Location: kernel/bpf/verifier.c:217
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+```
+**Symbols:**
+
+```
+ffffffff81173a30-ffffffff81173ad3: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+void verbose(const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81181c70)
+Location: kernel/bpf/verifier.c:223
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+```
+**Symbols:**
+
+```
+ffffffff81181c70-ffffffff81181d13: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+void verbose(const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff8118e0c0)
+Location: kernel/bpf/verifier.c:166
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+```
+**Symbols:**
+
+```
+ffffffff8118e0c0-ffffffff8118e163: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+void verbose(const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81193c80)
+Location: kernel/bpf/verifier.c:168
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access_adj
+  - kernel/bpf/verifier.c:check_map_access_adj
+  - kernel/bpf/verifier.c:check_map_access_adj
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+```
+**Symbols:**
+
+```
+ffffffff81193c80-ffffffff81193d22: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+void verbose(struct bpf_verifier_env *env, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811a1440)
+Location: kernel/bpf/verifier.c:173
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+```
+**Symbols:**
+
+```
+ffffffff811a1440-ffffffff811a15a3: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811b7a60)
+Location: kernel/bpf/verifier.c:233
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+```
+**Symbols:**
+
+```
+ffffffff811b7a60-ffffffff811b7af8: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811c7030)
+Location: kernel/bpf/verifier.c:278
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff811c7030-ffffffff811c70c8: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811d92d0)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff811d92d0-ffffffff811d9368: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811e59d0)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff811e59d0-ffffffff811e5a68: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81205310)
+Location: kernel/bpf/verifier.c:321
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_check_subprogs
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_xadd
+  - kernel/bpf/verifier.c:check_xadd
+  - kernel/bpf/verifier.c:check_xadd
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_sock_access
+  - kernel/bpf/verifier.c:check_sock_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff81205310-ffffffff812053ab: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81205470)
+Location: kernel/bpf/verifier.c:325
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_check_subprogs
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_func_call
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:may_update_sockmap
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_xadd
+  - kernel/bpf/verifier.c:check_xadd
+  - kernel/bpf/verifier.c:check_xadd
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_sock_access
+  - kernel/bpf/verifier.c:check_sock_access
+  - kernel/bpf/verifier.c:check_ctx_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff81205470-ffffffff81205515: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81205e00)
+Location: kernel/bpf/verifier.c:344
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:may_update_sockmap
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff81205e00-ffffffff81205ea5: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81238c30)
+Location: kernel/bpf/verifier.c:345
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:may_update_sockmap
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:__check_mem_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:add_subprog_and_kfunc
+  - kernel/bpf/verifier.c:add_subprog_and_kfunc
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff81238c30-ffffffff81238cd5: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff8127d150)
+Location: kernel/bpf/verifier.c:348
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:may_update_sockmap
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg_reg_off
+  - kernel/bpf/verifier.c:check_func_arg_reg_off
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:__check_buffer_access
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_insn_state
+  - kernel/bpf/verifier.c:print_insn_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff8127d150-ffffffff8127d223: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff812d4070)
+Location: kernel/bpf/verifier.c:349
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_node
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_node
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_node
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_node
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_node
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_head
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_head
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_head
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_head
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_head
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_head
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_list_head
+  - kernel/bpf/verifier.c:ref_set_release_on_unlock
+  - kernel/bpf/verifier.c:ref_set_release_on_unlock
+  - kernel/bpf/verifier.c:ref_set_release_on_unlock
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:__btf_type_is_scalar_struct
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:may_update_sockmap
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg_reg_off
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:__check_buffer_access
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_max_stack_depth
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_insn_state
+  - kernel/bpf/verifier.c:print_insn_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:destroy_if_dynptr_stack_slot
+  - kernel/bpf/verifier.c:dynptr_get_spi
+  - kernel/bpf/verifier.c:dynptr_get_spi
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff812d4070-ffffffff812d4143: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff812f6640)
+Location: kernel/bpf/verifier.c:359
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:fixup_kfunc_call
+  - kernel/bpf/verifier.c:fixup_kfunc_call
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:save_aux_ptr_type
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_abnormal_return
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:fetch_kfunc_meta
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_btf_id
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:__btf_type_is_scalar_struct
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:set_rbtree_add_callback_state
+  - kernel/bpf/verifier.c:set_rbtree_add_callback_state
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:__check_func_call
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:may_update_sockmap
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:get_dynptr_arg_reg
+  - kernel/bpf/verifier.c:get_dynptr_arg_reg
+  - kernel/bpf/verifier.c:check_func_arg_reg_off
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:process_iter_arg
+  - kernel/bpf/verifier.c:process_iter_arg
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:__check_buffer_access
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:mark_reg_stack_read
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:mark_all_scalars_precise
+  - kernel/bpf/verifier.c:mark_all_scalars_precise
+  - kernel/bpf/verifier.c:mark_all_scalars_precise
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_insn_state
+  - kernel/bpf/verifier.c:print_insn_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:destroy_if_dynptr_stack_slot
+  - kernel/bpf/verifier.c:stack_slot_obj_get_spi
+  - kernel/bpf/verifier.c:stack_slot_obj_get_spi
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff812f6640-ffffffff812f66f2: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff81315340)
+Location: kernel/bpf/verifier.c:352
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_attach_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:check_struct_ops_btf_id
+  - kernel/bpf/verifier.c:do_check_subprogs
+  - kernel/bpf/verifier.c:do_check_common
+  - kernel/bpf/verifier.c:do_check_common
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:do_misc_fixups
+  - kernel/bpf/verifier.c:fixup_kfunc_call
+  - kernel/bpf/verifier.c:fixup_kfunc_call
+  - kernel/bpf/verifier.c:fixup_kfunc_call
+  - kernel/bpf/verifier.c:fixup_kfunc_call
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_map_prog_compatibility
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:check_pseudo_btf_id
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:save_aux_ptr_type
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:propagate_precision
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:check_cfg
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_abs
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_ld_imm
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_check_bounds
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:sanitize_err
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:check_kfunc_call
+  - kernel/bpf/verifier.c:fetch_kfunc_meta
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:check_kfunc_args
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:__process_kf_arg_ptr_to_graph_node
+  - kernel/bpf/verifier.c:ref_convert_owning_non_owning
+  - kernel/bpf/verifier.c:ref_convert_owning_non_owning
+  - kernel/bpf/verifier.c:process_kf_arg_ptr_to_btf_id
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:get_kfunc_ptr_arg_type
+  - kernel/bpf/verifier.c:__btf_type_is_scalar_struct
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:record_func_map
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:prepare_func_exit
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:set_map_elem_callback_state
+  - kernel/bpf/verifier.c:push_callback_call
+  - kernel/bpf/verifier.c:push_callback_call
+  - kernel/bpf/verifier.c:push_callback_call
+  - kernel/bpf/verifier.c:setup_func_entry
+  - kernel/bpf/verifier.c:setup_func_entry
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:check_map_func_compatibility
+  - kernel/bpf/verifier.c:may_update_sockmap
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_reg_const_str
+  - kernel/bpf/verifier.c:check_reg_const_str
+  - kernel/bpf/verifier.c:check_reg_const_str
+  - kernel/bpf/verifier.c:check_reg_const_str
+  - kernel/bpf/verifier.c:check_reg_const_str
+  - kernel/bpf/verifier.c:get_dynptr_arg_reg
+  - kernel/bpf/verifier.c:get_dynptr_arg_reg
+  - kernel/bpf/verifier.c:check_func_arg_reg_off
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:check_reg_type
+  - kernel/bpf/verifier.c:process_iter_arg
+  - kernel/bpf/verifier.c:process_iter_arg
+  - kernel/bpf/verifier.c:process_iter_arg
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_dynptr_func
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_mem_size_reg
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_stack_range_initialized
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_atomic
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_stack_access_within_bounds
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_map_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:check_ptr_to_btf_access
+  - kernel/bpf/verifier.c:__check_buffer_access
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_max_stack_depth_subprog
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:map_kptr_match_type
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:__check_ptr_off_reg
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_mem_region_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_read_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_var_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:check_stack_write_fixed_off
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:mark_all_scalars_precise
+  - kernel/bpf/verifier.c:mark_all_scalars_precise
+  - kernel/bpf/verifier.c:mark_all_scalars_precise
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:__check_reg_arg
+  - kernel/bpf/verifier.c:__check_reg_arg
+  - kernel/bpf/verifier.c:__check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:check_subprogs
+  - kernel/bpf/verifier.c:add_subprog_and_kfunc
+  - kernel/bpf/verifier.c:add_subprog_and_kfunc
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:add_kfunc_call
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/verifier.c:bpf_find_exception_callback_insn_off
+  - kernel/bpf/verifier.c:bpf_find_exception_callback_insn_off
+  - kernel/bpf/verifier.c:bpf_find_exception_callback_insn_off
+  - kernel/bpf/verifier.c:bpf_find_exception_callback_insn_off
+  - kernel/bpf/verifier.c:bpf_find_exception_callback_insn_off
+  - kernel/bpf/verifier.c:bpf_find_exception_callback_insn_off
+  - kernel/bpf/verifier.c:reg_bounds_sanity_check
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:destroy_if_dynptr_stack_slot
+  - kernel/bpf/verifier.c:stack_slot_obj_get_spi
+  - kernel/bpf/verifier.c:stack_slot_obj_get_spi
+  - kernel/bpf/verifier.c:verbose_invalid_scalar
+  - kernel/bpf/verifier.c:verbose_invalid_scalar
+  - kernel/bpf/verifier.c:verbose_invalid_scalar
+  - kernel/bpf/verifier.c:verbose_invalid_scalar
+  - kernel/bpf/verifier.c:verbose_invalid_scalar
+```
+**Symbols:**
+
+```
+ffffffff81315340-ffffffff813153f2: verbose (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffff800010268cf8)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffff800010268cf8-ffff800010268dc4: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (c049b028)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+c049b028-c049b0c0: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (c00000000030e960)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+c00000000030e960-c00000000030e9f0: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffe0001a3ccc)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_return_code
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:check_stack_write
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:backtrack_insn
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffe0001a3ccc-ffffffe0001a3d30: verbose (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811ddff0)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff811ddff0-ffffffff811de088: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811d0db0)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff811d0db0-ffffffff811d0e48: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811dbdc0)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff811dbdc0-ffffffff811dbe58: verbose (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void verbose(void *private_data, const char *fmt, void (anon));
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/bpf/verifier.c (ffffffff811ea1d0)
+Location: kernel/bpf/verifier.c:270
+Inline: False
+Direct callers:
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:fixup_bpf_calls
+  - kernel/bpf/verifier.c:jit_subprogs
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:convert_ctx_accesses
+  - kernel/bpf/verifier.c:bpf_patch_insn_data
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:replace_map_fd_with_map_ptr
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:do_check
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:is_state_visited
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:push_insn
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_cond_jmp_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:check_alu_op
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_reg_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_scalar_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:adjust_ptr_min_max_vals
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_reg_sane_offset
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_helper_call
+  - kernel/bpf/verifier.c:check_reference_leak
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:check_func_arg
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:process_spin_lock
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:check_helper_mem_access
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:__check_stack_boundary
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_mem_access
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_ptr_alignment
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_packet_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:check_map_access
+  - kernel/bpf/verifier.c:__check_map_access
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:check_map_access_type
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:__mark_chain_precision
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:check_reg_arg
+  - kernel/bpf/verifier.c:mark_reg_read
+  - kernel/bpf/verifier.c:push_stack
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_verifier_state
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:print_liveness
+  - kernel/bpf/verifier.c:verbose_linfo
+```
+**Symbols:**
+
+```
+ffffffff811ea1d0-ffffffff811ea268: verbose (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+<details>
+<summary>Changed between <code>4.13</code> and <code>4.15</code> ⚠️</summary>
+<ul>
+<li>
+<b>Param added. </b>
+<code>struct bpf_verifier_env *env</code>
+</li>
+<li>
+<b>Param reordered. </b>
+<code>fmt, (anon)</code> ➡️ <code>env, fmt, (anon)</code>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<details>
+<summary>Changed between <code>4.15</code> and <code>4.18</code> ⚠️</summary>
+<ul>
+<li>
+<b>Param added. </b>
+<code>void *private_data</code>
+</li>
+<li>
+<b>Param removed. </b>
+<code>struct bpf_verifier_env *env</code>
+</li>
+</ul>
+</details>
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+No changes between <code>amd64</code> and <code>arm64</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>armhf</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>ppc64el</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>riscv64</code> ✅
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

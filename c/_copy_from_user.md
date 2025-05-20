@@ -1,0 +1,18542 @@
+# Function: <code>_copy_from_user</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In None (0)
+Location: None
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/microcode/intel.c:get_ucode_user
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_generate_siginfo
+  - arch/x86/ia32/sys_ia32.c:sys32_mmap
+  - kernel/sysctl.c:__do_proc_doulongvec_minmax
+  - kernel/sysctl.c:__do_proc_dointvec
+  - kernel/sysctl.c:proc_do_large_bitmap
+  - kernel/sysctl_binary.c:SyS_sysctl
+  - kernel/sysctl_binary.c:compat_SyS_sysctl
+  - kernel/capability.c:SyS_capset
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_request
+  - kernel/signal.c:SYSC_rt_tgsigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigqueueinfo
+  - kernel/signal.c:compat_SyS_rt_sigprocmask
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:compat_restore_altstack
+  - kernel/signal.c:SyS_sigprocmask
+  - kernel/signal.c:SyS_rt_sigaction
+  - kernel/signal.c:compat_SyS_rt_sigaction
+  - kernel/signal.c:compat_SyS_rt_sigsuspend
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:SyS_sethostname
+  - kernel/sys.c:SyS_setdomainname
+  - kernel/sys.c:SyS_prlimit64
+  - kernel/sys.c:SyS_setrlimit
+  - kernel/sched/core.c:sched_feat_write
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/core.c:SyS_sched_setattr
+  - kernel/sched/core.c:SyS_sched_setaffinity
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:SYSC_adjtimex
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/hrtimer.c:SyS_nanosleep
+  - kernel/time/itimer.c:SyS_setitimer
+  - kernel/time/posix-timers.c:SYSC_clock_adjtime
+  - kernel/time/posix-timers.c:SyS_timer_create
+  - kernel/time/posix-timers.c:SyS_timer_settime
+  - kernel/time/posix-timers.c:SyS_clock_settime
+  - kernel/time/posix-timers.c:SyS_clock_nanosleep
+  - kernel/time/timer_stats.c:tstats_write
+  - kernel/futex.c:SyS_futex
+  - kernel/module.c:SYSC_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:kimage_alloc_init
+  - kernel/kexec.c:compat_SyS_kexec_load
+  - kernel/kexec_file.c:SyS_kexec_file_load
+  - kernel/compat.c:C_SYSC_rt_sigtimedwait
+  - kernel/compat.c:compat_SyS_settimeofday
+  - kernel/compat.c:compat_SyS_settimeofday
+  - kernel/user_namespace.c:map_write
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/auditsc.c:audit_log_exit
+  - kernel/auditsc.c:audit_log_exit
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/trace/ftrace.c:ftrace_pid_write
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:blk_msg_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/trace_events.c:event_filter_write
+  - kernel/trace/trace_events.c:subsystem_filter_write
+  - kernel/trace/trace_events_trigger.c:event_trigger_write
+  - kernel/trace/trace_probe.c:traceprobe_probes_write
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u64
+  - kernel/trace/trace_uprobe.c:fetch_stack_u64
+  - kernel/trace/trace_uprobe.c:fetch_stack_u32
+  - kernel/trace/trace_uprobe.c:fetch_stack_u16
+  - kernel/trace/trace_uprobe.c:fetch_stack_u8
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u32
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u16
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u8
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_lookup_elem
+  - kernel/bpf/syscall.c:map_get_next_key
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/events/core.c:SYSC_perf_event_open
+  - kernel/events/core.c:perf_ioctl
+  - mm/shmem.c:SyS_memfd_create
+  - mm/util.c:memdup_user
+  - mm/mempolicy.c:get_nodes
+  - mm/mempolicy.c:compat_SyS_get_mempolicy
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/read_write.c:SyS_sendfile64
+  - fs/read_write.c:compat_SyS_sendfile64
+  - fs/fcntl.c:SyS_fcntl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:SyS_select
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:do_sys_poll
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:SyS_ppoll
+  - fs/xattr.c:setxattr
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/libfs.c:simple_attr_write
+  - fs/splice.c:vmsplice_to_pipe
+  - fs/splice.c:SyS_splice
+  - fs/splice.c:SyS_splice
+  - fs/utimes.c:SyS_utimensat
+  - fs/utimes.c:SyS_utimes
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:SyS_epoll_ctl
+  - fs/eventpoll.c:SyS_epoll_pwait
+  - fs/eventpoll.c:compat_SyS_epoll_pwait
+  - fs/signalfd.c:SyS_signalfd
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/timerfd.c:SyS_timerfd_settime
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/aio.c:read_events
+  - fs/aio.c:do_io_submit
+  - fs/locks.c:fcntl_getlk
+  - fs/locks.c:fcntl_setlk
+  - fs/compat.c:compat_SyS_old_select
+  - fs/compat.c:compat_SyS_old_select
+  - fs/compat.c:compat_SyS_pselect6
+  - fs/compat.c:compat_SyS_pselect6
+  - fs/compat.c:compat_SyS_ppoll
+  - fs/compat.c:compat_SyS_ppoll
+  - fs/fhandle.c:SyS_name_to_handle_at
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:proc_pid_attr_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/debugfs/file.c:debugfs_write_file_bool
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - ipc/compat.c:do_compat_semctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_msgctl
+  - ipc/compat.c:compat_SyS_ipc
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/mqueue.c:prepare_timeout
+  - ipc/mqueue.c:SYSC_mq_getsetattr
+  - ipc/mqueue.c:SyS_mq_open
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/compat_mq.c:compat_SyS_mq_getsetattr
+  - security/keys/keyctl.c:SyS_add_key
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/selinux/selinuxfs.c:sel_write_avc_cache_threshold
+  - security/selinux/selinuxfs.c:sel_write_checkreqprot
+  - security/selinux/selinuxfs.c:sel_write_disable
+  - security/selinux/selinuxfs.c:sel_commit_bools_write
+  - security/selinux/selinuxfs.c:sel_write_enforce
+  - security/selinux/selinuxfs.c:sel_write_bool
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/smack/smackfs.c:smk_write_syslog
+  - security/smack/smackfs.c:smk_write_ambient
+  - security/smack/smackfs.c:smk_write_onlycap
+  - security/smack/smackfs.c:smk_write_relabel_self
+  - security/smack/smackfs.c:smk_write_revoke_subj
+  - security/smack/smackfs.c:smk_write_net6addr
+  - security/smack/smackfs.c:smk_write_net4addr
+  - security/tomoyo/securityfs_if.c:tomoyo_write_self
+  - security/integrity/ima/ima_fs.c:ima_write_policy
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/bsg.c:bsg_ioctl
+  - block/bsg.c:bsg_write
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - drivers/pinctrl/pinconf.c:pinconf_dbg_config_write
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_diacrit
+  - drivers/tty/vt/keyboard.c:vt_do_diacrit
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/random.c:write_pool
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev.c:tpm_write
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_read_struct
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:SyS_socketcall
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:sk_attach_filter
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:compat_SyS_socketcall
+  - net/netlink/af_netlink.c:netlink_setsockopt
+  - net/netfilter/nf_log.c:nf_log_proc_dostring
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:compat_raw_setsockopt
+  - net/ipv4/raw.c:raw_setsockopt
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/devinet.c:devinet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/rfkill/core.c:rfkill_fop_write
+```
+**Symbols:**
+
+```
+ffffffff813f5ff0-ffffffff813f601a: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In None (0)
+Location: None
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_write
+  - arch/x86/kernel/cpu/microcode/intel.c:get_ucode_user
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_generate_siginfo
+  - arch/x86/ia32/sys_ia32.c:sys32_mmap
+  - kernel/sysctl_binary.c:compat_SyS_sysctl
+  - kernel/sysctl_binary.c:SyS_sysctl
+  - kernel/capability.c:SyS_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:compat_SyS_rt_sigsuspend
+  - kernel/signal.c:compat_SyS_rt_sigaction
+  - kernel/signal.c:SyS_rt_sigaction
+  - kernel/signal.c:SyS_sigprocmask
+  - kernel/signal.c:compat_restore_altstack
+  - kernel/signal.c:SYSC_rt_tgsigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:compat_SyS_rt_sigprocmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:SyS_setrlimit
+  - kernel/sys.c:SyS_prlimit64
+  - kernel/sys.c:SyS_setdomainname
+  - kernel/sys.c:SyS_sethostname
+  - kernel/sched/core.c:SyS_sched_setaffinity
+  - kernel/sched/core.c:SyS_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:SYSC_adjtimex
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/hrtimer.c:SyS_nanosleep
+  - kernel/time/itimer.c:SyS_setitimer
+  - kernel/time/posix-timers.c:SyS_clock_nanosleep
+  - kernel/time/posix-timers.c:SYSC_clock_adjtime
+  - kernel/time/posix-timers.c:SyS_clock_settime
+  - kernel/time/posix-timers.c:SyS_timer_settime
+  - kernel/time/posix-timers.c:SyS_timer_create
+  - kernel/time/timer_stats.c:tstats_write
+  - kernel/futex.c:SyS_futex
+  - kernel/module.c:SYSC_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:compat_SyS_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/kexec_file.c:SyS_kexec_file_load
+  - kernel/compat.c:C_SYSC_rt_sigtimedwait
+  - kernel/compat.c:compat_get_timespec
+  - kernel/compat.c:compat_get_timeval
+  - kernel/compat.c:compat_SyS_settimeofday
+  - kernel/compat.c:compat_SyS_settimeofday
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/trace_probe.c:traceprobe_probes_write
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u64
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u32
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u16
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u8
+  - kernel/trace/trace_uprobe.c:fetch_stack_u64
+  - kernel/trace/trace_uprobe.c:fetch_stack_u32
+  - kernel/trace/trace_uprobe.c:fetch_stack_u16
+  - kernel/trace/trace_uprobe.c:fetch_stack_u8
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_get_next_key
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_lookup_elem
+  - kernel/events/core.c:SYSC_perf_event_open
+  - kernel/events/core.c:perf_ioctl
+  - mm/shmem.c:SyS_memfd_create
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:memdup_user
+  - mm/mempolicy.c:compat_SyS_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:compat_SyS_sendfile64
+  - fs/read_write.c:SyS_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:SyS_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:do_sys_poll
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:SyS_splice
+  - fs/splice.c:SyS_splice
+  - fs/splice.c:vmsplice_to_pipe
+  - fs/utimes.c:SyS_utimes
+  - fs/utimes.c:SyS_utimensat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:compat_SyS_epoll_pwait
+  - fs/eventpoll.c:SyS_epoll_pwait
+  - fs/eventpoll.c:SyS_epoll_ctl
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:SyS_signalfd
+  - fs/timerfd.c:SyS_timerfd_settime
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/aio.c:do_io_submit
+  - fs/aio.c:read_events
+  - fs/locks.c:fcntl_setlk
+  - fs/locks.c:fcntl_getlk
+  - fs/compat.c:compat_SyS_ppoll
+  - fs/compat.c:compat_SyS_ppoll
+  - fs/compat.c:compat_SyS_pselect6
+  - fs/compat.c:compat_SyS_pselect6
+  - fs/compat.c:compat_SyS_old_select
+  - fs/compat.c:compat_SyS_old_select
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:SyS_name_to_handle_at
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/debugfs/file.c:debugfs_write_file_bool
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_msgctl
+  - ipc/compat.c:compat_SyS_ipc
+  - ipc/compat.c:do_compat_semctl
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/mqueue.c:SYSC_mq_getsetattr
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/mqueue.c:SyS_mq_open
+  - ipc/mqueue.c:prepare_timeout
+  - ipc/compat_mq.c:compat_SyS_mq_getsetattr
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:SyS_add_key
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/selinux/selinuxfs.c:sel_write_validatetrans
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_revoke_subj
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/integrity/ima/ima_fs.c:ima_write_policy
+  - security/integrity/evm/evm_secfs.c:evm_write_key
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_ioctl
+  - block/bsg.c:bsg_write
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/pinctrl/pinconf.c:pinconf_dbg_config_write
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev.c:tpm_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_get_tunable
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:compat_SyS_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/devinet.c:devinet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+```
+**Symbols:**
+
+```
+ffffffff8143cb50-ffffffff8143cb77: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/lib/usercopy.c (ffffffff8145b7c0)
+Location: arch/x86/lib/usercopy.c:77
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_write
+  - arch/x86/kernel/cpu/microcode/intel.c:get_ucode_user
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_generate_siginfo
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:sys32_mmap
+  - kernel/sysctl_binary.c:compat_SyS_sysctl
+  - kernel/sysctl_binary.c:SyS_sysctl
+  - kernel/capability.c:SyS_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:compat_SyS_rt_sigsuspend
+  - kernel/signal.c:compat_SyS_rt_sigaction
+  - kernel/signal.c:SyS_rt_sigaction
+  - kernel/signal.c:SyS_sigprocmask
+  - kernel/signal.c:compat_restore_altstack
+  - kernel/signal.c:SYSC_rt_tgsigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:compat_SyS_rt_sigprocmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:SyS_setrlimit
+  - kernel/sys.c:SyS_prlimit64
+  - kernel/sys.c:SyS_setdomainname
+  - kernel/sys.c:SyS_sethostname
+  - kernel/sched/core.c:SyS_sched_setaffinity
+  - kernel/sched/core.c:SyS_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:SYSC_adjtimex
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/hrtimer.c:SyS_nanosleep
+  - kernel/time/posix-timers.c:SyS_clock_nanosleep
+  - kernel/time/posix-timers.c:SYSC_clock_adjtime
+  - kernel/time/posix-timers.c:SyS_clock_settime
+  - kernel/time/posix-timers.c:SyS_timer_settime
+  - kernel/time/posix-timers.c:SyS_timer_create
+  - kernel/time/itimer.c:SyS_setitimer
+  - kernel/time/timer_stats.c:tstats_write
+  - kernel/futex.c:SyS_futex
+  - kernel/module.c:SYSC_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:compat_SyS_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/kexec_file.c:SyS_kexec_file_load
+  - kernel/compat.c:C_SYSC_rt_sigtimedwait
+  - kernel/compat.c:compat_get_timespec
+  - kernel/compat.c:compat_get_timeval
+  - kernel/compat.c:compat_SyS_settimeofday
+  - kernel/compat.c:compat_SyS_settimeofday
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/trace_probe.c:traceprobe_probes_write
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u64
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u32
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u16
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u8
+  - kernel/trace/trace_uprobe.c:fetch_stack_u64
+  - kernel/trace/trace_uprobe.c:fetch_stack_u32
+  - kernel/trace/trace_uprobe.c:fetch_stack_u16
+  - kernel/trace/trace_uprobe.c:fetch_stack_u8
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_get_next_key
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_lookup_elem
+  - kernel/events/core.c:SYSC_perf_event_open
+  - kernel/events/core.c:perf_ioctl
+  - mm/shmem.c:SyS_memfd_create
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:memdup_user
+  - mm/mempolicy.c:C_SYSC_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:compat_SyS_sendfile64
+  - fs/read_write.c:SyS_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:SyS_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:do_sys_poll
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:SyS_splice
+  - fs/splice.c:SyS_splice
+  - fs/utimes.c:SyS_utimes
+  - fs/utimes.c:SyS_utimensat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:compat_SyS_epoll_pwait
+  - fs/eventpoll.c:SyS_epoll_pwait
+  - fs/eventpoll.c:SyS_epoll_ctl
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:SyS_signalfd
+  - fs/timerfd.c:SyS_timerfd_settime
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/aio.c:do_io_submit
+  - fs/aio.c:read_events
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/locks.c:fcntl_setlk
+  - fs/locks.c:fcntl_getlk
+  - fs/compat.c:compat_SyS_ppoll
+  - fs/compat.c:compat_SyS_ppoll
+  - fs/compat.c:compat_SyS_pselect6
+  - fs/compat.c:compat_SyS_pselect6
+  - fs/compat.c:compat_SyS_old_select
+  - fs/compat.c:compat_SyS_old_select
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:SyS_name_to_handle_at
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/debugfs/file.c:debugfs_write_file_bool
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_msgctl
+  - ipc/compat.c:compat_SyS_ipc
+  - ipc/compat.c:do_compat_semctl
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/mqueue.c:SYSC_mq_getsetattr
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/mqueue.c:SyS_mq_open
+  - ipc/mqueue.c:prepare_timeout
+  - ipc/compat_mq.c:compat_SyS_mq_getsetattr
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:SyS_add_key
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/selinux/selinuxfs.c:sel_write_validatetrans
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/integrity/ima/ima_fs.c:ima_write_policy
+  - security/integrity/evm/evm_secfs.c:evm_write_key
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_ioctl
+  - block/bsg.c:bsg_write
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/pinctrl/pinconf.c:pinconf_dbg_config_write
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev.c:tpm_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_get_stats
+  - net/core/ethtool.c:ethtool_self_test
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:compat_SyS_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/devinet.c:devinet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+```
+**Symbols:**
+
+```
+ffffffff8145b7c0-ffffffff8145b836: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff8146c5c0)
+Location: lib/usercopy.c:6
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mcheck/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_write
+  - arch/x86/kernel/cpu/microcode/intel.c:get_ucode_user
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_generate_siginfo
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:sys32_mmap
+  - kernel/sysctl_binary.c:compat_SyS_sysctl
+  - kernel/sysctl_binary.c:SyS_sysctl
+  - kernel/capability.c:SyS_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:compat_SyS_rt_sigsuspend
+  - kernel/signal.c:compat_SyS_rt_sigaction
+  - kernel/signal.c:SyS_rt_sigaction
+  - kernel/signal.c:SyS_sigprocmask
+  - kernel/signal.c:compat_restore_altstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:SyS_sigaltstack
+  - kernel/signal.c:SYSC_rt_tgsigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigqueueinfo
+  - kernel/signal.c:C_SYSC_rt_sigtimedwait
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:compat_SyS_rt_sigprocmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:SyS_setrlimit
+  - kernel/sys.c:SyS_prlimit64
+  - kernel/sys.c:compat_SyS_setrlimit
+  - kernel/sys.c:SyS_setdomainname
+  - kernel/sys.c:SyS_sethostname
+  - kernel/sched/core.c:SyS_sched_setaffinity
+  - kernel/sched/core.c:SyS_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:SyS_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:SYSC_adjtimex
+  - kernel/time/time.c:compat_SyS_settimeofday
+  - kernel/time/time.c:compat_SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/posix-timers.c:SYSC_clock_adjtime
+  - kernel/time/posix-timers.c:SyS_timer_create
+  - kernel/time/itimer.c:SyS_setitimer
+  - kernel/futex.c:SyS_futex
+  - kernel/module.c:SYSC_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:compat_SyS_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_itimerspec64
+  - kernel/compat.c:get_compat_itimerspec64
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/compat.c:compat_get_timex
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/trace_probe.c:traceprobe_probes_write
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u64
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u32
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u16
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u8
+  - kernel/trace/trace_uprobe.c:fetch_stack_u64
+  - kernel/trace/trace_uprobe.c:fetch_stack_u32
+  - kernel/trace/trace_uprobe.c:fetch_stack_u16
+  - kernel/trace/trace_uprobe.c:fetch_stack_u8
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/events/core.c:SYSC_perf_event_open
+  - kernel/events/core.c:perf_ioctl
+  - mm/shmem.c:SyS_memfd_create
+  - mm/shmem.c:shmem_mcopy_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:C_SYSC_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:compat_SyS_sendfile64
+  - fs/read_write.c:SyS_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:compat_SyS_ppoll
+  - fs/select.c:compat_SyS_ppoll
+  - fs/select.c:compat_SyS_pselect6
+  - fs/select.c:compat_SyS_pselect6
+  - fs/select.c:compat_SyS_old_select
+  - fs/select.c:compat_SyS_old_select
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:do_sys_poll
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:SyS_splice
+  - fs/splice.c:SyS_splice
+  - fs/utimes.c:SyS_utimes
+  - fs/utimes.c:SyS_utimensat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:compat_SyS_epoll_pwait
+  - fs/eventpoll.c:SyS_epoll_pwait
+  - fs/eventpoll.c:SyS_epoll_ctl
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:SyS_signalfd
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/aio.c:do_io_submit
+  - fs/aio.c:read_events
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/compat_ioctl.c:do_ioctl_trans
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:SyS_name_to_handle_at
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/debugfs/file.c:debugfs_write_file_bool
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_shmctl
+  - ipc/compat.c:C_SYSC_msgctl
+  - ipc/compat.c:compat_SyS_ipc
+  - ipc/compat.c:do_compat_semctl
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:SYSC_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/mqueue.c:C_SYSC_mq_getsetattr
+  - ipc/mqueue.c:compat_SyS_mq_open
+  - ipc/mqueue.c:SYSC_mq_getsetattr
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:SyS_mq_open
+  - ipc/mqueue.c:prepare_timeout
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:SyS_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/security.c:security_task_prctl
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - security/integrity/evm/evm_secfs.c:evm_write_key
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_ioctl
+  - block/bsg.c:bsg_write
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/pinctrl/pinconf.c:pinconf_dbg_config_write
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:proc_submiturb_compat
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/core/dev_ioctl.c:dev_ifname
+  - net/compat.c:compat_SyS_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/devinet.c:devinet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/exthdrs.c:ipv6_renew_option
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+```
+**Symbols:**
+
+```
+ffffffff8146c5c0-ffffffff8146c620: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff814988e0)
+Location: lib/usercopy.c:7
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mcheck/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_write
+  - arch/x86/kernel/cpu/microcode/intel.c:get_ucode_user
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_generate_siginfo
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:sys32_mmap
+  - kernel/sysctl_binary.c:compat_SyS_sysctl
+  - kernel/sysctl_binary.c:SyS_sysctl
+  - kernel/capability.c:SyS_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:SyS_rt_sigsuspend
+  - kernel/signal.c:SyS_rt_sigaction
+  - kernel/signal.c:SyS_sigprocmask
+  - kernel/signal.c:compat_restore_altstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:SyS_sigaltstack
+  - kernel/signal.c:SYSC_rt_tgsigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigqueueinfo
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:SYSC_rt_sigtimedwait
+  - kernel/signal.c:SyS_rt_sigprocmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:SyS_setrlimit
+  - kernel/sys.c:SyS_prlimit64
+  - kernel/sys.c:compat_SyS_setrlimit
+  - kernel/sys.c:SyS_setdomainname
+  - kernel/sys.c:SyS_sethostname
+  - kernel/sched/core.c:SyS_sched_setaffinity
+  - kernel/sched/core.c:SyS_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:SyS_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:SYSC_adjtimex
+  - kernel/time/time.c:compat_SyS_settimeofday
+  - kernel/time/time.c:compat_SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/time.c:SyS_settimeofday
+  - kernel/time/posix-timers.c:SYSC_clock_adjtime
+  - kernel/time/posix-timers.c:SyS_timer_create
+  - kernel/time/itimer.c:SyS_setitimer
+  - kernel/futex.c:SyS_futex
+  - kernel/module.c:SYSC_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:compat_SyS_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerspec64
+  - kernel/compat.c:get_compat_itimerspec64
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/compat.c:compat_get_timex
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u64
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u32
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u16
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u8
+  - kernel/trace/trace_uprobe.c:fetch_stack_u64
+  - kernel/trace/trace_uprobe.c:fetch_stack_u32
+  - kernel/trace/trace_uprobe.c:fetch_stack_u16
+  - kernel/trace/trace_uprobe.c:fetch_stack_u8
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:SyS_bpf
+  - kernel/bpf/syscall.c:bpf_obj_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/events/core.c:SYSC_perf_event_open
+  - kernel/events/core.c:perf_ioctl
+  - mm/shmem.c:SyS_memfd_create
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:C_SYSC_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:SyS_copy_file_range
+  - fs/read_write.c:compat_SyS_sendfile64
+  - fs/read_write.c:SyS_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:compat_SyS_old_select
+  - fs/select.c:compat_SyS_old_select
+  - fs/select.c:SyS_ppoll
+  - fs/select.c:do_sys_poll
+  - fs/select.c:SyS_pselect6
+  - fs/select.c:SyS_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:SyS_splice
+  - fs/splice.c:SyS_splice
+  - fs/utimes.c:SyS_utimes
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:SyS_epoll_pwait
+  - fs/eventpoll.c:SyS_epoll_ctl
+  - fs/signalfd.c:compat_SyS_signalfd
+  - fs/signalfd.c:SyS_signalfd
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/aio.c:do_io_submit
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:SyS_name_to_handle_at
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:SyS_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/debugfs/file.c:debugfs_write_file_bool
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/shm.c:SYSC_shmctl
+  - ipc/syscall.c:compat_SyS_ipc
+  - ipc/mqueue.c:C_SYSC_mq_getsetattr
+  - ipc/mqueue.c:compat_SyS_mq_open
+  - ipc/mqueue.c:SYSC_mq_getsetattr
+  - ipc/mqueue.c:SyS_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:SyS_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:SyS_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/security.c:security_task_prctl
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_ioctl
+  - block/bsg.c:bsg_write
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/pinctrl/pinconf.c:pinconf_dbg_config_write
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:proc_submiturb_compat
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:SyS_socketcall
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ioctl
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/core/dev_ioctl.c:dev_ifname
+  - net/compat.c:compat_SyS_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/devinet.c:devinet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/exthdrs.c:ipv6_renew_option
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+```
+**Symbols:**
+
+```
+ffffffff814988e0-ffffffff81498940: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff814cdb30)
+Location: lib/usercopy.c:7
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mcheck/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/microcode/intel.c:get_ucode_user
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_generate_siginfo
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__do_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__do_sys_rt_sigqueueinfo
+  - kernel/signal.c:__do_sys_rt_sigtimedwait
+  - kernel/signal.c:__do_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:kcmp_epoll_target
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/futex.c:__ia32_sys_futex
+  - kernel/futex.c:__x64_sys_futex
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/compat.c:compat_get_timex
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u64
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u32
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u16
+  - kernel/trace/trace_uprobe.c:fetch_file_offset_u8
+  - kernel/trace/trace_uprobe.c:fetch_stack_u64
+  - kernel/trace/trace_uprobe.c:fetch_stack_u32
+  - kernel/trace/trace_uprobe.c:fetch_stack_u16
+  - kernel/trace/trace_uprobe.c:fetch_stack_u8
+  - kernel/bpf/syscall.c:__ia32_sys_bpf
+  - kernel/bpf/syscall.c:__x64_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:__ia32_sys_ppoll
+  - fs/select.c:__x64_sys_ppoll
+  - fs/select.c:do_sys_poll
+  - fs/select.c:do_pselect
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_pwait
+  - fs/eventpoll.c:__x64_sys_epoll_pwait
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/sem.c:semctl_main
+  - ipc/shm.c:ksys_shmctl
+  - ipc/syscall.c:__x32_compat_sys_ipc
+  - ipc/syscall.c:__ia32_compat_sys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_ioctl
+  - block/bsg.c:bsg_write
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/pinctrl/pinconf.c:pinconf_dbg_config_write
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:proc_submiturb_compat
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/rtc/rtc-dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__x32_compat_sys_socketcall
+  - net/compat.c:__ia32_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff814cdb30-ffffffff814cdb90: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff814e2400)
+Location: lib/usercopy.c:7
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/microcode/intel.c:get_ucode_user
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_fault_info
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:kcmp_epoll_target
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/compat.c:compat_get_timex
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/verifier.c:bpf_check
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:kernel_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/sem.c:semctl_main
+  - ipc/shm.c:ksys_shmctl
+  - ipc/syscall.c:__x32_compat_sys_ipc
+  - ipc/syscall.c:__ia32_compat_sys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_ioctl
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/pinctrl/pinconf.c:pinconf_dbg_config_write
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:proc_submiturb_compat
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__x32_compat_sys_socketcall
+  - net/compat.c:__ia32_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff814e2400-ffffffff814e2460: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff8150e2c0)
+Location: lib/usercopy.c:7
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_fault_info
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:___sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_prog_test_run_skb
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff8150e2c0-ffffffff8150e320: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff8152c110)
+Location: lib/usercopy.c:8
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_fault_info
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - arch/x86/platform/uv/tlb_uv.c:tunables_write
+  - arch/x86/platform/uv/tlb_uv.c:ptc_proc_write
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_pci_config_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff8152c110-ffffffff8152c170: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff8158fb70)
+Location: lib/usercopy.c:9
+Inline: False
+Direct callers:
+  - arch/x86/kernel/signal.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__x32_compat_sys_ia32_mmap
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/ia32_signal.c:ia32_restore_sigcontext
+  - arch/x86/platform/uv/tlb_uv.c:tunables_write
+  - arch/x86/platform/uv/tlb_uv.c:ptc_proc_write
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_set_swap_area
+  - kernel/kcmp.c:kcmp_epoll_target
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:get_old_itimerval32
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:kimage_alloc_init
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_send
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:rseq_get_rseq_cs
+  - kernel/rseq.c:rseq_get_rseq_cs
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic_pte
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__ia32_sys_openat2
+  - fs/open.c:__x64_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:copy_mount_options
+  - fs/namespace.c:copy_mount_options
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_wake
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:__io_sqe_files_update
+  - fs/io_uring.c:io_sqe_files_register
+  - fs/io_uring.c:__io_recvmsg_copy_hdr
+  - fs/io_uring.c:io_epoll_ctl_prep
+  - fs/io_uring.c:io_import_iovec
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setinfo
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_ioctl_fitrim
+  - fs/efivarfs/file.c:efivarfs_ioc_setxflags
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - block/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - block/scsi_ioctl.c:get_sg_io_hdr
+  - block/scsi_ioctl.c:get_sg_io_hdr
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:blk_fill_sghdr_rq
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:lineevent_create
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_set_config
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_user
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_tiocsserial
+  - drivers/tty/tty_io.c:do_tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_merge
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl_create_fence
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dma_rw_chunk
+  - drivers/vfio/vfio_iommu_type1.c:update_user_bitmap
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_config_do_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_volctrl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_play_trkind
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_play_msf
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_get_subchnl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_multisession
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:get_disk_info
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sioc_ifmap
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:__copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:__get_compat_msghdr
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_tunable
+  - net/ethtool/ioctl.c:ethtool_get_tunable
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_flash_device
+  - net/ethtool/ioctl.c:ethtool_get_perm_addr
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_get_strings
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_ringparam
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_regs
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_set_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ethtool/ioctl.c:ethtool_set_features
+  - net/ethtool/ioctl.c:ethtool_set_features
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:compat_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_setsockopt
+  - net/ipv4/tcp.c:tcp_repair_options_est
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/af_inet6.c:inet6_compat_routing_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_getsockopt
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_setsockopt
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff8158fb70-ffffffff8158fbd6: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff815ac6d0)
+Location: lib/usercopy.c:10
+Inline: False
+Direct callers:
+  - arch/x86/kernel/signal.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__x32_compat_sys_ia32_mmap
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_create
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_create
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/ia32_signal.c:ia32_restore_sigcontext
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_set_swap_area
+  - kernel/kcmp.c:kcmp_epoll_target
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:get_old_itimerval32
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:kimage_alloc_init
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_addfd
+  - kernel/seccomp.c:seccomp_notify_send
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/helpers.c:bpf_copy_from_user
+  - kernel/bpf/bpf_iter.c:bpf_iter_link_attach
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:rseq_get_rseq_cs
+  - kernel/rseq.c:rseq_get_rseq_cs
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic_pte
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__ia32_sys_openat2
+  - fs/open.c:__x64_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:copy_mount_options
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_wake
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__do_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__do_compat_sys_io_pgetevents
+  - fs/aio.c:__do_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:__do_sys_io_uring_enter
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:__io_sqe_files_update
+  - fs/io_uring.c:io_sqe_files_register
+  - fs/io_uring.c:io_req_prep
+  - fs/io_uring.c:io_req_prep
+  - fs/io_uring.c:__io_recvmsg_copy_hdr
+  - fs/io_uring.c:io_import_iovec
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setinfo
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_ioctl_fitrim
+  - fs/efivarfs/file.c:efivarfs_ioc_setxflags
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - block/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - block/scsi_ioctl.c:get_sg_io_hdr
+  - block/scsi_ioctl.c:get_sg_io_hdr
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:blk_fill_sghdr_rq
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - arch/x86/lib/insn-eval.c:insn_fetch_from_user
+  - drivers/gpio/gpiolib-cdev.c:gpio_ioctl
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get
+  - drivers/gpio/gpiolib-cdev.c:linereq_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_ioctl_compat
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_config
+  - drivers/gpio/gpiolib-cdev.c:linereq_get_values
+  - drivers/video/fbdev/core/fbmem.c:fb_getput_cmap
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_user
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_tiocsserial
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_setactivate
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/iommu/iommu.c:iommu_sva_prepare_bind_data
+  - drivers/iommu/iommu.c:iommu_sva_prepare_bind_data
+  - drivers/iommu/iommu.c:iommu_uapi_cache_invalidate
+  - drivers/iommu/iommu.c:iommu_uapi_cache_invalidate
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_merge
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl_create_fence
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dma_rw_chunk
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_get_info
+  - drivers/vfio/vfio_iommu_type1.c:update_user_bitmap
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_config_do_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_volctrl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_play_trkind
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_play_msf
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_get_subchnl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl_multisession
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:do_proc_bulk
+  - drivers/usb/core/devio.c:do_proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:get_disk_info
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_coredump_write
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_device_ioctl
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_cdev_write
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sioc_ifmap
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:__copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:__get_compat_msghdr
+  - net/netlink/af_netlink.c:netlink_setsockopt
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/bpf/test_run.c:bpf_prog_test_run_raw_tp
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:set_phy_tunable
+  - net/ethtool/ioctl.c:get_phy_tunable
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_tunable
+  - net/ethtool/ioctl.c:ethtool_get_tunable
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_flash_device
+  - net/ethtool/ioctl.c:ethtool_get_perm_addr
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_get_strings
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_ringparam
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_regs
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_set_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ethtool/ioctl.c:ethtool_set_features
+  - net/ethtool/ioctl.c:ethtool_set_features
+  - net/ipv4/ip_options.c:ip_options_get
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:compat_ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:compat_ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/tcp.c:tcp_repair_options_est
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/udp.c:udp_lib_setsockopt
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/af_inet6.c:inet6_compat_routing_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_opt_hdr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:fanout_set_data
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff815ac6d0-ffffffff815ac750: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff815b7360)
+Location: lib/usercopy.c:10
+Inline: False
+Direct callers:
+  - arch/x86/kernel/signal.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__x32_compat_sys_ia32_mmap
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/ia32_signal.c:ia32_restore_sigcontext
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_scaling_write
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:get_old_itimerval32
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:kimage_alloc_init
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_addfd
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_obj_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/helpers.c:bpf_copy_from_user
+  - kernel/bpf/bpf_iter.c:bpf_iter_link_attach
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:rseq_get_rseq_cs
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic_pte
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__ia32_sys_openat2
+  - fs/open.c:__x64_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:__do_sys_mount_setattr
+  - fs/namespace.c:copy_mount_options
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_continue
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__do_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__do_compat_sys_io_pgetevents
+  - fs/aio.c:__do_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_register_rsrc
+  - fs/io_uring.c:io_register_rsrc_update
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:__do_sys_io_uring_enter
+  - fs/io_uring.c:__io_sqe_buffers_update
+  - fs/io_uring.c:io_sqe_buffers_register
+  - fs/io_uring.c:__io_sqe_files_update
+  - fs/io_uring.c:__io_sqe_files_update
+  - fs/io_uring.c:io_sqe_files_register
+  - fs/io_uring.c:io_sqe_files_register
+  - fs/io_uring.c:io_req_prep
+  - fs/io_uring.c:io_req_prep
+  - fs/io_uring.c:__io_recvmsg_copy_hdr
+  - fs/io_uring.c:io_import_iovec
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/read_metadata.c:fsverity_ioctl_read_metadata
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - security/landlock/syscalls.c:__ia32_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__x64_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__ia32_sys_landlock_create_ruleset
+  - security/landlock/syscalls.c:__x64_sys_landlock_create_ruleset
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/scsi_ioctl.c:scsi_cdrom_send_packet
+  - block/scsi_ioctl.c:scsi_cdrom_send_packet
+  - block/scsi_ioctl.c:get_sg_io_hdr
+  - block/scsi_ioctl.c:get_sg_io_hdr
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - arch/x86/lib/insn-eval.c:insn_fetch_from_user
+  - drivers/gpio/gpiolib-cdev.c:gpio_ioctl
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get
+  - drivers/gpio/gpiolib-cdev.c:linereq_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_config
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_values
+  - drivers/gpio/gpiolib-cdev.c:linereq_get_values
+  - drivers/video/fbdev/core/fbmem.c:fb_getput_cmap
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_resizex
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/iommu/iommu.c:iommu_sva_prepare_bind_data
+  - drivers/iommu/iommu.c:iommu_sva_prepare_bind_data
+  - drivers/iommu/iommu.c:iommu_uapi_cache_invalidate
+  - drivers/iommu/iommu.c:iommu_uapi_cache_invalidate
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dma_rw_chunk
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_get_info
+  - drivers/vfio/vfio_iommu_type1.c:update_user_bitmap
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_config_do_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:do_proc_bulk
+  - drivers/usb/core/devio.c:do_proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_abs_setup
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/platform/x86/intel_pmc_core.c:pmc_core_lpm_latch_mode_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_coredump_write
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_device_ioctl
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_cdev_write
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_sock_ioctl_trans
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:__copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:__get_compat_msghdr
+  - net/netlink/af_netlink.c:netlink_setsockopt
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/bpf/test_run.c:bpf_prog_test_run_raw_tp
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:get_phy_tunable
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_get_tunable
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_flash_device
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_get_strings
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_rxnfc
+  - net/ethtool/ioctl.c:ethtool_set_rxnfc
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ipv4/ip_options.c:ip_options_get
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:compat_ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:compat_ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/tcp.c:tcp_repair_options_est
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_setsockopt
+  - net/ipv4/udp.c:udp_lib_setsockopt
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/af_inet6.c:inet6_compat_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_opt_hdr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_linger
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_int
+```
+**Symbols:**
+
+```
+ffffffff815b7360-ffffffff815b73c0: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff8161d990)
+Location: lib/usercopy.c:10
+Inline: False
+Direct callers:
+  - arch/x86/kernel/signal.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__x64_compat_sys_ia32_mmap
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/fpu/regset.c:xstateregs_set
+  - arch/x86/kernel/fpu/xstate.c:copy_from_buffer
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/ia32_signal.c:ia32_restore_sigcontext
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__x64_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_scaling_write
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x64_compat_sys_settimeofday
+  - kernel/time/time.c:__x64_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:get_old_itimerval32
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__do_compat_sys_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_addfd
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/trace_hwlat.c:hwlat_mode_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__sys_bpf
+  - kernel/bpf/syscall.c:bpf_obj_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/helpers.c:bpf_copy_from_user
+  - kernel/bpf/bpf_iter.c:bpf_iter_link_attach
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:get_bitmap
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic_pte
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__ia32_sys_openat2
+  - fs/open.c:__x64_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__x64_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x64_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:__do_sys_mount_setattr
+  - fs/namespace.c:copy_mount_options
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_continue
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x64_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x64_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_register_iowq_max_workers
+  - fs/io_uring.c:io_register_rsrc
+  - fs/io_uring.c:io_register_rsrc_update
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:__do_sys_io_uring_enter
+  - fs/io_uring.c:__io_sqe_buffers_update
+  - fs/io_uring.c:__io_sqe_files_update
+  - fs/io_uring.c:__io_sqe_files_update
+  - fs/io_uring.c:io_sqe_files_register
+  - fs/io_uring.c:io_rsrc_data_alloc
+  - fs/io_uring.c:io_req_prep
+  - fs/io_uring.c:io_req_prep
+  - fs/io_uring.c:__io_recvmsg_copy_hdr
+  - fs/io_uring.c:io_import_iovec
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/read_metadata.c:fsverity_ioctl_read_metadata
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x64_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - security/landlock/syscalls.c:__ia32_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__x64_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__ia32_sys_landlock_create_ruleset
+  - security/landlock/syscalls.c:__x64_sys_landlock_create_ruleset
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/bsg.c:bsg_sg_io
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - arch/x86/lib/insn-eval.c:insn_fetch_from_user
+  - drivers/gpio/gpiolib-cdev.c:gpio_ioctl
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get
+  - drivers/gpio/gpiolib-cdev.c:linereq_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_ioctl_compat
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_config
+  - drivers/gpio/gpiolib-cdev.c:linereq_get_values
+  - drivers/video/fbdev/core/fbmem.c:fb_getput_cmap
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_resizex
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/iommu/iommu.c:iommu_sva_prepare_bind_data
+  - drivers/iommu/iommu.c:iommu_sva_prepare_bind_data
+  - drivers/iommu/iommu.c:iommu_uapi_cache_invalidate
+  - drivers/iommu/iommu.c:iommu_uapi_cache_invalidate
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_ioctl.c:scsi_cdrom_send_packet
+  - drivers/scsi/scsi_ioctl.c:scsi_cdrom_send_packet
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_io
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/scsi_bsg.c:scsi_bsg_sg_io_fn
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dma_rw_chunk
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_get_info
+  - drivers/vfio/vfio_iommu_type1.c:update_user_bitmap
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_config_do_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:do_proc_bulk
+  - drivers/usb/core/devio.c:do_proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_abs_setup
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/platform/x86/intel/pmc/core.c:pmc_core_lpm_latch_mode_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_coredump_write
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_device_ioctl
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_cdev_write
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:__copy_msghdr_from_user
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:__get_compat_msghdr
+  - net/netlink/af_netlink.c:netlink_setsockopt
+  - net/bpf/test_run.c:bpf_prog_test_run_syscall
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/bpf/test_run.c:bpf_prog_test_run_raw_tp
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:get_phy_tunable
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_get_tunable
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_flash_device
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_get_strings
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_regs
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_user
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_compat
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ipv4/ip_options.c:ip_options_get
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:compat_ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:compat_ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_setsockopt
+  - net/ipv4/udp.c:udp_lib_setsockopt
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/af_inet6.c:inet6_compat_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_opt_hdr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_int
+```
+**Symbols:**
+
+```
+ffffffff8161d990-ffffffff8161d9f0: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff816eb4f0)
+Location: lib/usercopy.c:10
+Inline: False
+Direct callers:
+  - arch/x86/coco/tdx/tdx.c:tdx_get_report
+  - arch/x86/coco/tdx/tdx.c:tdx_get_report
+  - arch/x86/kernel/signal.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/fpu/regset.c:xstateregs_set
+  - arch/x86/kernel/fpu/xstate.c:copy_from_buffer
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/ia32_signal.c:ia32_restore_sigcontext
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__ia32_sys_rt_sigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_sigqueueinfo
+  - kernel/signal.c:__do_sys_pidfd_send_signal
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/build_utility.c:psi_write
+  - kernel/sched/build_utility.c:sched_dynamic_write
+  - kernel/sched/build_utility.c:sched_scaling_write
+  - kernel/sched/build_utility.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/module/main.c:__do_sys_init_module
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_compat_sys_setitimer
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/futex/syscalls.c:__do_sys_futex_waitv
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__do_compat_sys_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_addfd
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/trace_hwlat.c:hwlat_mode_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_lookup_elem
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/helpers.c:bpf_copy_from_user
+  - kernel/bpf/bpf_iter.c:bpf_iter_link_attach
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/huge_memory.c:split_huge_pages_write
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic_pte
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__do_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:__do_sys_mount_setattr
+  - fs/namespace.c:copy_mount_options
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_transaction_get
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_continue
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/read_metadata.c:fsverity_ioctl_read_metadata
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_write
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - security/landlock/syscalls.c:__ia32_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__x64_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__ia32_sys_landlock_create_ruleset
+  - security/landlock/syscalls.c:__x64_sys_landlock_create_ruleset
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/bsg.c:bsg_sg_io
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - io_uring/io_uring.c:__io_uring_register
+  - io_uring/io_uring.c:__io_uring_register
+  - io_uring/io_uring.c:__io_uring_register
+  - io_uring/io_uring.c:io_register_pbuf_ring
+  - io_uring/io_uring.c:io_register_iowq_max_workers
+  - io_uring/io_uring.c:io_register_rsrc
+  - io_uring/io_uring.c:io_register_rsrc_update
+  - io_uring/io_uring.c:io_uring_setup
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:io_ringfd_register
+  - io_uring/io_uring.c:io_eventfd_register
+  - io_uring/io_uring.c:__io_sqe_buffers_update
+  - io_uring/io_uring.c:io_copy_iov
+  - io_uring/io_uring.c:io_copy_iov
+  - io_uring/io_uring.c:__io_sqe_files_update
+  - io_uring/io_uring.c:__io_sqe_files_update
+  - io_uring/io_uring.c:io_sqe_files_register
+  - io_uring/io_uring.c:io_rsrc_data_alloc
+  - io_uring/io_uring.c:io_files_update
+  - io_uring/io_uring.c:__io_recvmsg_copy_hdr
+  - io_uring/io_uring.c:io_epoll_ctl_prep
+  - io_uring/io_uring.c:io_openat2_prep
+  - io_uring/io_uring.c:__io_import_iovec
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - arch/x86/lib/insn-eval.c:insn_fetch_from_user
+  - drivers/gpio/gpiolib-cdev.c:gpio_ioctl
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get_v1
+  - drivers/gpio/gpiolib-cdev.c:lineevent_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_ioctl_compat
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_config
+  - drivers/gpio/gpiolib-cdev.c:linereq_get_values
+  - drivers/gpio/gpiolib-cdev.c:linehandle_create
+  - drivers/gpio/gpiolib-cdev.c:linehandle_ioctl
+  - drivers/gpio/gpiolib-cdev.c:linehandle_set_config
+  - drivers/pci/vgaarb.c:vga_arb_write
+  - drivers/video/fbdev/core/fbmem.c:fb_getput_cmap
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termios
+  - drivers/tty/tty_ioctl.c:set_termios
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_resizex
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_set_rs485_config
+  - drivers/char/mem.c:write_mem
+  - drivers/char/virtio_console.c:port_fops_write
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_ioctl.c:scsi_cdrom_send_packet
+  - drivers/scsi/scsi_ioctl.c:scsi_cdrom_send_packet
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_io
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/scsi_bsg.c:scsi_bsg_sg_io_fn
+  - drivers/scsi/sg.c:sg_write
+  - drivers/scsi/sg.c:sg_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/vfio/vfio.c:vfio_device_fops_unl_ioctl
+  - drivers/vfio/vfio.c:vfio_ioctl_device_feature_mig_device_state
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dma_rw_chunk
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_ioctl
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_dirty_pages
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_unmap_dma
+  - drivers/vfio/vfio_iommu_type1.c:vfio_iommu_type1_get_info
+  - drivers/vfio/vfio_iommu_type1.c:update_user_bitmap
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl_feature
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_core_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_config_do_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:do_proc_bulk
+  - drivers/usb/core/devio.c:do_proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_abs_setup
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/platform/x86/intel/pmc/core.c:pmc_core_lpm_latch_mode_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_coredump_write
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_device_ioctl
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_cdev_write
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:__copy_msghdr_from_user
+  - net/socket.c:move_addr_to_kernel
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:__get_compat_msghdr
+  - net/netlink/af_netlink.c:netlink_setsockopt
+  - net/bpf/test_run.c:bpf_prog_test_run_xdp
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:get_phy_tunable
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_get_strings
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_user
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_compat
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ipv4/ip_options.c:ip_options_get
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:compat_ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:compat_ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/tcp.c:tcp_repair_options_est
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_setsockopt
+  - net/ipv4/udp.c:udp_lib_setsockopt
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/af_inet6.c:inet6_compat_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_opt_hdr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/mptcp/sockopt.c:mptcp_get_subflow_data
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_int
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - net/mctp/af_mctp.c:mctp_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff816eb4f0-ffffffff816eb561: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff817dbbc0)
+Location: lib/usercopy.c:11
+Inline: False
+Direct callers:
+  - arch/x86/kernel/signal_64.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/signal_32.c:ia32_restore_sigcontext
+  - arch/x86/kernel/fpu/regset.c:xstateregs_set
+  - arch/x86/kernel/fpu/xstate.c:copy_from_buffer
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__ia32_sys_rt_sigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_sigqueueinfo
+  - kernel/signal.c:__do_sys_pidfd_send_signal
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/build_utility.c:psi_write
+  - kernel/sched/build_utility.c:sched_dynamic_write
+  - kernel/sched/build_utility.c:sched_scaling_write
+  - kernel/sched/build_utility.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/module/main.c:__do_sys_init_module
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_compat_sys_setitimer
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/futex/syscalls.c:__do_sys_futex_waitv
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__do_compat_sys_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_addfd
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/trace_hwlat.c:hwlat_mode_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_delete_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_lookup_elem
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/helpers.c:bpf_copy_from_user
+  - kernel/bpf/bpf_iter.c:bpf_iter_link_attach
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/vmscan.c:lru_gen_seq_write
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/huge_memory.c:split_huge_pages_write
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__do_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:__do_sys_mount_setattr
+  - fs/namespace.c:copy_mount_options
+  - fs/libfs.c:simple_transaction_get
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_continue
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/read_metadata.c:fsverity_ioctl_read_metadata
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_write
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:notify_set_filter
+  - security/apparmor/apparmorfs.c:notify_set_filter
+  - security/landlock/syscalls.c:__ia32_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__x64_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__ia32_sys_landlock_create_ruleset
+  - security/landlock/syscalls.c:__x64_sys_landlock_create_ruleset
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/bsg.c:bsg_sg_io
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - io_uring/io_uring.c:io_register_iowq_max_workers
+  - io_uring/io_uring.c:io_uring_setup
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:io_eventfd_register
+  - io_uring/filetable.c:io_register_file_alloc_range
+  - io_uring/openclose.c:io_openat2_prep
+  - io_uring/epoll.c:io_epoll_ctl_prep
+  - io_uring/net.c:__io_compat_recvmsg_copy_hdr
+  - io_uring/net.c:__io_recvmsg_copy_hdr
+  - io_uring/net.c:__io_recvmsg_copy_hdr
+  - io_uring/tctx.c:io_ringfd_unregister
+  - io_uring/tctx.c:io_ringfd_register
+  - io_uring/cancel.c:io_sync_cancel
+  - io_uring/kbuf.c:io_unregister_pbuf_ring
+  - io_uring/kbuf.c:io_register_pbuf_ring
+  - io_uring/rsrc.c:io_sqe_files_register
+  - io_uring/rsrc.c:io_files_update
+  - io_uring/rsrc.c:io_register_rsrc
+  - io_uring/rsrc.c:io_register_rsrc_update
+  - io_uring/rsrc.c:io_register_files_update
+  - io_uring/rsrc.c:__io_sqe_buffers_update
+  - io_uring/rsrc.c:__io_sqe_files_update
+  - io_uring/rsrc.c:__io_sqe_files_update
+  - io_uring/rsrc.c:io_rsrc_data_alloc
+  - io_uring/rsrc.c:io_copy_iov
+  - io_uring/rsrc.c:io_copy_iov
+  - io_uring/rw.c:io_prep_rw
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib-cdev.c:gpio_ioctl
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get_v1
+  - drivers/gpio/gpiolib-cdev.c:lineevent_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_ioctl_unlocked
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_config
+  - drivers/gpio/gpiolib-cdev.c:linereq_get_values
+  - drivers/gpio/gpiolib-cdev.c:linehandle_create
+  - drivers/gpio/gpiolib-cdev.c:linehandle_ioctl_unlocked
+  - drivers/gpio/gpiolib-cdev.c:linehandle_set_config
+  - drivers/pci/vgaarb.c:vga_arb_write
+  - drivers/video/fbdev/core/fbmem.c:fb_getput_cmap
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_ioctl.c:user_termios_to_kernel_termios_1
+  - drivers/tty/tty_ioctl.c:user_termios_to_kernel_termios
+  - drivers/tty/tty_ioctl.c:user_termio_to_kernel_termios
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_resizex
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_set_rs485_config
+  - drivers/char/mem.c:write_mem
+  - drivers/char/virtio_console.c:port_fops_write
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_import_sync_file
+  - drivers/dma-buf/dma-buf.c:dma_buf_export_sync_file
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_ioctl.c:scsi_cdrom_send_packet
+  - drivers/scsi/scsi_ioctl.c:scsi_cdrom_send_packet
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_io
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/scsi_bsg.c:scsi_bsg_sg_io_fn
+  - drivers/scsi/sg.c:sg_write
+  - drivers/scsi/sg.c:sg_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:do_proc_bulk
+  - drivers/usb/core/devio.c:do_proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_abs_setup
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:__md_set_array_info
+  - drivers/md/md.c:get_disk_info
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/platform/x86/intel/pmc/core.c:pmc_core_lpm_latch_mode_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_coredump_write
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_device_ioctl
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_cdev_write
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:move_addr_to_kernel
+  - net/core/sock.c:sk_getsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/netlink/af_netlink.c:netlink_setsockopt
+  - net/bpf/test_run.c:bpf_prog_test_run_xdp
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:get_phy_tunable
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_user
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_compat
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ipv4/ip_options.c:ip_options_get
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:compat_ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:tcp_repair_options_est
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/udp.c:udp_lib_setsockopt
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_getsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/af_inet6.c:inet6_compat_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_getsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_getsockopt
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_opt_hdr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_getsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:fanout_set_data
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/mptcp/sockopt.c:mptcp_get_subflow_data
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_linger
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_int
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - net/mctp/af_mctp.c:mctp_setsockopt
+  - arch/x86/lib/insn-eval.c:insn_fetch_from_user
+```
+**Symbols:**
+
+```
+ffffffff817dbbc0-ffffffff817dbc34: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff8181af60)
+Location: lib/usercopy.c:11
+Inline: False
+Direct callers:
+  - arch/x86/kernel/signal_64.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/signal_32.c:ia32_restore_sigcontext
+  - arch/x86/kernel/fpu/regset.c:xstateregs_set
+  - arch/x86/kernel/fpu/xstate.c:copy_from_buffer
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__ia32_sys_rt_sigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_sigqueueinfo
+  - kernel/signal.c:__do_sys_pidfd_send_signal
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/build_utility.c:psi_write
+  - kernel/sched/build_utility.c:sched_dynamic_write
+  - kernel/sched/build_utility.c:sched_scaling_write
+  - kernel/sched/build_utility.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/entry/syscall_user_dispatch.c:syscall_user_dispatch_set_config
+  - kernel/module/main.c:__do_sys_init_module
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_compat_sys_setitimer
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/futex/syscalls.c:__do_sys_futex_waitv
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__do_compat_sys_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_addfd
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/trace_hwlat.c:hwlat_mode_write
+  - kernel/trace/trace_osnoise.c:osnoise_cpus_write
+  - kernel/trace/trace_osnoise.c:osnoise_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/trace_events_user.c:user_events_ioctl_unreg
+  - kernel/trace/trace_events_user.c:user_events_ioctl_reg
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__sys_bpf
+  - kernel/bpf/syscall.c:bpf_obj_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_delete_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_lookup_elem
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/helpers.c:bpf_copy_from_user
+  - kernel/bpf/log.c:bpf_vlog_reverse_ubuf
+  - kernel/bpf/log.c:bpf_vlog_reverse_ubuf
+  - kernel/bpf/bpf_iter.c:bpf_iter_link_attach
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:rseq_get_rseq_cs
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/filemap.c:__ia32_sys_cachestat
+  - mm/filemap.c:__x64_sys_cachestat
+  - mm/vmscan.c:lru_gen_seq_write
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_folio_from_user
+  - mm/memory.c:copy_folio_from_user
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/huge_memory.c:split_huge_pages_write
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__ia32_sys_openat2
+  - fs/open.c:__x64_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:__ia32_sys_mount_setattr
+  - fs/namespace.c:__x64_sys_mount_setattr
+  - fs/namespace.c:copy_mount_options
+  - fs/libfs.c:simple_transaction_get
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_continue
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/read_metadata.c:fsverity_ioctl_read_metadata
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl_getuuid
+  - fs/ext4/ioctl.c:ext4_ioctl_setlabel
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_write
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:notify_set_filter
+  - security/apparmor/apparmorfs.c:notify_set_filter
+  - security/landlock/syscalls.c:__ia32_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__x64_sys_landlock_add_rule
+  - security/landlock/syscalls.c:__ia32_sys_landlock_create_ruleset
+  - security/landlock/syscalls.c:__x64_sys_landlock_create_ruleset
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/bsg.c:bsg_sg_io
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - io_uring/io_uring.c:io_register_iowq_max_workers
+  - io_uring/io_uring.c:io_register_iowq_aff
+  - io_uring/io_uring.c:io_uring_setup
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:io_eventfd_register
+  - io_uring/filetable.c:io_register_file_alloc_range
+  - io_uring/openclose.c:io_openat2_prep
+  - io_uring/epoll.c:io_epoll_ctl_prep
+  - io_uring/net.c:__io_compat_recvmsg_copy_hdr
+  - io_uring/net.c:__io_recvmsg_copy_hdr
+  - io_uring/net.c:__io_recvmsg_copy_hdr
+  - io_uring/tctx.c:io_ringfd_unregister
+  - io_uring/tctx.c:io_ringfd_register
+  - io_uring/cancel.c:io_sync_cancel
+  - io_uring/kbuf.c:io_unregister_pbuf_ring
+  - io_uring/kbuf.c:io_register_pbuf_ring
+  - io_uring/rsrc.c:io_sqe_files_register
+  - io_uring/rsrc.c:io_files_update
+  - io_uring/rsrc.c:io_register_rsrc
+  - io_uring/rsrc.c:io_register_rsrc_update
+  - io_uring/rsrc.c:io_register_files_update
+  - io_uring/rsrc.c:__io_sqe_buffers_update
+  - io_uring/rsrc.c:__io_sqe_files_update
+  - io_uring/rsrc.c:__io_sqe_files_update
+  - io_uring/rsrc.c:io_rsrc_data_alloc
+  - io_uring/rsrc.c:io_copy_iov
+  - io_uring/rsrc.c:io_copy_iov
+  - io_uring/rw.c:io_prep_rw
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib-cdev.c:gpio_ioctl
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get_v1
+  - drivers/gpio/gpiolib-cdev.c:lineevent_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_ioctl_unlocked
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_config
+  - drivers/gpio/gpiolib-cdev.c:linereq_get_values
+  - drivers/gpio/gpiolib-cdev.c:linehandle_create
+  - drivers/gpio/gpiolib-cdev.c:linehandle_ioctl_unlocked
+  - drivers/gpio/gpiolib-cdev.c:linehandle_set_config
+  - drivers/pci/vgaarb.c:vga_arb_write
+  - drivers/video/fbdev/core/fbmem.c:fb_getput_cmap
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fb_io_fops.c:fb_io_write
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fb_sys_fops.c:fb_sys_write
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_ioctl.c:user_termios_to_kernel_termios_1
+  - drivers/tty/tty_ioctl.c:user_termios_to_kernel_termios
+  - drivers/tty/tty_ioctl.c:user_termio_to_kernel_termios
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_resizex
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_set_rs485_config
+  - drivers/char/mem.c:write_mem
+  - drivers/char/virtio_console.c:port_fops_write
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_import_sync_file
+  - drivers/dma-buf/dma-buf.c:dma_buf_export_sync_file
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - drivers/scsi/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_io
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/scsi_bsg.c:scsi_bsg_sg_io_fn
+  - drivers/scsi/sg.c:sg_write
+  - drivers/scsi/sg.c:sg_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_at_ioctl
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:do_proc_bulk
+  - drivers/usb/core/devio.c:do_proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_abs_setup
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:__md_set_array_info
+  - drivers/md/md.c:get_disk_info
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/platform/x86/intel/pmc/core.c:pmc_core_lpm_latch_mode_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_coredump_write
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_device_ioctl
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_cdev_write
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:move_addr_to_kernel
+  - net/core/sock.c:sock_ioctl_inout
+  - net/core/sock.c:sk_getsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/dev_ioctl.c:dev_set_hwtstamp
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_prog_test_run_xdp
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:get_phy_tunable
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_get_tunable
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_user
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_compat
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ipv4/ip_options.c:ip_options_get
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:compat_ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:tcp_repair_options_est
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_getsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/af_inet6.c:inet6_compat_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_getsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_getsockopt
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_opt_hdr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_getsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:fanout_set_data
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/mptcp/sockopt.c:mptcp_getsockopt_full_info
+  - net/mptcp/sockopt.c:mptcp_get_subflow_data
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_linger
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_int
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - arch/x86/lib/insn-eval.c:insn_fetch_from_user
+```
+**Symbols:**
+
+```
+ffffffff8181af60-ffffffff8181affb: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff818602c0)
+Location: lib/usercopy.c:11
+Inline: False
+Direct callers:
+  - arch/x86/kernel/signal_64.c:restore_sigcontext
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/sys_ia32.c:__ia32_compat_sys_ia32_mmap
+  - arch/x86/kernel/signal_32.c:ia32_restore_sigcontext
+  - arch/x86/kernel/fpu/regset.c:xstateregs_set
+  - arch/x86/kernel/fpu/xstate.c:copy_from_buffer
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioctl
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_init
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_ioc_enclave_add_pages
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/capability.c:__do_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_tgsigqueueinfo
+  - kernel/signal.c:__ia32_sys_rt_sigqueueinfo
+  - kernel/signal.c:__x64_sys_rt_sigqueueinfo
+  - kernel/signal.c:__do_sys_pidfd_send_signal
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__do_sys_prlimit64
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/build_utility.c:psi_write
+  - kernel/sched/build_utility.c:sched_dynamic_write
+  - kernel/sched/build_utility.c:sched_scaling_write
+  - kernel/sched/build_utility.c:sched_feat_write
+  - kernel/power/qos.c:cpu_latency_qos_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/entry/syscall_user_dispatch.c:syscall_user_dispatch_set_config
+  - kernel/module/main.c:__do_sys_init_module
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_compat_sys_setitimer
+  - kernel/time/itimer.c:get_itimerval
+  - kernel/futex/syscalls.c:futex_parse_waitv
+  - kernel/kexec_core.c:kimage_load_crash_segment
+  - kernel/kexec_core.c:kimage_load_normal_segment
+  - kernel/kexec.c:__do_compat_sys_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:do_seccomp
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_addfd
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/trace_hwlat.c:hwlat_mode_write
+  - kernel/trace/trace_osnoise.c:osnoise_cpus_write
+  - kernel/trace/trace_osnoise.c:osnoise_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/trace_events_user.c:user_events_ioctl_unreg
+  - kernel/trace/trace_events_user.c:user_events_ioctl_reg
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:bpf_kprobe_multi_link_attach
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__sys_bpf
+  - kernel/bpf/syscall.c:bpf_obj_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:generic_map_lookup_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_update_batch
+  - kernel/bpf/syscall.c:generic_map_delete_batch
+  - kernel/bpf/syscall.c:map_delete_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/syscall.c:map_lookup_elem
+  - kernel/bpf/verifier.c:resolve_pseudo_ldimm64
+  - kernel/bpf/verifier.c:check_core_relo
+  - kernel/bpf/verifier.c:check_btf_line
+  - kernel/bpf/verifier.c:__find_kfunc_desc_btf
+  - kernel/bpf/helpers.c:bpf_copy_from_user
+  - kernel/bpf/log.c:bpf_vlog_reverse_ubuf
+  - kernel/bpf/log.c:bpf_vlog_reverse_ubuf
+  - kernel/bpf/bpf_iter.c:bpf_iter_link_attach
+  - kernel/bpf/hashtab.c:__htab_map_lookup_and_delete_batch
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_parse
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:rseq_get_rseq_cs
+  - kernel/watch_queue.c:watch_queue_set_filter
+  - mm/filemap.c:__ia32_sys_cachestat
+  - mm/filemap.c:__x64_sys_cachestat
+  - mm/vmscan.c:lru_gen_seq_write
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_folio_from_user
+  - mm/memory.c:copy_folio_from_user
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/huge_memory.c:split_huge_pages_write
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/memfd.c:__do_sys_memfd_create
+  - fs/open.c:__ia32_sys_openat2
+  - fs/open.c:__x64_sys_openat2
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__do_sys_copy_file_range
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_compat_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:compat_ioctl_preallocate
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/namespace.c:copy_mnt_id_req
+  - fs/namespace.c:__ia32_sys_mount_setattr
+  - fs/namespace.c:__x64_sys_mount_setattr
+  - fs/namespace.c:copy_mount_options
+  - fs/libfs.c:simple_transaction_get
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/splice.c:__do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_move
+  - fs/userfaultfd.c:userfaultfd_poison
+  - fs/userfaultfd.c:userfaultfd_continue
+  - fs/userfaultfd.c:userfaultfd_writeprotect
+  - fs/userfaultfd.c:userfaultfd_zeropage
+  - fs/userfaultfd.c:userfaultfd_copy
+  - fs/userfaultfd.c:userfaultfd_unregister
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/read_metadata.c:fsverity_ioctl_read_metadata
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:handle_to_path
+  - fs/fhandle.c:do_sys_name_to_handle
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:do_pagemap_scan
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:__ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl_getuuid
+  - fs/ext4/ioctl.c:ext4_ioctl_setlabel
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_write
+  - fs/debugfs/file.c:debugfs_write_file_str
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__do_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/security.c:security_getselfattr
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:listener_ioctl
+  - security/apparmor/apparmorfs.c:notify_set_filter
+  - security/apparmor/apparmorfs.c:notify_set_filter
+  - security/landlock/syscalls.c:add_rule_net_port
+  - security/landlock/syscalls.c:add_rule_path_beneath
+  - security/landlock/syscalls.c:__do_sys_landlock_create_ruleset
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_common_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blkpg_do_ioctl
+  - block/bsg.c:bsg_sg_io
+  - block/blk-zoned.c:blkdev_zone_mgmt_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:generic_table_write_data
+  - io_uring/io_uring.c:io_uring_setup
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/filetable.c:io_register_file_alloc_range
+  - io_uring/openclose.c:io_openat2_prep
+  - io_uring/epoll.c:io_epoll_ctl_prep
+  - io_uring/tctx.c:io_ringfd_unregister
+  - io_uring/tctx.c:io_ringfd_register
+  - io_uring/cancel.c:io_sync_cancel
+  - io_uring/kbuf.c:io_register_pbuf_status
+  - io_uring/kbuf.c:io_unregister_pbuf_ring
+  - io_uring/kbuf.c:io_register_pbuf_ring
+  - io_uring/rsrc.c:io_sqe_files_register
+  - io_uring/rsrc.c:io_files_update
+  - io_uring/rsrc.c:io_register_rsrc
+  - io_uring/rsrc.c:io_register_rsrc_update
+  - io_uring/rsrc.c:io_register_files_update
+  - io_uring/rsrc.c:__io_sqe_buffers_update
+  - io_uring/rsrc.c:__io_sqe_files_update
+  - io_uring/rsrc.c:__io_sqe_files_update
+  - io_uring/rsrc.c:io_rsrc_data_alloc
+  - io_uring/rsrc.c:io_copy_iov
+  - io_uring/rsrc.c:io_copy_iov
+  - io_uring/rw.c:io_prep_rwv
+  - io_uring/register.c:io_register_iowq_max_workers
+  - io_uring/register.c:io_register_iowq_aff
+  - io_uring/register.c:io_eventfd_register
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib-cdev.c:gpio_ioctl
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get
+  - drivers/gpio/gpiolib-cdev.c:lineinfo_get_v1
+  - drivers/gpio/gpiolib-cdev.c:lineevent_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_create
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_config
+  - drivers/gpio/gpiolib-cdev.c:linereq_set_values
+  - drivers/gpio/gpiolib-cdev.c:linereq_get_values
+  - drivers/gpio/gpiolib-cdev.c:linehandle_create
+  - drivers/gpio/gpiolib-cdev.c:linehandle_ioctl
+  - drivers/gpio/gpiolib-cdev.c:linehandle_set_config
+  - drivers/pci/vgaarb.c:vga_arb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fb_chrdev.c:fb_getput_cmap
+  - drivers/video/fbdev/core/fb_chrdev.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fb_chrdev.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fb_chrdev.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fb_chrdev.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fb_io_fops.c:fb_io_write
+  - drivers/video/fbdev/core/fb_sys_fops.c:fb_sys_write
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_ioctl.c:user_termios_to_kernel_termios_1
+  - drivers/tty/tty_ioctl.c:user_termios_to_kernel_termios
+  - drivers/tty/tty_ioctl.c:user_termio_to_kernel_termios
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_resizex
+  - drivers/tty/vt/vt_ioctl.c:vt_io_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_k_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_set_rs485_config
+  - drivers/char/mem.c:write_mem
+  - drivers/char/virtio_console.c:port_fops_write
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/iommu/intel/nested.c:intel_nested_domain_alloc
+  - drivers/iommu/intel/nested.c:intel_nested_cache_invalidate_user
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:lo_ioctl
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_import_sync_file
+  - drivers/dma-buf/dma-buf.c:dma_buf_export_sync_file
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/dma-heap.c:dma_heap_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - drivers/scsi/scsi_ioctl.c:scsi_get_cdrom_generic_arg
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:get_sg_io_hdr
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_scsi_ioctl
+  - drivers/scsi/scsi_ioctl.c:sg_io
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/scsi/scsi_bsg.c:scsi_bsg_sg_io_fn
+  - drivers/scsi/sg.c:sg_write
+  - drivers/scsi/sg.c:sg_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/drm/drm_atomic_uapi.c:drm_mode_atomic_ioctl
+  - drivers/gpu/drm/drm_color_mgmt.c:drm_mode_gamma_set_ioctl
+  - drivers/gpu/drm/drm_color_mgmt.c:drm_mode_gamma_set_ioctl
+  - drivers/gpu/drm/drm_color_mgmt.c:drm_mode_gamma_set_ioctl
+  - drivers/gpu/drm/drm_framebuffer.c:drm_mode_dirtyfb_ioctl
+  - drivers/gpu/drm/drm_gem.c:drm_gem_objects_lookup
+  - drivers/gpu/drm/drm_ioctl.c:drm_ioctl
+  - drivers/gpu/drm/drm_property.c:drm_mode_createblob_ioctl
+  - drivers/gpu/drm/drm_syncobj.c:drm_syncobj_timeline_signal_ioctl
+  - drivers/gpu/drm/drm_syncobj.c:drm_syncobj_array_find
+  - drivers/gpu/drm/drm_ioc32.c:compat_drm_mode_addfb2
+  - drivers/gpu/drm/drm_ioc32.c:compat_drm_mode_addfb2
+  - drivers/gpu/drm/drm_ioc32.c:compat_drm_wait_vblank
+  - drivers/gpu/drm/drm_ioc32.c:compat_drm_getclient
+  - drivers/gpu/drm/drm_ioc32.c:compat_drm_getunique
+  - drivers/gpu/drm/drm_ioc32.c:compat_drm_version
+  - drivers/gpu/drm/drm_debugfs.c:connector_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/phy/phy.c:phy_mii_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/tun.c:update_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_compat_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_ioctl
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:do_proc_bulk
+  - drivers/usb/core/devio.c:do_proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_abs_setup
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:__md_set_array_info
+  - drivers/md/md.c:get_disk_info
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/md/dm-ioctl.c:copy_params
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_coredump_write
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_device_ioctl
+  - drivers/remoteproc/remoteproc_cdev.c:rproc_cdev_write
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:get_user_ifreq
+  - net/socket.c:__do_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:move_addr_to_kernel
+  - net/core/sock.c:sock_ioctl_inout
+  - net/core/sock.c:sk_getsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sk_setsockopt
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/sock.c:sock_copy_user_timeval
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/filter.c:copy_bpf_fprog_from_user
+  - net/core/dev_ioctl.c:dev_set_hwtstamp
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/core/dev_ioctl.c:dev_ifconf
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_prog_test_run_xdp
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/bpf/bpf_dummy_struct_ops.c:bpf_struct_ops_test_run
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:__dev_ethtool
+  - net/ethtool/ioctl.c:get_phy_tunable
+  - net/ethtool/ioctl.c:ethtool_set_per_queue
+  - net/ethtool/ioctl.c:ethtool_set_per_queue_coalesce
+  - net/ethtool/ioctl.c:ethtool_get_dump_data
+  - net/ethtool/ioctl.c:ethtool_get_phy_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_get_stats
+  - net/ethtool/ioctl.c:ethtool_phys_id
+  - net/ethtool/ioctl.c:ethtool_self_test
+  - net/ethtool/ioctl.c:ethtool_set_channels
+  - net/ethtool/ioctl.c:ethtool_set_coalesce
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_eeprom
+  - net/ethtool/ioctl.c:ethtool_get_any_eeprom
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh
+  - net/ethtool/ioctl.c:ethtool_get_rxfh
+  - net/ethtool/ioctl.c:ethtool_set_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_get_rxfh_indir
+  - net/ethtool/ioctl.c:ethtool_copy_validate_indir
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_user
+  - net/ethtool/ioctl.c:ethtool_rxnfc_copy_from_compat
+  - net/ethtool/ioctl.c:ethtool_get_sset_info
+  - net/ethtool/ioctl.c:ethtool_set_settings
+  - net/ethtool/ioctl.c:ethtool_set_link_ksettings
+  - net/ethtool/ioctl.c:ethtool_get_link_ksettings
+  - net/ethtool/ioctl.c:load_link_ksettings_from_user
+  - net/ipv4/ip_options.c:ip_options_get
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_get_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_setsockopt
+  - net/ipv4/ip_sockglue.c:compat_ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:ip_mcast_join_leave
+  - net/ipv4/ip_sockglue.c:compat_ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:ip_set_mcast_msfilter
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/ip_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_getsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:do_tcp_setsockopt
+  - net/ipv4/tcp.c:tcp_repair_options_est
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_compat_routing_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_getsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/tcp_ao.c:copy_struct_from_sockptr
+  - net/xfrm/xfrm_state.c:xfrm_user_policy
+  - net/ipv6/af_inet6.c:inet6_compat_ioctl
+  - net/ipv6/af_inet6.c:inet6_ioctl
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_getsockopt
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_getsockopt
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_get_msfilter
+  - net/ipv6/ipv6_sockglue.c:do_ipv6_setsockopt
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_opt_hdr
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:ipv6_mcast_join_leave
+  - net/ipv6/ipv6_sockglue.c:compat_ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:ipv6_set_mcast_msfilter
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/ipv6_sockglue.c:copy_group_source_from_sockptr
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/raw.c:rawv6_setsockopt
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_getsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:fanout_set_data
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/mptcp/sockopt.c:mptcp_getsockopt_full_info
+  - net/mptcp/sockopt.c:mptcp_get_subflow_data
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_tcp
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_linger
+  - net/mptcp/sockopt.c:mptcp_setsockopt_sol_socket_int
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - net/mctp/af_mctp.c:mctp_ioctl
+  - arch/x86/lib/insn-eval.c:insn_fetch_from_user
+```
+**Symbols:**
+
+```
+ffffffff818602c0-ffffffff81860340: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Duplicate, Selective Inline, Transformation ⚠️</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Static Duplication
+
+**Inline:** Selective
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In arch/arm64/kernel/ptrace.c (ffff80001008f26c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - arch/arm64/kernel/ptrace.c:compat_gpr_set
+```
+```
+In arch/arm64/kernel/signal32.c (ffff80001009f154)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - arch/arm64/kernel/signal32.c:compat_restore_sigframe
+```
+```
+In virt/kvm/kvm_main.c (ffff8000100b79b0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_vm_ioctl
+  - virt/kvm/kvm_main.c:kvm_device_ioctl_attr
+  - virt/kvm/kvm_main.c:kvm_vcpu_ioctl
+  - virt/kvm/kvm_main.c:kvm_vcpu_ioctl
+  - virt/kvm/kvm_main.c:kvm_vcpu_ioctl
+  - virt/kvm/kvm_main.c:kvm_vcpu_ioctl
+  - virt/kvm/kvm_main.c:kvm_vcpu_ioctl
+  - virt/kvm/kvm_main.c:kvm_clear_dirty_log_protect
+```
+```
+In virt/kvm/arm/arm.c (ffff8000100c3140)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - virt/kvm/arm/arm.c:kvm_arch_vm_ioctl
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl
+```
+```
+In virt/kvm/arm/psci.c (ffff8000100ced64)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - virt/kvm/arm/psci.c:kvm_arm_set_fw_reg
+```
+```
+In arch/arm64/kvm/guest.c (ffff8000100d1d70)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - arch/arm64/kvm/guest.c:kvm_arm_set_reg
+  - arch/arm64/kvm/guest.c:kvm_arm_set_reg
+  - arch/arm64/kvm/guest.c:kvm_arm_set_reg
+  - arch/arm64/kvm/guest.c:kvm_arm_set_reg
+```
+```
+In arch/arm64/kvm/sys_regs.c (ffff8000100d7dd8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - arch/arm64/kvm/sys_regs.c:reg_from_user
+  - arch/arm64/kvm/sys_regs.c:set_wcr
+  - arch/arm64/kvm/sys_regs.c:set_wvr
+  - arch/arm64/kvm/sys_regs.c:set_bcr
+  - arch/arm64/kvm/sys_regs.c:set_bvr
+```
+```
+In virt/kvm/arm/vgic/vgic-kvm-device.c (ffff8000100e5c18)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In virt/kvm/arm/vgic/vgic-its.c (ffff8000100e97cc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - virt/kvm/arm/vgic/vgic-its.c:vgic_its_set_attr
+```
+```
+In kernel/fork.c (ffff8000100f2054)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/fork.c:copy_clone_args_from_user
+```
+```
+In kernel/sysctl_binary.c (ffff80001010554c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/sysctl_binary.c:__arm64_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__arm64_sys_sysctl
+```
+```
+In kernel/capability.c (ffff80001010644c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/capability.c:__arm64_sys_capset
+```
+```
+In kernel/ptrace.c (ffff8000101074d4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+Direct callers:
+  - kernel/ptrace.c:ptrace_request
+```
+```
+In kernel/signal.c (ffff80001010e568)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/signal.c:__arm64_sys_rt_sigsuspend
+  - kernel/signal.c:__arm64_sys_sigprocmask
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__arm64_sys_sigaltstack
+  - kernel/signal.c:__arm64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__arm64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:set_user_sigmask
+Direct callers:
+  - kernel/signal.c:__arm64_sys_rt_sigaction
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:__arm64_sys_rt_sigprocmask
+```
+```
+In kernel/sys.c (ffff8000101157f4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__arm64_sys_setrlimit
+  - kernel/sys.c:__arm64_sys_prlimit64
+  - kernel/sys.c:__arm64_compat_sys_setrlimit
+  - kernel/sys.c:__arm64_sys_setdomainname
+  - kernel/sys.c:__arm64_sys_sethostname
+Direct callers:
+  - kernel/sys.c:prctl_set_mm_map
+```
+```
+In kernel/sched/core.c (ffff8000101354e0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/sched/core.c:__arm64_sys_sched_setaffinity
+  - kernel/sched/core.c:__arm64_sys_sched_setattr
+  - kernel/sched/core.c:__arm64_sys_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+```
+```
+In kernel/sched/debug.c (ffff800010160bcc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/sched/debug.c:sched_feat_write
+```
+```
+In kernel/sched/psi.c (ffff8000101680e4)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In kernel/power/qos.c (ffff80001016d7c0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/power/qos.c:pm_qos_power_write
+```
+```
+In kernel/kcmp.c (ffff800010197964)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/kcmp.c:kcmp_epoll_target
+```
+```
+In kernel/profile.c (ffff800010199430)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/profile.c:write_profile
+```
+```
+In kernel/time/time.c (ffff80001019a790)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__arm64_compat_sys_settimeofday
+  - kernel/time/time.c:__arm64_compat_sys_settimeofday
+  - kernel/time/time.c:__arm64_sys_settimeofday
+  - kernel/time/time.c:__arm64_sys_settimeofday
+  - kernel/time/time.c:__arm64_sys_settimeofday
+```
+```
+In kernel/time/posix-timers.c (ffff8000101ab660)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__arm64_sys_timer_create
+```
+```
+In kernel/time/itimer.c (ffff8000101b0048)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/time/itimer.c:__arm64_sys_setitimer
+```
+```
+In kernel/module.c (ffff8000101c1350)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/module.c:copy_chunked_from_user
+```
+```
+In kernel/kexec_core.c (ffff8000101c8b58)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+```
+```
+In kernel/kexec.c (ffff8000101c9e88)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/kexec.c:__arm64_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+```
+```
+In kernel/compat.c (ffff8000101cc424)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+```
+```
+In kernel/user_namespace.c (ffff8000101e6d44)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/user_namespace.c:proc_setgroups_write
+```
+```
+In kernel/kprobes.c (ffff8000101f8078)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/kprobes.c:write_enabled_file_bool
+```
+```
+In kernel/seccomp.c (ffff800010208c30)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+```
+```
+In kernel/trace/trace.c (ffff8000102221a0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+```
+```
+In kernel/trace/blktrace.c (ffff800010236a04)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/trace/blktrace.c:__blk_trace_setup
+```
+```
+In kernel/trace/bpf_trace.c (ffff80001024e96c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+```
+```
+In kernel/trace/trace_uprobe.c (ffff8000102595f0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+```
+```
+In kernel/bpf/syscall.c (ffff800010264ea4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:map_update_elem
+Direct callers:
+  - kernel/bpf/syscall.c:bpf_prog_load
+```
+```
+In kernel/bpf/verifier.c (ffff800010269520)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+```
+```
+In kernel/bpf/btf.c (ffff8000102837e8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+```
+```
+In kernel/bpf/cgroup.c (ffff80001028d518)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+```
+```
+In kernel/events/core.c (ffff800010296e40)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+```
+```
+In kernel/rseq.c (ffff8000102ac778)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+```
+```
+In mm/shmem.c (ffff8000102d33b8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/shmem.c:shmem_mfill_atomic_pte
+```
+```
+In mm/util.c (ffff8000102d8470)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+```
+```
+In mm/memory.c (ffff8000102fc1f0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/memory.c:copy_huge_page_from_user
+```
+```
+In mm/mempolicy.c (ffff800010339d6c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/mempolicy.c:__arm64_compat_sys_get_mempolicy
+Direct callers:
+  - mm/mempolicy.c:get_nodes
+```
+```
+In mm/migrate.c (ffff80001034eb40)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/migrate.c:do_pages_stat
+```
+```
+In mm/userfaultfd.c (ffff800010377e10)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic_pte
+```
+```
+In mm/memfd.c (ffff80001037c1e4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/memfd.c:__arm64_sys_memfd_create
+```
+```
+In fs/read_write.c (ffff800010383a10)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/read_write.c:__arm64_sys_copy_file_range
+  - fs/read_write.c:__arm64_sys_copy_file_range
+  - fs/read_write.c:__arm64_compat_sys_sendfile64
+  - fs/read_write.c:__arm64_sys_sendfile64
+Direct callers:
+  - fs/read_write.c:rw_copy_check_uvector
+```
+```
+In fs/exec.c (ffff80001038d8c8)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In fs/fcntl.c (ffff80001039b790)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+```
+```
+In fs/ioctl.c (ffff80001039e070)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/ioctl.c:ioctl_preallocate
+Direct callers:
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+```
+```
+In fs/select.c (ffff8000103a3acc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/select.c:__arm64_compat_sys_old_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:__arm64_sys_select
+Direct callers:
+  - fs/select.c:do_compat_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+```
+```
+In fs/xattr.c (ffff8000103bef44)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/xattr.c:setxattr
+```
+```
+In fs/libfs.c (ffff8000103c0b70)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+```
+```
+In fs/splice.c (ffff8000103cea88)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+```
+```
+In fs/notify/fanotify/fanotify_user.c (ffff8000103ef108)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+```
+```
+In fs/eventpoll.c (ffff8000103f1d24)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/eventpoll.c:__do_sys_epoll_ctl
+```
+```
+In fs/signalfd.c (ffff8000103f38b0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - fs/signalfd.c:__arm64_sys_signalfd
+  - fs/signalfd.c:__arm64_sys_signalfd4
+```
+```
+In fs/timerfd.c (ffff8000103f52c4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/timerfd.c:timerfd_ioctl
+```
+```
+In fs/eventfd.c (ffff8000103f62d4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/eventfd.c:eventfd_write
+```
+```
+In fs/userfaultfd.c (ffff8000103f7c20)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_register
+```
+```
+In fs/aio.c (ffff8000103fcc74)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/aio.c:__arm64_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__arm64_compat_sys_io_pgetevents
+  - fs/aio.c:__arm64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+```
+```
+In fs/io_uring.c (ffff800010401fb0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/io_uring.c:__arm64_sys_io_uring_register
+  - fs/io_uring.c:__arm64_sys_io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+```
+```
+In fs/crypto/keyring.c (ffff80001040d078)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+```
+```
+In fs/crypto/policy.c (ffff80001040fdc8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+```
+```
+In fs/verity/enable.c (ffff8000104113f0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+```
+```
+In fs/binfmt_elf.c (ffff800010420108)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In fs/compat_binfmt_elf.c (ffff8000104219b4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/compat_binfmt_elf.c:fill_psinfo
+```
+```
+In fs/fhandle.c (ffff800010429258)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:__arm64_sys_name_to_handle_at
+```
+```
+In fs/quota/quota.c (ffff800010435890)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+```
+```
+In fs/proc/task_mmu.c (ffff8000104390a0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/proc/task_mmu.c:clear_refs_write
+```
+```
+In fs/proc/base.c (ffff80001043f2e0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+```
+```
+In fs/kernfs/file.c (ffff8000104554b8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/kernfs/file.c:kernfs_fop_write
+```
+```
+In fs/configfs/file.c (ffff8000104595dc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/configfs/file.c:configfs_write_file
+```
+```
+In fs/ext4/ioctl.c (ffff80001048aef8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+```
+```
+In fs/fat/file.c (ffff8000104eb358)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/fat/file.c:fat_generic_ioctl
+```
+```
+In fs/ecryptfs/miscdev.c (ffff8000104fdb80)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In fs/efivarfs/file.c (ffff80001051ba90)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+```
+```
+In ipc/compat.c (ffff80001051c6f0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+```
+```
+In ipc/msgutil.c (ffff80001051e0c8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+```
+```
+In ipc/msg.c (ffff80001051ff60)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In ipc/sem.c (ffff8000105223a8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+```
+```
+In ipc/shm.c (ffff800010526bd0)
+Location: include/linux/uaccess.h:107
+Inline: False
+```
+```
+In ipc/mqueue.c (ffff800010529e38)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__arm64_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__arm64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__arm64_sys_mq_open
+```
+```
+In security/keys/keyctl.c (ffff800010531bb0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__arm64_sys_add_key
+```
+```
+In security/keys/compat_dh.c (ffff8000105370b0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+```
+```
+In security/keys/dh.c (ffff800010538008)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+```
+```
+In security/keys/keyctl_pkey.c (ffff800010538de0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+```
+```
+In security/selinux/selinuxfs.c (ffff800010556ac4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/selinux/selinuxfs.c:sel_write_load
+```
+```
+In security/smack/smackfs.c (ffff800010576328)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+```
+```
+In security/apparmor/apparmorfs.c (ffff80001058ae48)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - security/apparmor/apparmorfs.c:aa_write_access
+```
+```
+In block/ioctl.c (ffff8000105f7c30)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+```
+```
+In block/scsi_ioctl.c (ffff800010607d10)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+```
+```
+In block/bsg.c (ffff80001060a078)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/bsg.c:bsg_scsi_fill_hdr
+Direct callers:
+  - block/bsg.c:bsg_sg_io
+```
+```
+In block/blk-zoned.c (ffff80001061f9d8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+```
+```
+In block/blk-mq-debugfs.c (ffff800010623b8c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/blk-mq-debugfs.c:queue_state_write
+```
+```
+In block/sed-opal.c (ffff800010628688)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/sed-opal.c:write_shadow_mbr
+```
+```
+In lib/kfifo.c (ffff800010634428)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+```
+```
+In lib/kstrtox.c (ffff800010639b10)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+```
+```
+In drivers/gpio/gpiolib.c (ffff8000106c05c0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+```
+```
+In drivers/video/fbdev/core/fbmem.c (ffff800010744094)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+Direct callers:
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+```
+```
+In drivers/video/fbdev/core/fbcmap.c (ffff800010748c40)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+```
+```
+In drivers/video/fbdev/core/fbcon.c (ffff80001074f5d8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+```
+```
+In drivers/video/fbdev/imsttfb.c (ffff80001075a038)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+```
+```
+In drivers/xen/xenbus/xenbus_dev_frontend.c (ffff80001083a854)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+```
+```
+In drivers/tty/tty_io.c (ffff800010850d20)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_write
+Direct callers:
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+```
+```
+In drivers/tty/tty_ioctl.c (ffff80001085989c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/tty_ioctl.c:user_termio_to_kernel_termios
+Direct callers:
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+```
+```
+In drivers/tty/vt/vt_ioctl.c (ffff800010865418)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+```
+```
+In drivers/tty/vt/vc_screen.c (ffff800010867cbc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/vc_screen.c:vcs_write
+```
+```
+In drivers/tty/vt/selection.c (ffff8000108693c8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+```
+```
+In drivers/tty/vt/keyboard.c (ffff80001086d9ac)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+Direct callers:
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+```
+```
+In drivers/tty/vt/consolemap.c (ffff80001086fb08)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+```
+```
+In drivers/tty/vt/vt.c (ffff8000108768a0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/vt.c:con_set_cmap
+```
+```
+In drivers/tty/serial/serial_core.c (ffff80001087f418)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+```
+```
+In drivers/char/mem.c (ffff8000108ab254)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/char/mem.c:write_mem
+```
+```
+In drivers/char/random.c (ffff8000108ae1e8)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In drivers/char/virtio_console.c (ffff8000108b5c28)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In drivers/char/tpm/tpm-dev-common.c (ffff8000108b8c84)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+```
+```
+In drivers/lightnvm/core.c (ffff8000108dffd0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+```
+```
+In drivers/block/loop.c (ffff800010923a08)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+```
+```
+In drivers/mfd/ab3100-core.c (ffff80001094a4dc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+```
+```
+In drivers/mfd/aat2870-core.c (ffff80001094c6fc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+```
+```
+In drivers/nvdimm/bus.c (ffff800010951718)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+```
+```
+In drivers/dma-buf/dma-buf.c (ffff800010966100)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+```
+```
+In drivers/dma-buf/sync_file.c (ffff80001096a4c8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+```
+```
+In drivers/dma-buf/sw_sync.c (ffff80001096b5b0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+```
+```
+In drivers/dma-buf/udmabuf.c (ffff80001096cd88)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+```
+```
+In drivers/scsi/scsi_devinfo.c (ffff800010980c2c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+```
+```
+In drivers/scsi/scsi_proc.c (ffff8000109814b8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+```
+```
+In drivers/ata/libata-scsi.c (ffff8000109a4f88)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+```
+```
+In drivers/gpu/vga/vgaarb.c (ffff8000109c0580)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+```
+```
+In drivers/net/tun.c (ffff8000109dbc20)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+```
+```
+In drivers/net/ethernet/freescale/fec_ptp.c (ffff8000109ecdc0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/net/ethernet/freescale/fec_ptp.c:fec_ptp_set
+```
+```
+In drivers/net/ppp/ppp_generic.c (ffff800010a00c10)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+Direct callers:
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+```
+```
+In drivers/cdrom/cdrom.c (ffff800010a0d620)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+```
+```
+In drivers/usb/core/devio.c (ffff800010a307f8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+Direct callers:
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+```
+```
+In drivers/usb/host/xhci-debugfs.c (ffff800010a8fd04)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+```
+```
+In drivers/input/input-compat.c (ffff800010a99308)
+Location: include/linux/uaccess.h:107
+Inline: False
+```
+```
+In drivers/input/evdev.c (ffff800010a9e480)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+Direct callers:
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+```
+```
+In drivers/input/misc/uinput.c (ffff800010aa4b78)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+```
+```
+In drivers/rtc/dev.c (ffff800010aaa568)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+```
+```
+In drivers/i2c/i2c-dev.c (ffff800010ab77c8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+```
+```
+In drivers/media/cec/cec-api.c (ffff800010ac26d8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+```
+```
+In drivers/pps/pps.c (ffff800010ac58a8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+```
+```
+In drivers/ptp/ptp_chardev.c (ffff800010ac7798)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+```
+```
+In drivers/md/md.c (ffff800010ae7760)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+```
+```
+In drivers/md/dm-ioctl.c (ffff800010b08f88)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+```
+```
+In drivers/mmc/core/block.c (ffff800010b42168)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/mmc/core/block.c:mmc_blk_ioctl_copy_from_user
+Direct callers:
+  - drivers/mmc/core/block.c:mmc_blk_ioctl_multi_cmd
+```
+```
+In drivers/remoteproc/remoteproc_debugfs.c (ffff800010b82720)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+```
+```
+In net/socket.c (ffff800010ba5378)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_sioc_ifmap
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+Direct callers:
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:sock_ioctl
+```
+```
+In net/core/sock.c (ffff800010babda0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+```
+```
+In net/core/ethtool.c (ffff800010bd9968)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+```
+```
+In net/core/filter.c (ffff800010bfcd68)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+```
+```
+In net/core/dev_ioctl.c (ffff800010c03f18)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In net/compat.c (ffff800010c32ed8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+```
+```
+In net/bpf/test_run.c (ffff800010c52b90)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/bpf/test_run.c:bpf_ctx_init
+```
+```
+In net/ipv4/ip_options.c (ffff800010c61760)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+```
+```
+In net/ipv4/ip_sockglue.c (ffff800010c660d8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+```
+```
+In net/ipv4/tcp.c (ffff800010c6ffa8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/tcp.c:tcp_repair_options_est
+```
+```
+In net/ipv4/tcp_ipv4.c (ffff800010c8b69c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+```
+```
+In net/ipv4/raw.c (ffff800010c96f4c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/raw.c:raw_seticmpfilter
+```
+```
+In net/ipv4/arp.c (ffff800010ca3018)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/arp.c:arp_ioctl
+```
+```
+In net/ipv4/af_inet.c (ffff800010cabd48)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+```
+```
+In net/ipv4/fib_frontend.c (ffff800010cb4040)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+```
+```
+In net/ipv4/ipmr.c (ffff800010cc9a70)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+```
+```
+In net/ipv6/addrconf.c (ffff800010d00140)
+Location: include/linux/uaccess.h:107
+Inline: True
+Direct callers:
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+```
+```
+In net/ipv6/route.c (ffff800010d16a40)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv6/route.c:ipv6_route_ioctl
+```
+```
+In net/ipv6/ipv6_sockglue.c (ffff800010d1c410)
+Location: include/linux/uaccess.h:107
+Inline: False
+```
+```
+In net/ipv6/raw.c (ffff800010d28938)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In net/ipv6/tcp_ipv6.c (ffff800010d36d44)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+```
+```
+In net/ipv6/ip6_flowlabel.c (ffff800010d3e9d8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+```
+```
+In net/ipv6/ip6mr.c (ffff800010d432d8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+```
+```
+In net/packet/af_packet.c (ffff800010d579b8)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+```
+```
+In net/wireless/wext-core.c (ffff800010d611b0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+```
+```
+In net/wireless/wext-priv.c (ffff800010d626e0)
+Location: include/linux/uaccess.h:107
+Inline: False
+```
+```
+In net/rfkill/core.c (ffff800010d6cf1c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/rfkill/core.c:rfkill_fop_write
+```
+```
+In net/xdp/xsk.c (ffff800010d7f5b0)
+Location: include/linux/uaccess.h:107
+Inline: False
+Direct callers:
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffff8000100b79b0-ffff8000100b7b5c: _copy_from_user (STB_LOCAL)
+ffff8000100c3140-ffff8000100c32d8: _copy_from_user (STB_LOCAL)
+ffff8000100d1d70-ffff8000100d1f1c: _copy_from_user (STB_LOCAL)
+ffff8000100d7dd8-ffff8000100d7f70: _copy_from_user (STB_LOCAL)
+ffff8000101072f8-ffff800010107490: _copy_from_user (STB_LOCAL)
+ffff80001010bca0-ffff80001010bd98: _copy_from_user (STB_LOCAL)
+ffff8000101155f8-ffff8000101157a4: _copy_from_user (STB_LOCAL)
+ffff8000101354e0-ffff800010135684: _copy_from_user (STB_LOCAL)
+ffff80001019a790-ffff80001019a928: _copy_from_user (STB_LOCAL)
+ffff8000101ab660-ffff8000101ab7f8: _copy_from_user (STB_LOCAL)
+ffff8000101c8b58-ffff8000101c8d04: _copy_from_user (STB_LOCAL)
+ffff8000101c9e88-ffff8000101ca034: _copy_from_user (STB_LOCAL)
+ffff800010208c30-ffff800010208dc8: _copy_from_user (STB_LOCAL)
+ffff8000102221a0-ffff80001022234c: _copy_from_user (STB_LOCAL)
+ffff8000102595f0-ffff80001025979c: _copy_from_user (STB_LOCAL)
+ffff800010260180-ffff80001026032c: _copy_from_user (STB_LOCAL)
+ffff8000102837e8-ffff800010283994: _copy_from_user (STB_LOCAL)
+ffff80001028d518-ffff80001028d6c4: _copy_from_user (STB_LOCAL)
+ffff800010296e40-ffff800010296fe8: _copy_from_user (STB_LOCAL)
+ffff8000102d8470-ffff8000102d861c: _copy_from_user (STB_LOCAL)
+ffff800010337820-ffff8000103379cc: _copy_from_user (STB_LOCAL)
+ffff800010377e10-ffff800010377fb4: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff800010380df8-ffff800010380f90: _copy_from_user (STB_LOCAL)
+ffff80001039b790-ffff80001039b928: _copy_from_user (STB_LOCAL)
+ffff80001039d968-ffff80001039db00: _copy_from_user (STB_LOCAL)
+ffff8000103a2088-ffff8000103a2234: _copy_from_user (STB_LOCAL)
+ffff8000103c0b70-ffff8000103c0d1c: _copy_from_user (STB_LOCAL)
+ffff8000103cea88-ffff8000103cec20: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff8000103f38b0-ffff8000103f3a48: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff8000103f7c20-ffff8000103f7db8: _copy_from_user (STB_LOCAL)
+ffff800010401fb0-ffff800010402148: _copy_from_user (STB_LOCAL)
+ffff80001040d078-ffff80001040d224: _copy_from_user (STB_LOCAL)
+ffff80001040fdc8-ffff80001040ff60: _copy_from_user (STB_LOCAL)
+ffff8000104113f0-ffff800010411588: _copy_from_user (STB_LOCAL)
+ffff800010429258-ffff800010429404: _copy_from_user (STB_LOCAL)
+ffff800010435890-ffff800010435a28: _copy_from_user (STB_LOCAL)
+ffff80001043f2e0-ffff80001043f48c: _copy_from_user (STB_LOCAL)
+ffff80001048aef8-ffff80001048b090: _copy_from_user (STB_LOCAL)
+ffff80001051ba90-ffff80001051bc28: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff80001051c6f0-ffff80001051c888: _copy_from_user (STB_LOCAL)
+ffff80001051e0c8-ffff80001051e274: _copy_from_user (STB_LOCAL)
+ffff8000105223a8-ffff800010522554: _copy_from_user (STB_LOCAL)
+ffff800010526bd0-ffff800010526d68: _copy_from_user (STB_LOCAL)
+ffff800010529e38-ffff800010529fd0: _copy_from_user (STB_LOCAL)
+ffff800010531bb0-ffff800010531d5c: _copy_from_user (STB_LOCAL)
+ffff800010538008-ffff8000105381b4: _copy_from_user (STB_LOCAL)
+ffff800010576328-ffff8000105764d4: _copy_from_user (STB_LOCAL)
+ffff80001058ae48-ffff80001058aff4: _copy_from_user (STB_LOCAL)
+ffff8000105f7c30-ffff8000105f7dc8: _copy_from_user (STB_LOCAL)
+ffff800010607d10-ffff800010607ebc: _copy_from_user (STB_LOCAL)
+ffff800010609b28-ffff800010609cd4: _copy_from_user (STB_LOCAL)
+ffff80001061f9d8-ffff80001061fb70: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff800010634428-ffff8000106345d4: _copy_from_user (STB_LOCAL)
+ffff800010639b10-ffff800010639cbc: _copy_from_user (STB_LOCAL)
+ffff8000106c05c0-ffff8000106c0758: _copy_from_user (STB_LOCAL)
+ffff8000107442e0-ffff800010744478: _copy_from_user (STB_LOCAL)
+ffff800010748c40-ffff800010748dec: _copy_from_user (STB_LOCAL)
+ffff80001074f5d8-ffff80001074f770: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff80001075a038-ffff80001075a1d0: _copy_from_user (STB_LOCAL)
+ffff8000108509e8-ffff800010850b94: _copy_from_user (STB_LOCAL)
+ffff8000108596c8-ffff800010859860: _copy_from_user (STB_LOCAL)
+ffff800010865418-ffff8000108655b0: _copy_from_user (STB_LOCAL)
+ffff8000108693c8-ffff800010869560: _copy_from_user (STB_LOCAL)
+ffff80001086aba8-ffff80001086ad40: _copy_from_user (STB_LOCAL)
+ffff80001086fb08-ffff80001086fca0: _copy_from_user (STB_LOCAL)
+ffff80001087f418-ffff80001087f5b0: _copy_from_user (STB_LOCAL)
+ffff8000108dffd0-ffff8000108e0168: _copy_from_user (STB_LOCAL)
+ffff800010923a08-ffff800010923ba0: _copy_from_user (STB_LOCAL)
+ffff800010951718-ffff8000109518c4: _copy_from_user (STB_LOCAL)
+ffff80001096a4c8-ffff80001096a660: _copy_from_user (STB_LOCAL)
+ffff80001096b5b0-ffff80001096b748: _copy_from_user (STB_LOCAL)
+ffff80001096cd88-ffff80001096cf20: _copy_from_user (STB_LOCAL)
+ffff8000109814b8-ffff800010981664: _copy_from_user (STB_LOCAL)
+ffff8000109dbc20-ffff8000109dbdcc: _copy_from_user (STB_LOCAL)
+ffff8000109ff1d0-ffff8000109ff37c: _copy_from_user (STB_LOCAL)
+ffff800010a0d620-ffff800010a0d7b8: _copy_from_user (STB_LOCAL)
+ffff800010a2daf8-ffff800010a2dca4: _copy_from_user (STB_LOCAL)
+ffff800010a99308-ffff800010a994a0: _copy_from_user (STB_LOCAL)
+ffff800010a9e610-ffff800010a9e7bc: _copy_from_user (STB_LOCAL)
+ffff800010aa4b78-ffff800010aa4d24: _copy_from_user (STB_LOCAL)
+ffff800010aaa568-ffff800010aaa700: _copy_from_user (STB_LOCAL)
+ffff800010ab77c8-ffff800010ab7960: _copy_from_user (STB_LOCAL)
+ffff800010ac26d8-ffff800010ac2870: _copy_from_user (STB_LOCAL)
+ffff800010ac58a8-ffff800010ac5a40: _copy_from_user (STB_LOCAL)
+ffff800010ac7798-ffff800010ac7930: _copy_from_user (STB_LOCAL)
+ffff800010ae7760-ffff800010ae78f8: _copy_from_user (STB_LOCAL)
+ffff800010b08f88-ffff800010b09134: _copy_from_user (STB_LOCAL)
+ffff800010b41f90-ffff800010b42128: _copy_from_user (STB_LOCAL)
+ffff800010ba36d8-ffff800010ba3870: _copy_from_user (STB_LOCAL)
+ffff800010babda0-ffff800010babf4c: _copy_from_user (STB_LOCAL)
+ffff800010bd9968-ffff800010bd9b14: _copy_from_user (STB_LOCAL)
+ffff800010bfcd68-ffff800010bfcf14: _copy_from_user (STB_LOCAL)
+ffff800010c52b90-ffff800010c52d3c: _copy_from_user (STB_LOCAL)
+ffff800010c660d8-ffff800010c66270: _copy_from_user (STB_LOCAL)
+ffff800010c70880-ffff800010c70a2c: _copy_from_user (STB_LOCAL)
+ffff800010cabd48-ffff800010cabee0: _copy_from_user (STB_LOCAL)
+ffff800010cb4040-ffff800010cb41d8: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff800010cc9a70-ffff800010cc9c08: _copy_from_user (STB_LOCAL)
+ffff800010d00140-ffff800010d002d8: _copy_from_user.constprop.0 (STB_LOCAL)
+ffff800010d1c410-ffff800010d1c5a8: _copy_from_user (STB_LOCAL)
+ffff800010d3e9d8-ffff800010d3eb70: _copy_from_user (STB_LOCAL)
+ffff800010d432d8-ffff800010d43470: _copy_from_user (STB_LOCAL)
+ffff800010d579b8-ffff800010d57b64: _copy_from_user (STB_LOCAL)
+ffff800010d611b0-ffff800010d6135c: _copy_from_user (STB_LOCAL)
+ffff800010d626e0-ffff800010d6288c: _copy_from_user (STB_LOCAL)
+ffff800010d7f5b0-ffff800010d7f748: _copy_from_user (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Duplicate, Selective Inline ⚠️</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Static Duplication
+
+**Inline:** Selective
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/arm/kernel/ptrace.c (c030cb10)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - arch/arm/kernel/ptrace.c:arch_ptrace
+```
+```
+In kernel/fork.c (c03508a0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/fork.c:copy_clone_args_from_user
+```
+```
+In kernel/sysctl_binary.c (c036095c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/sysctl_binary.c:__se_sys_sysctl
+```
+```
+In kernel/capability.c (c036128c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/capability.c:__se_sys_capset
+```
+```
+In kernel/ptrace.c (c036315c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+```
+```
+In kernel/signal.c (c036a900)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/signal.c:__se_sys_rt_sigsuspend
+  - kernel/signal.c:__se_sys_rt_sigaction
+  - kernel/signal.c:__se_sys_sigprocmask
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__se_sys_sigaltstack
+  - kernel/signal.c:__se_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__se_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__se_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+```
+```
+In kernel/sys.c (c036b244)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__se_sys_setrlimit
+  - kernel/sys.c:__se_sys_prlimit64
+  - kernel/sys.c:__se_sys_setdomainname
+  - kernel/sys.c:__se_sys_sethostname
+```
+```
+In kernel/sched/core.c (c038cb44)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/sched/core.c:__se_sys_sched_setaffinity
+  - kernel/sched/core.c:__se_sys_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+```
+```
+In kernel/sched/debug.c (c03ac370)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/sched/debug.c:sched_feat_write
+```
+```
+In kernel/sched/psi.c (c03b4aac)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In kernel/power/qos.c (c03b8810)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/power/qos.c:pm_qos_power_write
+```
+```
+In kernel/power/user.c (c03c3ae4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/power/user.c:snapshot_ioctl
+```
+```
+In kernel/kcmp.c (c03e2d44)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/kcmp.c:__se_sys_kcmp
+```
+```
+In kernel/profile.c (c03e3db0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/profile.c:write_profile
+```
+```
+In kernel/time/time.c (c03e5130)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__se_sys_settimeofday
+  - kernel/time/time.c:__se_sys_settimeofday
+```
+```
+In kernel/time/posix-timers.c (c03f7498)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__se_sys_timer_create
+```
+```
+In kernel/time/itimer.c (c03fad2c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/time/itimer.c:__se_sys_setitimer
+```
+```
+In kernel/module.c (c040cc48)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/module.c:__se_sys_init_module
+```
+```
+In kernel/kexec_core.c (c04105ec)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+```
+```
+In kernel/kexec.c (c0410f1c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/kexec.c:do_kexec_load
+```
+```
+In kernel/user_namespace.c (c0427390)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/user_namespace.c:proc_setgroups_write
+```
+```
+In kernel/kprobes.c (c043892c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/kprobes.c:write_enabled_file_bool
+```
+```
+In kernel/seccomp.c (c04492c4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+```
+```
+In kernel/trace/trace.c (c0467cc0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+```
+```
+In kernel/trace/blktrace.c (c0471d38)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/trace/blktrace.c:__blk_trace_setup
+```
+```
+In kernel/trace/bpf_trace.c (c0481968)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+```
+```
+In kernel/trace/trace_uprobe.c (c048d218)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+```
+```
+In kernel/bpf/syscall.c (c049704c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_get_info_by_fd
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+```
+```
+In kernel/bpf/verifier.c (c049b8f4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+```
+```
+In kernel/bpf/btf.c (c04b6248)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+```
+```
+In kernel/bpf/cgroup.c (c04bd43c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+```
+```
+In kernel/events/core.c (c04c5450)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+```
+```
+In kernel/rseq.c (c04d956c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - kernel/rseq.c:rseq_ip_fixup
+  - kernel/rseq.c:rseq_ip_fixup
+```
+```
+In mm/shmem.c (c04fb3ec)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/shmem.c:shmem_mfill_atomic_pte
+```
+```
+In mm/util.c (c04ffb14)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+```
+```
+In mm/mmap.c (c051fb4c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/mmap.c:__se_sys_old_mmap
+```
+```
+In mm/userfaultfd.c (c0563d30)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+```
+```
+In mm/memfd.c (c0566fe8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - mm/memfd.c:__se_sys_memfd_create
+```
+```
+In fs/read_write.c (c056dd94)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/read_write.c:__se_sys_copy_file_range
+  - fs/read_write.c:__se_sys_copy_file_range
+  - fs/read_write.c:__se_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+```
+```
+In fs/exec.c (c05749d8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/exec.c:copy_strings
+```
+```
+In fs/fcntl.c (c058238c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/fcntl.c:__se_sys_fcntl64
+  - fs/fcntl.c:__se_sys_fcntl64
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+```
+```
+In fs/ioctl.c (c058388c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+```
+```
+In fs/select.c (c058595c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/select.c:do_sys_poll
+  - fs/select.c:__se_sys_old_select
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+```
+```
+In fs/xattr.c (c059bd04)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/xattr.c:setxattr
+```
+```
+In fs/libfs.c (c059e610)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+```
+```
+In fs/splice.c (c05aa144)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+```
+```
+In fs/notify/fanotify/fanotify_user.c (c05c4bb0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+```
+```
+In fs/eventpoll.c (c05c799c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/eventpoll.c:__do_sys_epoll_ctl
+```
+```
+In fs/signalfd.c (c05c908c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/signalfd.c:__se_sys_signalfd
+  - fs/signalfd.c:__se_sys_signalfd4
+```
+```
+In fs/timerfd.c (c05c9868)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/timerfd.c:timerfd_ioctl
+```
+```
+In fs/eventfd.c (c05cada0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/eventfd.c:eventfd_write
+```
+```
+In fs/userfaultfd.c (c05cc888)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_unregister
+  - fs/userfaultfd.c:userfaultfd_register
+```
+```
+In fs/aio.c (c05d1a6c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/aio.c:__se_sys_io_pgetevents_time32
+  - fs/aio.c:__se_sys_io_pgetevents
+  - fs/aio.c:__se_sys_io_submit
+```
+```
+In fs/io_uring.c (c05d78d0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/io_uring.c:__se_sys_io_uring_register
+  - fs/io_uring.c:__se_sys_io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+```
+```
+In fs/crypto/keyring.c (c05dadfc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+```
+```
+In fs/crypto/policy.c (c05dcfb0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+```
+```
+In fs/verity/enable.c (c05ddff4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+```
+```
+In fs/binfmt_elf.c (c05e6314)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/binfmt_elf.c:fill_psinfo
+```
+```
+In fs/binfmt_elf_fdpic.c (c05e9598)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/binfmt_elf_fdpic.c:fill_psinfo
+```
+```
+In fs/fhandle.c (c05f215c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/fhandle.c:__se_sys_open_by_handle_at
+  - fs/fhandle.c:__se_sys_open_by_handle_at
+  - fs/fhandle.c:do_sys_name_to_handle
+```
+```
+In fs/quota/quota.c (c05fe7a0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+```
+```
+In fs/proc/task_mmu.c (c06000e0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/proc/task_mmu.c:clear_refs_write
+```
+```
+In fs/proc/base.c (c0605a2c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/proc/base.c:mem_rw
+```
+```
+In fs/kernfs/file.c (c0617ae8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/kernfs/file.c:kernfs_fop_write
+```
+```
+In fs/configfs/file.c (c061ad68)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/configfs/file.c:configfs_write_file
+```
+```
+In fs/ext4/ioctl.c (c064da80)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+```
+```
+In fs/fat/file.c (c06a9124)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/fat/file.c:fat_generic_ioctl
+```
+```
+In fs/ecryptfs/miscdev.c (c06bb0d8)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In fs/efivarfs/file.c (c06d8530)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+```
+```
+In ipc/msgutil.c (c06da790)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+```
+```
+In ipc/msg.c (c06dbce4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - ipc/msg.c:copy_msqid_from_user
+  - ipc/msg.c:copy_msqid_from_user
+```
+```
+In ipc/sem.c (c06dee6c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:copy_semid_from_user
+  - ipc/sem.c:copy_semid_from_user
+  - ipc/sem.c:semctl_main
+```
+```
+In ipc/shm.c (c06e101c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - ipc/shm.c:ksys_shmctl
+  - ipc/shm.c:ksys_shmctl
+```
+```
+In ipc/mqueue.c (c06e4e44)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - ipc/mqueue.c:__se_sys_mq_getsetattr
+  - ipc/mqueue.c:__se_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__se_sys_mq_open
+```
+```
+In security/keys/keyctl.c (c06e9c58)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__se_sys_add_key
+```
+```
+In security/keys/dh.c (c06ef5f4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+```
+```
+In security/keys/keyctl_pkey.c (c06ef8a0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+```
+```
+In security/selinux/selinuxfs.c (c070b94c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/selinux/selinuxfs.c:sel_write_load
+```
+```
+In security/smack/smackfs.c (c07295f8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+```
+```
+In security/apparmor/apparmorfs.c (c073dce0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - security/apparmor/apparmorfs.c:aa_write_access
+```
+```
+In block/ioctl.c (c07a3994)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+```
+```
+In block/scsi_ioctl.c (c07b484c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+```
+```
+In block/bsg.c (c07b4d64)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+```
+```
+In block/blk-zoned.c (c07c7f10)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+```
+```
+In block/blk-mq-debugfs.c (c07cad28)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/blk-mq-debugfs.c:queue_state_write
+```
+```
+In block/sed-opal.c (c07cea24)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - block/sed-opal.c:write_shadow_mbr
+```
+```
+In lib/kfifo.c (c07daae8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+```
+```
+In lib/kstrtox.c (c07e0628)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+```
+```
+In drivers/gpio/gpiolib.c (c0861474)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+```
+```
+In drivers/video/fbdev/core/fbmem.c (c08c8c80)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+```
+```
+In drivers/video/fbdev/core/fbcmap.c (c08cbd08)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+```
+```
+In drivers/video/fbdev/core/fbcon.c (c08d58ec)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+```
+```
+In drivers/video/fbdev/imsttfb.c (c08dd644)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+```
+```
+In drivers/tty/tty_io.c (c095cf7c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+```
+```
+In drivers/tty/tty_ioctl.c (c0963a00)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/tty_ioctl.c:user_termio_to_kernel_termios
+```
+```
+In drivers/tty/vt/vt_ioctl.c (c096bd8c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+```
+```
+In drivers/tty/vt/vc_screen.c (c096cebc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/vc_screen.c:vcs_write
+```
+```
+In drivers/tty/vt/selection.c (c096e7e0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+```
+```
+In drivers/tty/vt/keyboard.c (c0972220)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+```
+```
+In drivers/tty/vt/consolemap.c (c0973968)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+```
+```
+In drivers/tty/vt/vt.c (c0979134)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/vt/vt.c:con_set_cmap
+```
+```
+In drivers/tty/serial/serial_core.c (c09822f0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+```
+```
+In drivers/char/mem.c (c09a76ec)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/char/mem.c:write_mem
+```
+```
+In drivers/char/random.c (c09a9b3c)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In drivers/char/virtio_console.c (c09afd68)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In drivers/char/tpm/tpm-dev-common.c (c09b234c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+```
+```
+In drivers/lightnvm/core.c (c09d0100)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+```
+```
+In drivers/block/loop.c (c0a07e88)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+```
+```
+In drivers/mfd/ab3100-core.c (c0a32e50)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+```
+```
+In drivers/mfd/aat2870-core.c (c0a366f8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+```
+```
+In drivers/dma-buf/dma-buf.c (c0a3c020)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+```
+```
+In drivers/dma-buf/sync_file.c (c0a409c8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+```
+```
+In drivers/dma-buf/sw_sync.c (c0a412a8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+```
+```
+In drivers/dma-buf/udmabuf.c (c0a42520)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+```
+```
+In drivers/scsi/scsi_devinfo.c (c0a53380)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+```
+```
+In drivers/scsi/scsi_proc.c (c0a53f18)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+```
+```
+In drivers/ata/libata-scsi.c (c0a752a8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+```
+```
+In drivers/gpu/vga/vgaarb.c (c0a8d8e4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+```
+```
+In drivers/mtd/mtdchar.c (c0a96b28)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_ioctl
+  - drivers/mtd/mtdchar.c:mtdchar_write
+```
+```
+In drivers/net/tun.c (c0ac62bc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/net/tun.c:tun_set_ebpf
+```
+```
+In drivers/net/ethernet/freescale/fec_ptp.c (c0aced08)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/net/ethernet/freescale/fec_ptp.c:fec_ptp_set
+```
+```
+In drivers/net/ethernet/ti/cpsw.c (c0ad3ff4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/net/ethernet/ti/cpsw.c:cpsw_ndo_ioctl
+```
+```
+In drivers/net/ppp/ppp_generic.c (c0adfa5c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+```
+```
+In drivers/cdrom/cdrom.c (c0ae71ec)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+```
+```
+In drivers/usb/core/devio.c (c0b05668)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+```
+```
+In drivers/usb/host/xhci-debugfs.c (c0b61efc)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+```
+```
+In drivers/usb/musb/musb_debugfs.c (c0b714f0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/usb/musb/musb_debugfs.c:musb_softconnect_write
+  - drivers/usb/musb/musb_debugfs.c:musb_test_mode_write
+```
+```
+In drivers/input/input-compat.c (c0b7b3ec)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+```
+```
+In drivers/input/evdev.c (c0b7f6d0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+```
+```
+In drivers/input/misc/uinput.c (c0b8455c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+```
+```
+In drivers/rtc/dev.c (c0b895a4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+```
+```
+In drivers/i2c/i2c-dev.c (c0b97d7c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+```
+```
+In drivers/media/cec/cec-api.c (c0ba41b0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+```
+```
+In drivers/pps/pps.c (c0ba5858)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+```
+```
+In drivers/ptp/ptp_chardev.c (c0ba74c8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+```
+```
+In drivers/md/md.c (c0bd5668)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+```
+```
+In drivers/md/dm-ioctl.c (c0be79b4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+```
+```
+In drivers/mmc/core/block.c (c0c1b78c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/mmc/core/block.c:mmc_blk_ioctl_multi_cmd
+  - drivers/mmc/core/block.c:mmc_blk_ioctl_copy_from_user
+```
+```
+In drivers/firmware/tegra/bpmp-debugfs.c (c0c42a04)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/firmware/tegra/bpmp-debugfs.c:debugfs_store
+```
+```
+In drivers/remoteproc/remoteproc_debugfs.c (c0c65b5c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+```
+```
+In sound/core/memory.c (c0c84c80)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/core/memory.c:copy_from_user_toio
+```
+```
+In sound/core/control.c (c0c87b94)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/core/control.c:snd_ctl_ioctl
+  - sound/core/control.c:snd_ctl_ioctl
+  - sound/core/control.c:snd_ctl_ioctl
+  - sound/core/control.c:snd_ctl_tlv_ioctl
+  - sound/core/control.c:snd_ctl_elem_add_user
+  - sound/core/control.c:snd_ctl_elem_info_user
+  - sound/core/control.c:snd_ctl_elem_list
+```
+```
+In sound/core/info.c (c0c89740)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/core/info.c:snd_info_text_entry_write
+```
+```
+In sound/core/timer.c (c0c8e714)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/core/timer.c:__snd_timer_user_ioctl
+  - sound/core/timer.c:__snd_timer_user_ioctl
+  - sound/core/timer.c:__snd_timer_user_ioctl
+  - sound/core/timer.c:__snd_timer_user_ioctl
+  - sound/core/timer.c:__snd_timer_user_ioctl
+```
+```
+In sound/core/pcm_native.c (c0c9547c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/core/pcm_native.c:snd_pcm_common_ioctl
+  - sound/core/pcm_native.c:snd_pcm_common_ioctl
+  - sound/core/pcm_native.c:snd_pcm_common_ioctl
+  - sound/core/pcm_native.c:snd_pcm_sync_ptr
+  - sound/core/pcm_native.c:snd_pcm_sw_params_user
+```
+```
+In sound/core/pcm_lib.c (c0c990c0)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/core/pcm_lib.c:default_write_copy
+```
+```
+In sound/core/compress_offload.c (c0c9e834)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/core/compress_offload.c:snd_compr_ioctl
+  - sound/core/compress_offload.c:snd_compr_ioctl
+  - sound/core/compress_offload.c:snd_compr_write
+  - sound/core/compress_offload.c:snd_compr_write
+  - sound/core/compress_offload.c:snd_compr_write
+```
+```
+In sound/soc/soc-generic-dmaengine-pcm.c (c0cbb62c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - sound/soc/soc-generic-dmaengine-pcm.c:dmaengine_copy_user
+```
+```
+In net/socket.c (c0cc4e64)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_ioctl
+  - net/socket.c:move_addr_to_kernel
+```
+```
+In net/core/sock.c (c0ccc028)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+```
+```
+In net/core/ethtool.c (c0cf6e58)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_copy_validate_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+Direct callers:
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+```
+```
+In net/core/filter.c (c0d1b718)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+```
+```
+In net/core/dev_ioctl.c (c0d1d348)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/core/dev_ioctl.c:dev_ifsioc
+```
+```
+In net/bpf/test_run.c (c0d6370c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/bpf/test_run.c:bpf_prog_test_run_flow_dissector
+  - net/bpf/test_run.c:bpf_prog_test_run_skb
+  - net/bpf/test_run.c:bpf_test_init
+```
+```
+In net/ipv4/ip_options.c (c0d71168)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+```
+```
+In net/ipv4/ip_sockglue.c (c0d76084)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In net/ipv4/tcp.c (c0d806f8)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In net/ipv4/tcp_ipv4.c (c0d9bb68)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+```
+```
+In net/ipv4/raw.c (c0da54b4)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In net/ipv4/arp.c (c0dafe44)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/arp.c:arp_ioctl
+```
+```
+In net/ipv4/af_inet.c (c0db8b90)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+```
+```
+In net/ipv4/fib_frontend.c (c0dbf610)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+```
+```
+In net/ipv4/ipmr.c (c0dd9d50)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+```
+```
+In net/ipv6/addrconf.c (c0e0fea4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+```
+```
+In net/ipv6/route.c (c0e1c758)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv6/route.c:ipv6_route_ioctl
+```
+```
+In net/ipv6/ipv6_sockglue.c (c0e21b1c)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In net/ipv6/raw.c (c0e2d290)
+Location: include/linux/uaccess.h:107
+Inline: True
+```
+```
+In net/ipv6/tcp_ipv6.c (c0e39bc8)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+```
+```
+In net/ipv6/ip6_flowlabel.c (c0e42834)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+```
+```
+In net/ipv6/ip6mr.c (c0e4941c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+```
+```
+In net/packet/af_packet.c (c0e5d498)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+```
+```
+In net/wireless/wext-core.c (c0e60e98)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+```
+```
+In net/wireless/wext-priv.c (c0e61860)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/wireless/wext-priv.c:ioctl_private_iw_point
+```
+```
+In net/rfkill/core.c (c0e6a40c)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/rfkill/core.c:rfkill_fop_write
+```
+```
+In net/xdp/xsk.c (c0e7a5c4)
+Location: include/linux/uaccess.h:107
+Inline: True
+Inline callers:
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+c0cf3628-c0cf36c0: _copy_from_user (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (c0000000007de270)
+Location: lib/usercopy.c:8
+Inline: False
+Direct callers:
+  - arch/powerpc/kernel/ptrace.c:arch_ptrace
+  - arch/powerpc/kernel/signal_32.c:compat_sys_sigreturn
+  - arch/powerpc/kernel/rtas.c:__se_sys_rtas
+  - arch/powerpc/kernel/rtas.c:__se_sys_rtas
+  - arch/powerpc/kernel/rtas-proc.c:ppc_rtas_progress_write
+  - arch/powerpc/kernel/rtas-proc.c:parse_number
+  - arch/powerpc/mm/numa.c:topology_write
+  - arch/powerpc/platforms/pseries/lpar.c:vcpudispatch_stats_freq_write
+  - arch/powerpc/platforms/pseries/lpar.c:vcpudispatch_stats_write
+  - arch/powerpc/platforms/pseries/lparcfg.c:lparcfg_write
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__se_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__se_sys_sysctl
+  - kernel/capability.c:__se_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__se_sys_rt_sigsuspend
+  - kernel/signal.c:__se_sys_rt_sigaction
+  - kernel/signal.c:__se_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__se_sys_sigaltstack
+  - kernel/signal.c:__se_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__se_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__se_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__se_sys_setrlimit
+  - kernel/sys.c:__se_sys_prlimit64
+  - kernel/sys.c:__se_compat_sys_setrlimit
+  - kernel/sys.c:__se_sys_setdomainname
+  - kernel/sys.c:__se_sys_sethostname
+  - kernel/sched/core.c:__do_sys_sched_setaffinity
+  - kernel/sched/core.c:__se_sys_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/kcmp.c:__se_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__se_compat_sys_settimeofday
+  - kernel/time/time.c:__se_compat_sys_settimeofday
+  - kernel/time/time.c:__se_sys_settimeofday
+  - kernel/time/time.c:__se_sys_settimeofday
+  - kernel/time/time.c:__se_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__se_sys_timer_create
+  - kernel/time/itimer.c:__se_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__se_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__se_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__se_sys_memfd_create
+  - fs/read_write.c:__se_sys_copy_file_range
+  - fs/read_write.c:__se_sys_copy_file_range
+  - fs/read_write.c:__se_compat_sys_sendfile64
+  - fs/read_write.c:__se_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__se_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:__se_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__se_sys_epoll_ctl
+  - fs/signalfd.c:__se_sys_signalfd
+  - fs/signalfd.c:__se_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_unregister
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__se_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__se_compat_sys_io_pgetevents
+  - fs/aio.c:__se_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__se_sys_io_uring_register
+  - fs/io_uring.c:__se_sys_io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:__se_sys_name_to_handle_at
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/proc/base.c:mem_rw
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/msg.c:copy_msqid_from_user
+  - ipc/msg.c:copy_msqid_from_user
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:copy_semid_from_user
+  - ipc/sem.c:copy_semid_from_user
+  - ipc/sem.c:semctl_main
+  - ipc/shm.c:ksys_shmctl
+  - ipc/shm.c:ksys_shmctl
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/syscall.c:ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__se_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__se_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__se_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__se_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:user_termio_to_kernel_termios
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_pci_config_rw
+  - drivers/vfio/pci/vfio_pci_nvlink2.c:vfio_pci_npu2_rw
+  - drivers/vfio/pci/vfio_pci_nvlink2.c:vfio_pci_nvgpu_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_sioc_ifmap
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__se_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+c0000000007de270-c0000000007de398: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffe000464f08)
+Location: lib/usercopy.c:8
+Inline: False
+Direct callers:
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__se_sys_sysctl
+  - kernel/capability.c:__se_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__se_sys_rt_sigsuspend
+  - kernel/signal.c:__se_sys_rt_sigaction
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__se_sys_sigaltstack
+  - kernel/signal.c:__se_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__se_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__se_sys_setrlimit
+  - kernel/sys.c:__se_sys_prlimit64
+  - kernel/sys.c:__se_sys_setdomainname
+  - kernel/sys.c:__se_sys_sethostname
+  - kernel/sched/core.c:__se_sys_sched_setaffinity
+  - kernel/sched/core.c:__se_sys_sched_setattr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/kcmp.c:__se_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_itimerspec64
+  - kernel/time/time.c:get_old_timespec32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__se_sys_settimeofday
+  - kernel/time/time.c:__se_sys_settimeofday
+  - kernel/time/time.c:__se_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__se_sys_timer_create
+  - kernel/time/itimer.c:__se_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__se_sys_memfd_create
+  - fs/read_write.c:__se_sys_copy_file_range
+  - fs/read_write.c:__se_sys_copy_file_range
+  - fs/read_write.c:__se_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/exec.c:copy_strings
+  - fs/fcntl.c:__se_sys_fcntl
+  - fs/fcntl.c:__se_sys_fcntl
+  - fs/fcntl.c:__se_sys_fcntl
+  - fs/fcntl.c:__se_sys_fcntl
+  - fs/fcntl.c:__se_sys_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:do_sys_poll
+  - fs/select.c:__se_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__se_sys_epoll_ctl
+  - fs/signalfd.c:__se_sys_signalfd
+  - fs/signalfd.c:__se_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_unregister
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__se_sys_io_pgetevents
+  - fs/io_uring.c:__se_sys_io_uring_register
+  - fs/io_uring.c:__se_sys_io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/binfmt_flat.c:load_flat_file
+  - fs/fhandle.c:__se_sys_open_by_handle_at
+  - fs/fhandle.c:__se_sys_open_by_handle_at
+  - fs/fhandle.c:__se_sys_name_to_handle_at
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/proc/base.c:mem_rw
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__se_sys_mq_notify
+  - ipc/mqueue.c:__se_sys_mq_notify
+  - ipc/mqueue.c:__se_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__se_sys_add_key
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_getdriver
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_ff_effect_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ioctl_handler
+  - drivers/input/misc/uinput.c:uinput_ff_upload_from_user
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/mmc/core/block.c:mmc_blk_ioctl_multi_cmd
+  - drivers/mmc/core/block.c:mmc_blk_ioctl_copy_from_user
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:rtentry_to_fib_config
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-priv.c:ioctl_private_call
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffe000464f08-ffffffe000464f6c: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff815246f0)
+Location: lib/usercopy.c:8
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_fault_info
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/nvme/host/core.c:nvme_user_cmd64
+  - drivers/nvme/host/core.c:nvme_user_cmd
+  - drivers/nvme/host/core.c:nvme_submit_io
+  - drivers/nvme/host/core.c:nvme_submit_user_cmd
+  - drivers/nvme/host/lightnvm.c:nvme_nvm_user_vcmd
+  - drivers/nvme/host/lightnvm.c:nvme_nvm_submit_vio
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff815246f0-ffffffff81524750: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff815149d0)
+Location: lib/usercopy.c:8
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_fault_info
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/nvme/host/core.c:nvme_user_cmd64
+  - drivers/nvme/host/core.c:nvme_user_cmd
+  - drivers/nvme/host/core.c:nvme_submit_io
+  - drivers/nvme/host/core.c:nvme_submit_user_cmd
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_pci_config_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff815149d0-ffffffff81514a30: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff81520780)
+Location: lib/usercopy.c:8
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_fault_info
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - kernel/rseq.c:__rseq_handle_notify_resume
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_pci_config_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff81520780-ffffffff815207e0: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+long unsigned int _copy_from_user(void *to, const void *from, long unsigned int n);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In lib/usercopy.c (ffffffff8153a100)
+Location: lib/usercopy.c:8
+Inline: False
+Direct callers:
+  - arch/x86/kernel/ldt.c:write_ldt
+  - arch/x86/kernel/tls.c:do_set_thread_area
+  - arch/x86/kernel/cpu/mce/dev-mcelog.c:mce_chrdev_write
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/mtrr/if.c:mtrr_ioctl
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/uprobes.c:arch_uretprobe_hijack_return_addr
+  - arch/x86/kernel/umip.c:fixup_umip_exception
+  - arch/x86/mm/tlb.c:tlbflush_write_file
+  - arch/x86/mm/mpx.c:mpx_fault_info
+  - arch/x86/mm/pkeys.c:init_pkru_write_file
+  - arch/x86/ia32/sys_ia32.c:__x32_compat_sys_x86_mmap
+  - arch/x86/ia32/sys_ia32.c:__ia32_compat_sys_x86_mmap
+  - arch/x86/platform/uv/tlb_uv.c:tunables_write
+  - arch/x86/platform/uv/tlb_uv.c:ptc_proc_write
+  - kernel/fork.c:copy_clone_args_from_user
+  - kernel/sysctl_binary.c:__x32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_compat_sys_sysctl
+  - kernel/sysctl_binary.c:__ia32_sys_sysctl
+  - kernel/sysctl_binary.c:__x64_sys_sysctl
+  - kernel/capability.c:__ia32_sys_capset
+  - kernel/capability.c:__x64_sys_capset
+  - kernel/ptrace.c:ptrace_request
+  - kernel/ptrace.c:ptrace_peek_siginfo
+  - kernel/ptrace.c:ptrace_writedata
+  - kernel/signal.c:__ia32_sys_rt_sigsuspend
+  - kernel/signal.c:__x64_sys_rt_sigsuspend
+  - kernel/signal.c:__ia32_sys_rt_sigaction
+  - kernel/signal.c:__x64_sys_rt_sigaction
+  - kernel/signal.c:__ia32_sys_sigprocmask
+  - kernel/signal.c:__x64_sys_sigprocmask
+  - kernel/signal.c:do_compat_sigaltstack
+  - kernel/signal.c:restore_altstack
+  - kernel/signal.c:__ia32_sys_sigaltstack
+  - kernel/signal.c:__x64_sys_sigaltstack
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait_time32
+  - kernel/signal.c:__ia32_sys_rt_sigtimedwait
+  - kernel/signal.c:__x64_sys_rt_sigtimedwait
+  - kernel/signal.c:copy_siginfo_from_user32
+  - kernel/signal.c:__copy_siginfo_from_user32
+  - kernel/signal.c:copy_siginfo_from_user
+  - kernel/signal.c:__copy_siginfo_from_user
+  - kernel/signal.c:__ia32_sys_rt_sigprocmask
+  - kernel/signal.c:__x64_sys_rt_sigprocmask
+  - kernel/signal.c:set_user_sigmask
+  - kernel/sys.c:prctl_set_auxv
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:__ia32_sys_setrlimit
+  - kernel/sys.c:__x64_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_prlimit64
+  - kernel/sys.c:__x64_sys_prlimit64
+  - kernel/sys.c:__x32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_compat_sys_setrlimit
+  - kernel/sys.c:__ia32_sys_setdomainname
+  - kernel/sys.c:__x64_sys_setdomainname
+  - kernel/sys.c:__ia32_sys_sethostname
+  - kernel/sys.c:__x64_sys_sethostname
+  - kernel/sched/core.c:get_user_cpu_mask
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:sched_copy_attr
+  - kernel/sched/core.c:do_sched_setscheduler
+  - kernel/sched/debug.c:sched_feat_write
+  - kernel/power/qos.c:pm_qos_power_write
+  - kernel/power/user.c:snapshot_ioctl
+  - kernel/kcmp.c:__do_sys_kcmp
+  - kernel/profile.c:write_profile
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_old_itimerspec32
+  - kernel/time/time.c:get_timespec64
+  - kernel/time/time.c:get_old_timex32
+  - kernel/time/time.c:__do_sys_adjtimex
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__x32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_compat_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__ia32_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/time.c:__x64_sys_settimeofday
+  - kernel/time/posix-timers.c:__do_sys_clock_adjtime
+  - kernel/time/posix-timers.c:__ia32_sys_timer_create
+  - kernel/time/posix-timers.c:__x64_sys_timer_create
+  - kernel/time/itimer.c:__ia32_sys_setitimer
+  - kernel/time/itimer.c:__x64_sys_setitimer
+  - kernel/module.c:__do_sys_init_module
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec_core.c:kimage_load_segment
+  - kernel/kexec.c:__x32_compat_sys_kexec_load
+  - kernel/kexec.c:__ia32_compat_sys_kexec_load
+  - kernel/kexec.c:do_kexec_load
+  - kernel/compat.c:get_compat_sigset
+  - kernel/compat.c:get_compat_itimerval
+  - kernel/user_namespace.c:proc_setgroups_write
+  - kernel/kprobes.c:write_enabled_file_bool
+  - kernel/seccomp.c:seccomp_get_metadata
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_set_mode_filter
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/seccomp.c:seccomp_notify_ioctl
+  - kernel/trace/trace.c:trace_parse_run_command
+  - kernel/trace/trace.c:tracing_clock_write
+  - kernel/trace/trace.c:tracing_set_trace_write
+  - kernel/trace/trace.c:tracing_trace_options_write
+  - kernel/trace/blktrace.c:compat_blk_trace_setup
+  - kernel/trace/blktrace.c:__blk_trace_setup
+  - kernel/trace/bpf_trace.c:perf_event_query_prog_array
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/trace/trace_uprobe.c:process_fetch_insn
+  - kernel/bpf/syscall.c:__do_sys_bpf
+  - kernel/bpf/syscall.c:bpf_prog_load
+  - kernel/bpf/syscall.c:map_update_elem
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/verifier.c:check_btf_info
+  - kernel/bpf/btf.c:btf_get_info_by_fd
+  - kernel/bpf/btf.c:btf_new_fd
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_getsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_setsockopt
+  - kernel/bpf/cgroup.c:__cgroup_bpf_run_filter_sysctl
+  - kernel/events/core.c:perf_copy_attr
+  - kernel/events/core.c:_perf_ioctl
+  - kernel/rseq.c:rseq_ip_fixup
+  - kernel/rseq.c:rseq_ip_fixup
+  - mm/shmem.c:shmem_mfill_atomic_pte
+  - mm/util.c:memdup_user_nul
+  - mm/util.c:vmemdup_user
+  - mm/util.c:memdup_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/memory.c:copy_huge_page_from_user
+  - mm/mempolicy.c:__do_compat_sys_get_mempolicy
+  - mm/mempolicy.c:get_nodes
+  - mm/migrate.c:do_pages_stat
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/memfd.c:__ia32_sys_memfd_create
+  - mm/memfd.c:__x64_sys_memfd_create
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__ia32_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x64_sys_copy_file_range
+  - fs/read_write.c:__x32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_compat_sys_sendfile64
+  - fs/read_write.c:__ia32_sys_sendfile64
+  - fs/read_write.c:__x64_sys_sendfile64
+  - fs/read_write.c:rw_copy_check_uvector
+  - fs/fcntl.c:get_compat_flock64
+  - fs/fcntl.c:get_compat_flock
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/fcntl.c:do_fcntl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:do_vfs_ioctl
+  - fs/ioctl.c:ioctl_preallocate
+  - fs/select.c:__x32_compat_sys_old_select
+  - fs/select.c:__ia32_compat_sys_old_select
+  - fs/select.c:do_compat_select
+  - fs/select.c:do_sys_poll
+  - fs/select.c:kern_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/select.c:core_sys_select
+  - fs/xattr.c:setxattr
+  - fs/libfs.c:simple_attr_write
+  - fs/libfs.c:simple_write_to_buffer
+  - fs/splice.c:do_splice
+  - fs/splice.c:do_splice
+  - fs/utimes.c:do_futimesat
+  - fs/notify/fanotify/fanotify_user.c:fanotify_write
+  - fs/eventpoll.c:__ia32_sys_epoll_ctl
+  - fs/eventpoll.c:__x64_sys_epoll_ctl
+  - fs/signalfd.c:__ia32_sys_signalfd
+  - fs/signalfd.c:__x64_sys_signalfd
+  - fs/signalfd.c:__ia32_sys_signalfd4
+  - fs/signalfd.c:__x64_sys_signalfd4
+  - fs/timerfd.c:timerfd_ioctl
+  - fs/eventfd.c:eventfd_write
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_ioctl
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/aio.c:__x32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents_time64
+  - fs/aio.c:__x32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_compat_sys_io_pgetevents
+  - fs/aio.c:__ia32_sys_io_pgetevents
+  - fs/aio.c:__x64_sys_io_pgetevents
+  - fs/aio.c:io_submit_one
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:__io_uring_register
+  - fs/io_uring.c:io_uring_setup
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/crypto/keyring.c:fscrypt_ioctl_get_key_status
+  - fs/crypto/keyring.c:do_remove_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/keyring.c:fscrypt_ioctl_add_key
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_get_policy_ex
+  - fs/crypto/policy.c:fscrypt_ioctl_set_policy
+  - fs/verity/enable.c:fsverity_ioctl_enable
+  - fs/verity/enable.c:enable_verity
+  - fs/verity/enable.c:enable_verity
+  - fs/compat_binfmt_elf.c:fill_psinfo
+  - fs/fhandle.c:do_handle_open
+  - fs/fhandle.c:do_handle_open
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:do_quotactl
+  - fs/quota/quota.c:quota_setxquota
+  - fs/quota/quota.c:quota_getxstatev
+  - fs/quota/quota.c:quota_setquota
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/base.c:comm_write
+  - fs/proc/base.c:sched_autogroup_write
+  - fs/proc/base.c:oom_score_adj_write
+  - fs/proc/base.c:oom_adj_write
+  - fs/kernfs/file.c:kernfs_fop_write
+  - fs/configfs/file.c:configfs_write_file
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioctl
+  - fs/ext4/ioctl.c:ext4_ioc_getfsmap
+  - fs/fat/file.c:fat_generic_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_ioctl
+  - fs/efivarfs/file.c:efivarfs_file_write
+  - ipc/compat.c:get_compat_ipc_perm
+  - ipc/compat.c:get_compat_ipc64_perm
+  - ipc/msgutil.c:load_msg
+  - ipc/msgutil.c:load_msg
+  - ipc/sem.c:do_semtimedop
+  - ipc/sem.c:semctl_main
+  - ipc/syscall.c:compat_ksys_ipc
+  - ipc/mqueue.c:__do_compat_sys_mq_getsetattr
+  - ipc/mqueue.c:__x32_compat_sys_mq_open
+  - ipc/mqueue.c:__ia32_compat_sys_mq_open
+  - ipc/mqueue.c:__do_sys_mq_getsetattr
+  - ipc/mqueue.c:__ia32_sys_mq_notify
+  - ipc/mqueue.c:__x64_sys_mq_notify
+  - ipc/mqueue.c:do_mq_notify
+  - ipc/mqueue.c:__ia32_sys_mq_open
+  - ipc/mqueue.c:__x64_sys_mq_open
+  - security/keys/keyctl.c:keyctl_update_key
+  - security/keys/keyctl.c:__ia32_sys_add_key
+  - security/keys/keyctl.c:__x64_sys_add_key
+  - security/keys/compat_dh.c:compat_keyctl_dh_compute
+  - security/keys/dh.c:keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/dh.c:__keyctl_dh_compute
+  - security/keys/keyctl_pkey.c:keyctl_pkey_params_get_2
+  - security/selinux/selinuxfs.c:sel_write_load
+  - security/smack/smackfs.c:smk_write_ptrace
+  - security/smack/smackfs.c:smk_write_logging
+  - security/smack/smackfs.c:smk_write_mapped
+  - security/smack/smackfs.c:smk_write_direct
+  - security/smack/smackfs.c:smk_write_doi
+  - security/apparmor/apparmorfs.c:aa_write_access
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_ioctl
+  - block/ioctl.c:blkdev_pr_preempt
+  - block/ioctl.c:blk_ioctl_discard
+  - block/ioctl.c:blkpg_ioctl
+  - block/ioctl.c:blkpg_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:scsi_cmd_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_scsi_ioctl
+  - block/scsi_ioctl.c:sg_io
+  - block/bsg.c:bsg_sg_io
+  - block/bsg.c:bsg_scsi_fill_hdr
+  - block/blk-zoned.c:blkdev_reset_zones_ioctl
+  - block/blk-zoned.c:blkdev_report_zones_ioctl
+  - block/blk-mq-debugfs.c:queue_state_write
+  - block/sed-opal.c:write_shadow_mbr
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kfifo.c:kfifo_copy_from_user
+  - lib/kstrtox.c:kstrtos8_from_user
+  - lib/kstrtox.c:kstrtou8_from_user
+  - lib/kstrtox.c:kstrtos16_from_user
+  - lib/kstrtox.c:kstrtou16_from_user
+  - lib/kstrtox.c:kstrtoint_from_user
+  - lib/kstrtox.c:kstrtouint_from_user
+  - lib/kstrtox.c:kstrtol_from_user
+  - lib/kstrtox.c:kstrtoul_from_user
+  - lib/kstrtox.c:kstrtoll_from_user
+  - lib/kstrtox.c:kstrtoull_from_user
+  - lib/kstrtox.c:kstrtobool_from_user
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:gpio_ioctl
+  - drivers/gpio/gpiolib.c:linehandle_create
+  - drivers/gpio/gpiolib.c:linehandle_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:do_fb_ioctl
+  - drivers/video/fbdev/core/fbmem.c:fb_write
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcmap.c:fb_set_user_cmap
+  - drivers/video/fbdev/core/fbcon.c:fbcon_get_con2fb_map_ioctl
+  - drivers/video/fbdev/core/fbcon.c:fbcon_set_con2fb_map_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/video/fbdev/imsttfb.c:imsttfb_ioctl
+  - drivers/acpi/proc.c:acpi_system_write_wakeup_device
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_write
+  - drivers/tty/tty_io.c:compat_tty_tiocsserial
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_ioctl
+  - drivers/tty/tty_io.c:tty_write
+  - drivers/tty/tty_ioctl.c:tty_mode_ioctl
+  - drivers/tty/tty_ioctl.c:set_termiox
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_compat_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_ioctl
+  - drivers/tty/vt/vt_ioctl.c:vt_event_wait_ioctl
+  - drivers/tty/vt/vc_screen.c:vcs_write
+  - drivers/tty/vt/selection.c:set_selection_user
+  - drivers/tty/vt/selection.c:sel_loadlut
+  - drivers/tty/vt/keyboard.c:vt_do_kdgkb_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kdsk_ioctl
+  - drivers/tty/vt/keyboard.c:vt_do_kbkeycode_ioctl
+  - drivers/tty/vt/consolemap.c:con_set_trans_new
+  - drivers/tty/vt/consolemap.c:con_set_trans_old
+  - drivers/tty/vt/vt.c:con_set_cmap
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/tty/serial/serial_core.c:uart_ioctl
+  - drivers/char/mem.c:write_mem
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agp_ioctl
+  - drivers/char/agp/frontend.c:agpioc_setup_wrap
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/agp/compat_ioctl.c:compat_agp_ioctl
+  - drivers/char/tpm/tpm-dev-common.c:tpm_common_write
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/lightnvm/core.c:nvm_ctl_ioctl
+  - drivers/block/loop.c:loop_info64_from_compat
+  - drivers/block/loop.c:loop_set_status64
+  - drivers/block/loop.c:loop_set_status_old
+  - drivers/mfd/ab3100-core.c:ab3100_get_set_reg
+  - drivers/mfd/aat2870-core.c:aat2870_reg_write_file
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/nvdimm/bus.c:__nd_ioctl
+  - drivers/dma-buf/dma-buf.c:dma_buf_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl
+  - drivers/dma-buf/sync_file.c:sync_file_ioctl_fence_info
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/sw_sync.c:sw_sync_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/dma-buf/udmabuf.c:udmabuf_ioctl
+  - drivers/scsi/scsi_devinfo.c:proc_scsi_devinfo_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_write
+  - drivers/scsi/scsi_proc.c:proc_scsi_host_write
+  - drivers/ata/libata-scsi.c:ata_task_ioctl
+  - drivers/ata/libata-scsi.c:ata_cmd_ioctl
+  - drivers/gpu/vga/vgaarb.c:vga_arb_write
+  - drivers/gpu/vga/vga_switcheroo.c:vga_switcheroo_debugfs_write
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:__tun_chr_ioctl
+  - drivers/net/tun.c:tun_set_ebpf
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_set_compress
+  - drivers/net/ppp/ppp_generic.c:ppp_ioctl
+  - drivers/net/ppp/ppp_generic.c:get_filter
+  - drivers/net/ppp/ppp_generic.c:ppp_write
+  - drivers/vfio/vfio.c:vfio_group_fops_unl_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_ioctl
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_rdwr.c:do_io_rw
+  - drivers/vfio/pci/vfio_pci_config.c:vfio_pci_config_rw
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:cdrom_ioctl
+  - drivers/cdrom/cdrom.c:mmc_ioctl_dvd_auth
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_volume
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_blk
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_play_msf
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_subchannel
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_audio
+  - drivers/cdrom/cdrom.c:mmc_ioctl_cdrom_read_data
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:proc_disconnect_claim
+  - drivers/usb/core/devio.c:get_urb32
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_do_submiturb
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_bulk
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/core/devio.c:proc_control
+  - drivers/usb/host/xhci-debugfs.c:xhci_port_write
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/input-compat.c:input_event_from_user
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_do_ioctl
+  - drivers/input/evdev.c:evdev_handle_set_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_set_keycode
+  - drivers/input/evdev.c:evdev_handle_get_keycode_v2
+  - drivers/input/evdev.c:evdev_handle_get_keycode
+  - drivers/input/misc/uinput.c:uinput_dev_setup
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/rtc/dev.c:rtc_dev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:compat_i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl
+  - drivers/i2c/i2c-dev.c:i2cdev_ioctl_smbus
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_compat_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/md/dm-ioctl.c:ctl_ioctl
+  - drivers/remoteproc/remoteproc_debugfs.c:rproc_recovery_write
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:compat_sock_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:routing_ioctl
+  - net/socket.c:compat_ifr_data_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:ethtool_ioctl
+  - net/socket.c:__ia32_sys_socketcall
+  - net/socket.c:__x64_sys_socketcall
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:____sys_sendmsg
+  - net/socket.c:copy_msghdr_from_user
+  - net/socket.c:sock_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/socket.c:sock_do_ioctl
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_setsockopt
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/sock.c:sock_set_timeout
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:dev_ethtool
+  - net/core/ethtool.c:ethtool_set_per_queue
+  - net/core/ethtool.c:ethtool_set_per_queue_coalesce
+  - net/core/ethtool.c:ethtool_flash_device
+  - net/core/ethtool.c:ethtool_set_channels
+  - net/core/ethtool.c:ethtool_set_coalesce
+  - net/core/ethtool.c:ethtool_get_any_eeprom
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh
+  - net/core/ethtool.c:ethtool_get_rxfh
+  - net/core/ethtool.c:ethtool_set_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxfh_indir
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_get_rxnfc
+  - net/core/ethtool.c:ethtool_set_rxnfc
+  - net/core/ethtool.c:ethtool_get_sset_info
+  - net/core/ethtool.c:ethtool_set_settings
+  - net/core/ethtool.c:ethtool_set_link_ksettings
+  - net/core/ethtool.c:ethtool_get_link_ksettings
+  - net/core/ethtool.c:load_link_ksettings_from_user
+  - net/core/filter.c:__get_filter
+  - net/core/filter.c:bpf_prog_create_from_user
+  - net/core/dev_ioctl.c:dev_ifsioc
+  - net/compat.c:__do_compat_sys_socketcall
+  - net/compat.c:get_compat_bpf_fprog
+  - net/compat.c:cmsghdr_from_user_compat_to_kern
+  - net/compat.c:get_compat_msghdr
+  - net/bpf/test_run.c:bpf_ctx_init
+  - net/ipv4/ip_options.c:ip_options_get_from_user
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/ip_sockglue.c:do_ip_getsockopt
+  - net/ipv4/tcp_ipv4.c:tcp_v4_parse_md5_keys
+  - net/ipv4/raw.c:raw_seticmpfilter
+  - net/ipv4/arp.c:arp_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/af_inet.c:inet_ioctl
+  - net/ipv4/fib_frontend.c:ip_rt_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_compat_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ipmr_ioctl
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv4/ipmr.c:ip_mroute_setsockopt
+  - net/ipv6/addrconf.c:addrconf_del_ifaddr
+  - net/ipv6/addrconf.c:addrconf_add_ifaddr
+  - net/ipv6/addrconf.c:addrconf_set_dstaddr
+  - net/ipv6/route.c:ipv6_route_ioctl
+  - net/ipv6/tcp_ipv6.c:tcp_v6_parse_md5_keys
+  - net/ipv6/ip6_flowlabel.c:ipv6_flowlabel_opt
+  - net/ipv6/ip6_flowlabel.c:fl_create
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_compat_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6mr_ioctl
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/ipv6/ip6mr.c:ip6_mroute_setsockopt
+  - net/packet/af_packet.c:packet_getsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/packet/af_packet.c:packet_setsockopt
+  - net/wireless/wext-core.c:compat_wext_handle_ioctl
+  - net/wireless/wext-core.c:wext_handle_ioctl
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/wireless/wext-core.c:ioctl_standard_iw_point
+  - net/rfkill/core.c:rfkill_fop_write
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+  - net/xdp/xsk.c:xsk_setsockopt
+```
+**Symbols:**
+
+```
+ffffffff8153a100-ffffffff8153a160: _copy_from_user (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>Changed between <code>4.10</code> and <code>4.13</code> ⚠️</summary>
+<ul>
+<li>
+<b>Param type changed. </b>
+<code>unsigned int n</code> ➡️ <code>long unsigned int n</code>
+</li>
+</ul>
+</details>
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+No changes between <code>amd64</code> and <code>arm64</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>armhf</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>ppc64el</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>riscv64</code> ✅
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

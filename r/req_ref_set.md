@@ -1,0 +1,181 @@
+# Function: <code>req_ref_set</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-flush.c (ffffffff8167be71)
+Location: block/blk.h:479
+Inline: True
+Inline callers:
+  - block/blk-flush.c:blk_flush_complete_seq
+```
+```
+In block/blk-mq.c (ffffffff81683860)
+Location: block/blk.h:479
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-flush.c (ffffffff817386ef)
+Location: block/blk.h:484
+Inline: True
+Inline callers:
+  - block/blk-flush.c:blk_flush_complete_seq
+```
+```
+In block/blk-mq.c (ffffffff81740f90)
+Location: block/blk.h:484
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-flush.c (ffffffff81774cfb)
+Location: block/blk.h:513
+Inline: True
+Inline callers:
+  - block/blk-flush.c:blk_flush_complete_seq
+```
+```
+In block/blk-mq.c (ffffffff8177d1d4)
+Location: block/blk.h:513
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-flush.c (ffffffff817b703c)
+Location: block/blk.h:509
+Inline: True
+Inline callers:
+  - block/blk-flush.c:blk_flush_complete_seq
+```
+```
+In block/blk-mq.c (ffffffff817bf561)
+Location: block/blk.h:509
+Inline: True
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

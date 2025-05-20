@@ -1,0 +1,683 @@
+# Function: <code>knl_uncore_cpu_init</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101b7b0)
+Location: arch/x86/events/intel/uncore_snbep.c:1980
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101b7b0-ffffffff8101b7c6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101ab90)
+Location: arch/x86/events/intel/uncore_snbep.c:1986
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101ab90-ffffffff8101aba6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101b1f0)
+Location: arch/x86/events/intel/uncore_snbep.c:2066
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101b1f0-ffffffff8101b206: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff810195c0)
+Location: arch/x86/events/intel/uncore_snbep.c:2065
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810195c0-ffffffff810195d6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81019e60)
+Location: arch/x86/events/intel/uncore_snbep.c:2066
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81019e60-ffffffff81019e76: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101a7e0)
+Location: arch/x86/events/intel/uncore_snbep.c:2067
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101a7e0-ffffffff8101a7f6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101afb0)
+Location: arch/x86/events/intel/uncore_snbep.c:2069
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101afb0-ffffffff8101afc6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101ca50)
+Location: arch/x86/events/intel/uncore_snbep.c:2137
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101ca50-ffffffff8101ca66: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101d3d0)
+Location: arch/x86/events/intel/uncore_snbep.c:2132
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101d3d0-ffffffff8101d3e6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101f1e0)
+Location: arch/x86/events/intel/uncore_snbep.c:2169
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101f1e0-ffffffff8101f1f6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101fc70)
+Location: arch/x86/events/intel/uncore_snbep.c:2198
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101fc70-ffffffff8101fc86: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff810211c0)
+Location: arch/x86/events/intel/uncore_snbep.c:2240
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810211c0-ffffffff810211d6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81024e30)
+Location: arch/x86/events/intel/uncore_snbep.c:2260
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81024e30-ffffffff81024e46: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81028c00)
+Location: arch/x86/events/intel/uncore_snbep.c:2260
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81028c00-ffffffff81028c1a: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8102f450)
+Location: arch/x86/events/intel/uncore_snbep.c:2279
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102f450-ffffffff8102f46a: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8102f4d0)
+Location: arch/x86/events/intel/uncore_snbep.c:2269
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102f4d0-ffffffff8102f4ea: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81035640)
+Location: arch/x86/events/intel/uncore_snbep.c:2277
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81035640-ffffffff8103565a: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101d3d0)
+Location: arch/x86/events/intel/uncore_snbep.c:2132
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101d3d0-ffffffff8101d3e6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101cc70)
+Location: arch/x86/events/intel/uncore_snbep.c:2132
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101cc70-ffffffff8101cc86: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101d390)
+Location: arch/x86/events/intel/uncore_snbep.c:2132
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101d390-ffffffff8101d3a6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void knl_uncore_cpu_init();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101d5e0)
+Location: arch/x86/events/intel/uncore_snbep.c:2132
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101d5e0-ffffffff8101d5f6: knl_uncore_cpu_init (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

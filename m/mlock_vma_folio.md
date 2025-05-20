@@ -1,0 +1,188 @@
+# Function: <code>mlock_vma_folio</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/rmap.c (ffffffff8135e1b9)
+Location: mm/internal.h:511
+Inline: True
+Inline callers:
+  - mm/rmap.c:try_to_unmap_one
+  - mm/rmap.c:try_to_unmap_one
+  - mm/rmap.c:page_add_file_rmap
+  - mm/rmap.c:page_add_file_rmap
+  - mm/rmap.c:page_add_anon_rmap
+  - mm/rmap.c:page_add_anon_rmap
+  - mm/rmap.c:folio_referenced_one
+  - mm/rmap.c:folio_referenced_one
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/rmap.c (ffffffff813d8fe1)
+Location: mm/internal.h:509
+Inline: True
+Inline callers:
+  - mm/rmap.c:try_to_unmap_one
+  - mm/rmap.c:try_to_unmap_one
+  - mm/rmap.c:page_add_file_rmap
+  - mm/rmap.c:page_add_file_rmap
+  - mm/rmap.c:page_add_anon_rmap
+  - mm/rmap.c:page_add_anon_rmap
+  - mm/rmap.c:folio_referenced_one
+  - mm/rmap.c:folio_referenced_one
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/rmap.c (ffffffff8140d6e1)
+Location: mm/internal.h:585
+Inline: True
+Inline callers:
+  - mm/rmap.c:try_to_unmap_one
+  - mm/rmap.c:try_to_unmap_one
+  - mm/rmap.c:page_add_file_rmap
+  - mm/rmap.c:page_add_file_rmap
+  - mm/rmap.c:page_add_anon_rmap
+  - mm/rmap.c:page_add_anon_rmap
+  - mm/rmap.c:folio_referenced_one
+  - mm/rmap.c:folio_referenced_one
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/rmap.c (ffffffff81439ec0)
+Location: mm/internal.h:658
+Inline: True
+Inline callers:
+  - mm/rmap.c:try_to_unmap_one
+  - mm/rmap.c:folio_add_file_rmap_pmd
+  - mm/rmap.c:folio_add_file_rmap_ptes
+  - mm/rmap.c:folio_add_anon_rmap_pmd
+  - mm/rmap.c:folio_add_anon_rmap_ptes
+  - mm/rmap.c:folio_referenced_one
+  - mm/rmap.c:folio_referenced_one
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

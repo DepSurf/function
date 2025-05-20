@@ -1,0 +1,245 @@
+# Function: <code>cfq_group_notify_queue_del</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+void cfq_group_notify_queue_del(struct cfq_data *cfqd, struct cfq_group *cfqg);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/cfq-iosched.c (ffffffff813e0ba0)
+Location: block/cfq-iosched.c:1409
+Inline: False
+Direct callers:
+  - block/cfq-iosched.c:cfq_del_cfqq_rr
+```
+**Symbols:**
+
+```
+ffffffff813e0ba0-ffffffff813e0d31: cfq_group_notify_queue_del (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+void cfq_group_notify_queue_del(struct cfq_data *cfqd, struct cfq_group *cfqg);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/cfq-iosched.c (ffffffff81426dc0)
+Location: block/cfq-iosched.c:1432
+Inline: False
+Direct callers:
+  - block/cfq-iosched.c:cfq_del_cfqq_rr
+```
+**Symbols:**
+
+```
+ffffffff81426dc0-ffffffff81426f51: cfq_group_notify_queue_del (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+void cfq_group_notify_queue_del(struct cfq_data *cfqd, struct cfq_group *cfqg);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/cfq-iosched.c (ffffffff8143ed70)
+Location: block/cfq-iosched.c:1423
+Inline: False
+Direct callers:
+  - block/cfq-iosched.c:cfq_del_cfqq_rr
+```
+**Symbols:**
+
+```
+ffffffff8143ed70-ffffffff8143ee39: cfq_group_notify_queue_del (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+void cfq_group_notify_queue_del(struct cfq_data *cfqd, struct cfq_group *cfqg);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/cfq-iosched.c (ffffffff8144e0f0)
+Location: block/cfq-iosched.c:1428
+Inline: False
+Direct callers:
+  - block/cfq-iosched.c:cfq_del_cfqq_rr
+```
+**Symbols:**
+
+```
+ffffffff8144e0f0-ffffffff8144e1b3: cfq_group_notify_queue_del (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/cfq-iosched.c (ffffffff8147ab77)
+Location: block/cfq-iosched.c:1408
+Inline: True
+Inline callers:
+  - block/cfq-iosched.c:cfq_del_cfqq_rr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/cfq-iosched.c (ffffffff814af547)
+Location: block/cfq-iosched.c:1411
+Inline: True
+Inline callers:
+  - block/cfq-iosched.c:cfq_del_cfqq_rr
+```
+</details>
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+</ul>

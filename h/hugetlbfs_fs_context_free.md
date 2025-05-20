@@ -1,0 +1,571 @@
+# Function: <code>hugetlbfs_fs_context_free</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff813e8570)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813e8570-ffffffff813e8584: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff81402610)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81402610-ffffffff81402624: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff81450170)
+Location: fs/hugetlbfs/inode.c:1391
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81450170-ffffffff81450184: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff8146c680)
+Location: fs/hugetlbfs/inode.c:1392
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8146c680-ffffffff8146c694: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff81471c10)
+Location: fs/hugetlbfs/inode.c:1386
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81471c10-ffffffff81471c24: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff814c8710)
+Location: fs/hugetlbfs/inode.c:1387
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff814c8710-ffffffff814c8724: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff81553d50)
+Location: fs/hugetlbfs/inode.c:1438
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81553d50-ffffffff81553d6a: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff815f5570)
+Location: fs/hugetlbfs/inode.c:1514
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff815f5570-ffffffff815f558a: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff8162d5f0)
+Location: fs/hugetlbfs/inode.c:1509
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8162d5f0-ffffffff8162d60a: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff81666ad0)
+Location: fs/hugetlbfs/inode.c:1531
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81666ad0-ffffffff81666aea: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffff8000104e0da0)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffff8000104e0da0-ffff8000104e0dcc: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (c00000000061da30)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+c00000000061da30-c00000000061da68: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffe000354f50)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffe000354f50-ffffffe000354f7a: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff813fabf0)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813fabf0-ffffffff813fac04: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff813eb670)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813eb670-ffffffff813eb684: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff813f7f70)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813f7f70-ffffffff813f7f84: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void hugetlbfs_fs_context_free(struct fs_context *fc);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/hugetlbfs/inode.c (ffffffff8140dcc0)
+Location: fs/hugetlbfs/inode.c:1305
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8140dcc0-ffffffff8140dcd4: hugetlbfs_fs_context_free (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+No changes between <code>amd64</code> and <code>arm64</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>ppc64el</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>riscv64</code> ✅
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

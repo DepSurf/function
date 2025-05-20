@@ -1,0 +1,711 @@
+# Function: <code>agp3_generic_configure</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff8151d8f0)
+Location: drivers/char/agp/generic.c:1380
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8151d8f0-ffffffff8151d9f0: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff815706c0)
+Location: drivers/char/agp/generic.c:1380
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff815706c0-ffffffff815707c0: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff8159cd80)
+Location: drivers/char/agp/generic.c:1380
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8159cd80-ffffffff8159ce80: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff815b0e40)
+Location: drivers/char/agp/generic.c:1376
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff815b0e40-ffffffff815b0f24: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff816179e0)
+Location: drivers/char/agp/generic.c:1376
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff816179e0-ffffffff81617ac4: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff816514e0)
+Location: drivers/char/agp/generic.c:1376
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff816514e0-ffffffff816515c4: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff8166f6b0)
+Location: drivers/char/agp/generic.c:1376
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8166f6b0-ffffffff8166f794: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff816a51d0)
+Location: drivers/char/agp/generic.c:1375
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff816a51d0-ffffffff816a52b4: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff816c7f00)
+Location: drivers/char/agp/generic.c:1375
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff816c7f00-ffffffff816c7fe4: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff8177c690)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8177c690-ffffffff8177c774: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff817957e0)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff817957e0-ffffffff817958c4: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff817784a0)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff817784a0-ffffffff81778583: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff817fdf40)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff817fdf40-ffffffff817fe023: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff8193d4c0)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8193d4c0-ffffffff8193d5c6: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff81a9e360)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81a9e360-ffffffff81a9e466: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff81ae9d00)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81ae9d00-ffffffff81ae9e06: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff81b3d190)
+Location: drivers/char/agp/generic.c:1372
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81b3d190-ffffffff81b3d296: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (c000000000955660)
+Location: drivers/char/agp/generic.c:1375
+Inline: False
+```
+**Symbols:**
+
+```
+c000000000955660-c000000000955788: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff8168d950)
+Location: drivers/char/agp/generic.c:1375
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8168d950-ffffffff8168da34: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff8166b340)
+Location: drivers/char/agp/generic.c:1375
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8166b340-ffffffff8166b424: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff816bbbc0)
+Location: drivers/char/agp/generic.c:1375
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff816bbbc0-ffffffff816bbca4: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+int agp3_generic_configure();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/char/agp/generic.c (ffffffff816d6190)
+Location: drivers/char/agp/generic.c:1375
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff816d6190-ffffffff816d6274: agp3_generic_configure (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+No changes between <code>amd64</code> and <code>ppc64el</code> ✅
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

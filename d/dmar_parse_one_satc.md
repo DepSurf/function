@@ -1,0 +1,257 @@
+# Function: <code>dmar_parse_one_satc</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+int dmar_parse_one_satc(struct acpi_dmar_header *hdr, void *arg);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/intel/iommu.c (ffffffff81795420)
+Location: drivers/iommu/intel/iommu.c:3799
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81795420-ffffffff8179555b: dmar_parse_one_satc (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+int dmar_parse_one_satc(struct acpi_dmar_header *hdr, void *arg);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/intel/iommu.c (ffffffff8181d290)
+Location: drivers/iommu/intel/iommu.c:3794
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8181d290-ffffffff8181d3cb: dmar_parse_one_satc (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+int dmar_parse_one_satc(struct acpi_dmar_header *hdr, void *arg);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/intel/iommu.c (ffffffff8195e020)
+Location: drivers/iommu/intel/iommu.c:3510
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8195e020-ffffffff8195e14c: dmar_parse_one_satc (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+int dmar_parse_one_satc(struct acpi_dmar_header *hdr, void *arg);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/intel/iommu.c (ffffffff81ac5b40)
+Location: drivers/iommu/intel/iommu.c:3390
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81ac5b40-ffffffff81ac5c6c: dmar_parse_one_satc (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+int dmar_parse_one_satc(struct acpi_dmar_header *hdr, void *arg);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/intel/iommu.c (ffffffff81b125d0)
+Location: drivers/iommu/intel/iommu.c:3277
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81b125d0-ffffffff81b12715: dmar_parse_one_satc (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+int dmar_parse_one_satc(struct acpi_dmar_header *hdr, void *arg);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/iommu/intel/iommu.c (ffffffff81b66bb0)
+Location: drivers/iommu/intel/iommu.c:3126
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81b66bb0-ffffffff81b66cf5: dmar_parse_one_satc (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

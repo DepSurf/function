@@ -1,0 +1,158 @@
+# Function: <code>vcpu_get_reg</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In virt/kvm/arm/mmio.c (ffff8000100cdba0)
+Location: arch/arm64/include/asm/kvm_emulate.h:170
+Inline: True
+Inline callers:
+  - virt/kvm/arm/mmio.c:io_mem_abort
+```
+```
+In virt/kvm/arm/psci.c (0)
+Location: arch/arm64/include/asm/kvm_emulate.h:170
+Inline: True
+```
+```
+In arch/arm64/kvm/handle_exit.c (ffff8000100d1258)
+Location: arch/arm64/include/asm/kvm_emulate.h:170
+Inline: True
+Inline callers:
+  - arch/arm64/kvm/handle_exit.c:handle_hvc
+```
+```
+In arch/arm64/kvm/sys_regs.c (ffff8000100d955c)
+Location: arch/arm64/include/asm/kvm_emulate.h:170
+Inline: True
+Inline callers:
+  - arch/arm64/kvm/sys_regs.c:kvm_handle_sys_reg
+  - arch/arm64/kvm/sys_regs.c:kvm_handle_cp_32
+  - arch/arm64/kvm/sys_regs.c:kvm_handle_cp_64
+  - arch/arm64/kvm/sys_regs.c:kvm_handle_cp_64
+```
+```
+In virt/kvm/arm/hyp/vgic-v3-sr.c (ffff800010dabf40)
+Location: arch/arm64/include/asm/kvm_emulate.h:170
+Inline: True
+Inline callers:
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_ctlr
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_pmr
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_apxrn
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_bpr1
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_bpr0
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_igrpen1
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_igrpen0
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_eoir
+  - virt/kvm/arm/hyp/vgic-v3-sr.c:__vgic_v3_write_dir
+```
+```
+In arch/arm64/kvm/hyp/vgic-v2-cpuif-proxy.c (ffff800010dad0dc)
+Location: arch/arm64/include/asm/kvm_emulate.h:170
+Inline: True
+Inline callers:
+  - arch/arm64/kvm/hyp/vgic-v2-cpuif-proxy.c:__vgic_v2_perform_cpuif_access
+```
+```
+In arch/arm64/kvm/hyp/switch.c (ffff800010dae360)
+Location: arch/arm64/include/asm/kvm_emulate.h:170
+Inline: True
+Inline callers:
+  - arch/arm64/kvm/hyp/switch.c:handle_tx2_tvm
+```
+</details>
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

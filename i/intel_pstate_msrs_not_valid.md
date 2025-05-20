@@ -1,0 +1,459 @@
+# Function: <code>intel_pstate_msrs_not_valid</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff81fb4931)
+Location: drivers/cpufreq/intel_pstate.c:1211
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff81fe13c3)
+Location: drivers/cpufreq/intel_pstate.c:1602
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff8201f0d1)
+Location: drivers/cpufreq/intel_pstate.c:2307
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff82101f2c)
+Location: drivers/cpufreq/intel_pstate.c:2375
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff8270b56f)
+Location: drivers/cpufreq/intel_pstate.c:2124
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff827354f9)
+Location: drivers/cpufreq/intel_pstate.c:2357
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff828ef425)
+Location: drivers/cpufreq/intel_pstate.c:2432
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff8290a93e)
+Location: drivers/cpufreq/intel_pstate.c:2461
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff82914335)
+Location: drivers/cpufreq/intel_pstate.c:2567
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff82d27227)
+Location: drivers/cpufreq/intel_pstate.c:2581
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff8301590e)
+Location: drivers/cpufreq/intel_pstate.c:2881
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff832208ac)
+Location: drivers/cpufreq/intel_pstate.c:2861
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff8330a1c9)
+Location: drivers/cpufreq/intel_pstate.c:3053
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff834c39ff)
+Location: drivers/cpufreq/intel_pstate.c:3221
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff83f0373d)
+Location: drivers/cpufreq/intel_pstate.c:3185
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff837296ad)
+Location: drivers/cpufreq/intel_pstate.c:3211
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff8395d63d)
+Location: drivers/cpufreq/intel_pstate.c:3227
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff828f9a6f)
+Location: drivers/cpufreq/intel_pstate.c:2567
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff828f1c32)
+Location: drivers/cpufreq/intel_pstate.c:2567
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff8290e981)
+Location: drivers/cpufreq/intel_pstate.c:2567
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/cpufreq/intel_pstate.c (ffffffff82915397)
+Location: drivers/cpufreq/intel_pstate.c:2567
+Inline: True
+Inline callers:
+  - drivers/cpufreq/intel_pstate.c:intel_pstate_init
+```
+</details>
+</li>
+</ul>
+
+## Differences

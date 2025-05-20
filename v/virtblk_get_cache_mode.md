@@ -1,0 +1,210 @@
+# Function: <code>virtblk_get_cache_mode</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+int virtblk_get_cache_mode(struct virtio_device *vdev);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/block/virtio_blk.c (ffffffff815718d0)
+Location: drivers/block/virtio_blk.c:472
+Inline: False
+Direct callers:
+  - drivers/block/virtio_blk.c:virtblk_update_cache_mode
+```
+**Symbols:**
+
+```
+ffffffff815718d0-ffffffff8157195c: virtblk_get_cache_mode (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+int virtblk_get_cache_mode(struct virtio_device *vdev);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/block/virtio_blk.c (ffffffff815c70a0)
+Location: drivers/block/virtio_blk.c:459
+Inline: False
+Direct callers:
+  - drivers/block/virtio_blk.c:virtblk_update_cache_mode
+```
+**Symbols:**
+
+```
+ffffffff815c70a0-ffffffff815c712c: virtblk_get_cache_mode (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+int virtblk_get_cache_mode(struct virtio_device *vdev);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/block/virtio_blk.c (ffffffff81b7f620)
+Location: drivers/block/virtio_blk.c:1131
+Inline: False
+Direct callers:
+  - drivers/block/virtio_blk.c:virtblk_probe
+  - drivers/block/virtio_blk.c:cache_type_show
+  - drivers/block/virtio_blk.c:cache_type_store
+```
+**Symbols:**
+
+```
+ffffffff81b7f620-ffffffff81b7f6c6: virtblk_get_cache_mode (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+int virtblk_get_cache_mode(struct virtio_device *vdev);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/block/virtio_blk.c (ffffffff81bd34a0)
+Location: drivers/block/virtio_blk.c:1078
+Inline: False
+Direct callers:
+  - drivers/block/virtio_blk.c:virtblk_probe
+  - drivers/block/virtio_blk.c:cache_type_show
+  - drivers/block/virtio_blk.c:cache_type_store
+```
+**Symbols:**
+
+```
+ffffffff81bd34a0-ffffffff81bd3546: virtblk_get_cache_mode (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

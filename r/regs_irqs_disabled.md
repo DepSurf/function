@@ -1,0 +1,215 @@
+# Function: <code>regs_irqs_disabled</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/entry/common.c (ffffffff81c38a4d)
+Location: arch/x86/include/asm/ptrace.h:227
+Inline: True
+Inline callers:
+  - kernel/entry/common.c:irqentry_exit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/entry/common.c (ffffffff81c2ae4d)
+Location: arch/x86/include/asm/ptrace.h:230
+Inline: True
+Inline callers:
+  - kernel/entry/common.c:irqentry_exit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/entry/common.c (ffffffff81d493dd)
+Location: arch/x86/include/asm/ptrace.h:230
+Inline: True
+Inline callers:
+  - kernel/entry/common.c:irqentry_exit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/entry/common.c (ffffffff81f1886d)
+Location: arch/x86/include/asm/ptrace.h:234
+Inline: True
+Inline callers:
+  - kernel/entry/common.c:irqentry_exit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/entry/common.c (ffffffff820bfebd)
+Location: arch/x86/include/asm/ptrace.h:234
+Inline: True
+Inline callers:
+  - kernel/entry/common.c:irqentry_exit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/entry/common.c (ffffffff82141cfd)
+Location: arch/x86/include/asm/ptrace.h:234
+Inline: True
+Inline callers:
+  - kernel/entry/common.c:irqentry_exit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/entry/common.c (ffffffff8222407d)
+Location: arch/x86/include/asm/ptrace.h:234
+Inline: True
+Inline callers:
+  - kernel/entry/common.c:irqentry_exit
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

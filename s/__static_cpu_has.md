@@ -1,0 +1,156 @@
+# Function: <code>__static_cpu_has</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/process_64.c (ffffffff8102d691)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+Inline callers:
+  - arch/x86/kernel/process_64.c:__switch_to
+```
+```
+In arch/x86/kernel/cpu/mcheck/therm_throt.c (ffffffff81049541)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/mcheck/therm_throt.c:intel_thermal_interrupt
+```
+```
+In arch/x86/kernel/acpi/cstate.c (ffffffff810500eb)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+Inline callers:
+  - arch/x86/kernel/acpi/cstate.c:acpi_processor_ffh_cstate_enter
+```
+```
+In arch/x86/mm/fault.c (ffffffff8106b438)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+Inline callers:
+  - arch/x86/mm/fault.c:__do_page_fault
+```
+```
+In kernel/locking/qspinlock.c (ffffffff810ca6e9)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+```
+```
+In fs/dax.c (ffffffff8125e15e)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+Inline callers:
+  - fs/dax.c:__dax_fault
+  - fs/dax.c:dax_do_io
+  - fs/dax.c:dax_zero_page_range
+  - fs/dax.c:dax_clear_blocks
+```
+```
+In drivers/idle/intel_idle.c (ffffffff81479448)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+Inline callers:
+  - drivers/idle/intel_idle.c:intel_idle
+  - drivers/idle/intel_idle.c:intel_idle_freeze
+```
+```
+In drivers/cpufreq/powernow-k8.c (ffffffff816b76d1)
+Location: arch/x86/include/asm/cpufeature.h:150
+Inline: True
+```
+</details>
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

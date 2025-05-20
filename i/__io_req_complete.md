@@ -1,0 +1,297 @@
+# Function: <code>__io_req_complete</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Selective Inline ⚠️</summary>
+
+```c
+void __io_req_complete(struct io_kiocb *req, long int res, unsigned int cflags, struct io_comp_state *cs);
+```
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io_uring.c (ffffffff81392674)
+Location: fs/io_uring.c:1935
+Inline: True
+Inline callers:
+  - fs/io_uring.c:io_cancel_defer_files
+  - fs/io_uring.c:io_cancel_defer_files
+  - fs/io_uring.c:io_submit_sqes
+  - fs/io_uring.c:io_submit_sqes
+  - fs/io_uring.c:io_submit_sqes
+  - fs/io_uring.c:io_submit_sqes
+  - fs/io_uring.c:io_submit_sqe
+  - fs/io_uring.c:io_submit_sqe
+  - fs/io_uring.c:io_queue_sqe
+  - fs/io_uring.c:io_queue_sqe
+  - fs/io_uring.c:__io_queue_sqe
+  - fs/io_uring.c:__io_queue_sqe
+  - fs/io_uring.c:io_wq_submit_work
+  - fs/io_uring.c:io_wq_submit_work
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_openat2
+  - fs/io_uring.c:io_openat2
+Direct callers:
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_connect
+  - fs/io_uring.c:io_recv
+  - fs/io_uring.c:io_recvmsg
+  - fs/io_uring.c:io_send
+  - fs/io_uring.c:io_sendmsg
+  - fs/io_uring.c:io_close
+  - fs/io_uring.c:io_provide_buffers
+  - fs/io_uring.c:io_provide_buffers
+  - fs/io_uring.c:io_remove_buffers
+  - fs/io_uring.c:io_remove_buffers
+  - fs/io_uring.c:io_complete_rw_common
+```
+**Symbols:**
+
+```
+ffffffff813929c0-ffffffff81392ab1: __io_req_complete (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io_uring.c (ffffffff8139fc4e)
+Location: fs/io_uring.c:1660
+Inline: True
+Inline callers:
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_connect
+  - fs/io_uring.c:io_recv
+  - fs/io_uring.c:io_recvmsg
+  - fs/io_uring.c:io_send
+  - fs/io_uring.c:io_sendmsg
+  - fs/io_uring.c:io_provide_buffers
+  - fs/io_uring.c:io_openat2
+  - fs/io_uring.c:kiocb_done
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io_uring.c (ffffffff813ed0b2)
+Location: fs/io_uring.c:1884
+Inline: True
+Inline callers:
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_issue_sqe
+  - fs/io_uring.c:io_connect
+  - fs/io_uring.c:io_recv
+  - fs/io_uring.c:io_recvmsg
+  - fs/io_uring.c:io_send
+  - fs/io_uring.c:io_sendmsg
+  - fs/io_uring.c:io_close
+  - fs/io_uring.c:io_provide_buffers
+  - fs/io_uring.c:io_openat2
+  - fs/io_uring.c:kiocb_done
+  - fs/io_uring.c:kiocb_done
+  - fs/io_uring.c:kiocb_done
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io_uring.c (ffffffff816d4e51)
+Location: io_uring/io_uring.c:2386
+Inline: True
+Inline callers:
+  - io_uring/io_uring.c:io_files_update
+  - io_uring/io_uring.c:io_files_update
+  - io_uring/io_uring.c:io_poll_remove
+  - io_uring/io_uring.c:io_poll_remove
+  - io_uring/io_uring.c:io_poll_add
+  - io_uring/io_uring.c:io_poll_add
+  - io_uring/io_uring.c:io_connect
+  - io_uring/io_uring.c:io_connect
+  - io_uring/io_uring.c:io_socket
+  - io_uring/io_uring.c:io_socket
+  - io_uring/io_uring.c:io_accept
+  - io_uring/io_uring.c:io_accept
+  - io_uring/io_uring.c:io_recv
+  - io_uring/io_uring.c:io_recv
+  - io_uring/io_uring.c:io_recvmsg
+  - io_uring/io_uring.c:io_recvmsg
+  - io_uring/io_uring.c:io_send
+  - io_uring/io_uring.c:io_send
+  - io_uring/io_uring.c:io_sendmsg
+  - io_uring/io_uring.c:io_sendmsg
+  - io_uring/io_uring.c:io_shutdown
+  - io_uring/io_uring.c:io_sync_file_range
+  - io_uring/io_uring.c:io_close
+  - io_uring/io_uring.c:io_close
+  - io_uring/io_uring.c:io_statx
+  - io_uring/io_uring.c:io_fadvise
+  - io_uring/io_uring.c:io_fadvise
+  - io_uring/io_uring.c:io_madvise
+  - io_uring/io_uring.c:io_epoll_ctl
+  - io_uring/io_uring.c:io_epoll_ctl
+  - io_uring/io_uring.c:io_provide_buffers
+  - io_uring/io_uring.c:io_provide_buffers
+  - io_uring/io_uring.c:io_remove_buffers
+  - io_uring/io_uring.c:io_remove_buffers
+  - io_uring/io_uring.c:io_openat2
+  - io_uring/io_uring.c:io_openat2
+  - io_uring/io_uring.c:io_fallocate
+  - io_uring/io_uring.c:io_fsync
+  - io_uring/io_uring.c:io_msg_ring
+  - io_uring/io_uring.c:io_msg_ring
+  - io_uring/io_uring.c:io_nop
+  - io_uring/io_uring.c:io_nop
+  - io_uring/io_uring.c:io_splice
+  - io_uring/io_uring.c:io_tee
+  - io_uring/io_uring.c:io_uring_cmd_done
+  - io_uring/io_uring.c:io_linkat
+  - io_uring/io_uring.c:io_symlinkat
+  - io_uring/io_uring.c:io_mkdirat
+  - io_uring/io_uring.c:io_unlinkat
+  - io_uring/io_uring.c:io_setxattr
+  - io_uring/io_uring.c:io_fsetxattr
+  - io_uring/io_uring.c:io_getxattr
+  - io_uring/io_uring.c:io_fgetxattr
+  - io_uring/io_uring.c:io_renameat
+  - io_uring/io_uring.c:kiocb_done
+  - io_uring/io_uring.c:kiocb_done
+```
+</details>
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+</ul>

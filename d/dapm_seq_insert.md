@@ -1,0 +1,122 @@
+# Function: <code>dapm_seq_insert</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Selective Inline ⚠️</summary>
+
+```c
+void dapm_seq_insert(struct snd_soc_dapm_widget *new_widget, struct list_head *list, bool power_up);
+```
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In sound/soc/soc-dapm.c (c0ca7844)
+Location: sound/soc/soc-dapm.c:1485
+Inline: True
+Direct callers:
+  - sound/soc/soc-dapm.c:soc_dapm_shutdown_dapm
+  - sound/soc/soc-dapm.c:dapm_power_widgets
+  - sound/soc/soc-dapm.c:dapm_power_widgets
+  - sound/soc/soc-dapm.c:dapm_power_widgets
+```
+**Symbols:**
+
+```
+c0ca7844-c0ca7a04: dapm_seq_insert (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Arch</b>
+<ul>
+</ul>

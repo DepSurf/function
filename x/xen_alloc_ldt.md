@@ -1,0 +1,655 @@
+# Function: <code>xen_alloc_ldt</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten.c (ffffffff8101cd10)
+Location: arch/x86/xen/enlighten.c:543
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101cd10-ffffffff8101cd54: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten.c (ffffffff8101be90)
+Location: arch/x86/xen/enlighten.c:547
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101be90-ffffffff8101beda: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten.c (ffffffff8101c6a0)
+Location: arch/x86/xen/enlighten.c:549
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101c6a0-ffffffff8101c6ea: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff8101f600)
+Location: arch/x86/xen/enlighten_pv.c:364
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101f600-ffffffff8101f64c: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81020160)
+Location: arch/x86/xen/enlighten_pv.c:374
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81020160-ffffffff810201b3: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81020c60)
+Location: arch/x86/xen/enlighten_pv.c:374
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81020c60-ffffffff81020cb8: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81020560)
+Location: arch/x86/xen/enlighten_pv.c:396
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81020560-ffffffff810205b8: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff810220a0)
+Location: arch/x86/xen/enlighten_pv.c:396
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810220a0-ffffffff810220f9: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff810229e0)
+Location: arch/x86/xen/enlighten_pv.c:404
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810229e0-ffffffff81022a39: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81024e60)
+Location: arch/x86/xen/enlighten_pv.c:406
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81024e60-ffffffff81024eb9: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff810255d0)
+Location: arch/x86/xen/enlighten_pv.c:392
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810255d0-ffffffff81025629: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81027a90)
+Location: arch/x86/xen/enlighten_pv.c:392
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81027a90-ffffffff81027ae9: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff8102c110)
+Location: arch/x86/xen/enlighten_pv.c:363
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102c110-ffffffff8102c169: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81030d80)
+Location: arch/x86/xen/enlighten_pv.c:366
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81030d80-ffffffff81030ded: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff810378f0)
+Location: arch/x86/xen/enlighten_pv.c:377
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810378f0-ffffffff8103795d: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81037830)
+Location: arch/x86/xen/enlighten_pv.c:432
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81037830-ffffffff8103789d: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff8103db80)
+Location: arch/x86/xen/enlighten_pv.c:458
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8103db80-ffffffff8103dbed: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81022b40)
+Location: arch/x86/xen/enlighten_pv.c:404
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81022b40-ffffffff81022b99: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff810229a0)
+Location: arch/x86/xen/enlighten_pv.c:404
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810229a0-ffffffff810229f9: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void xen_alloc_ldt(struct desc_struct *ldt, unsigned int entries);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/enlighten_pv.c (ffffffff81022d30)
+Location: arch/x86/xen/enlighten_pv.c:404
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81022d30-ffffffff81022d89: xen_alloc_ldt (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

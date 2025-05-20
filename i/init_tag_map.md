@@ -1,0 +1,276 @@
+# Function: <code>init_tag_map</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+int init_tag_map(struct request_queue *q, struct blk_queue_tag *tags, int depth);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-tag.c (ffffffff813bc0a0)
+Location: block/blk-tag.c:89
+Inline: False
+Direct callers:
+  - block/blk-tag.c:__blk_queue_init_tags
+  - block/blk-tag.c:blk_queue_resize_tags
+```
+**Symbols:**
+
+```
+ffffffff813bc0a0-ffffffff813bc155: init_tag_map (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+int init_tag_map(struct request_queue *q, struct blk_queue_tag *tags, int depth);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-tag.c (ffffffff813ffeb0)
+Location: block/blk-tag.c:89
+Inline: False
+Direct callers:
+  - block/blk-tag.c:blk_queue_resize_tags
+  - block/blk-tag.c:__blk_queue_init_tags
+```
+**Symbols:**
+
+```
+ffffffff813ffeb0-ffffffff813fff55: init_tag_map (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+int init_tag_map(struct request_queue *q, struct blk_queue_tag *tags, int depth);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-tag.c (ffffffff81419750)
+Location: block/blk-tag.c:89
+Inline: False
+Direct callers:
+  - block/blk-tag.c:blk_queue_resize_tags
+  - block/blk-tag.c:__blk_queue_init_tags
+```
+**Symbols:**
+
+```
+ffffffff81419750-ffffffff814197f5: init_tag_map (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+int init_tag_map(struct request_queue *q, struct blk_queue_tag *tags, int depth);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-tag.c (ffffffff81427680)
+Location: block/blk-tag.c:89
+Inline: False
+Direct callers:
+  - block/blk-tag.c:blk_queue_resize_tags
+  - block/blk-tag.c:__blk_queue_init_tags
+```
+**Symbols:**
+
+```
+ffffffff81427680-ffffffff8142772a: init_tag_map (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+int init_tag_map(struct request_queue *q, struct blk_queue_tag *tags, int depth);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In block/blk-tag.c (ffffffff81452680)
+Location: block/blk-tag.c:90
+Inline: False
+Direct callers:
+  - block/blk-tag.c:blk_queue_resize_tags
+  - block/blk-tag.c:__blk_queue_init_tags
+```
+**Symbols:**
+
+```
+ffffffff81452680-ffffffff8145272a: init_tag_map (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Transformation ⚠️</summary>
+
+```c
+int init_tag_map(struct request_queue *q, struct blk_queue_tag *tags, int depth);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** True
+
+**Instances:**
+
+```
+In block/blk-tag.c (0)
+Location: block/blk-tag.c:90
+Inline: False
+Direct callers:
+  - block/blk-tag.c:blk_queue_resize_tags
+  - block/blk-tag.c:__blk_queue_init_tags
+```
+**Symbols:**
+
+```
+ffffffff81485a40-ffffffff81485ae3: init_tag_map (STB_LOCAL)
+ffffffff81485e09-ffffffff81485e29: init_tag_map.cold.9 (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+</ul>

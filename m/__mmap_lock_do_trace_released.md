@@ -1,0 +1,1454 @@
+# Function: <code>__mmap_lock_do_trace_released</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void __mmap_lock_do_trace_released(struct mm_struct *mm, bool write);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/mmap_lock.c (ffffffff812961f0)
+Location: mm/mmap_lock.c:226
+Inline: False
+Direct callers:
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso
+  - arch/x86/entry/vdso/vma.c:vdso_join_timens
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/main.c:sgx_reclaimer_block
+  - arch/x86/mm/fault.c:do_user_addr_fault
+  - arch/x86/mm/fault.c:__bad_area
+  - kernel/fork.c:dup_mmap
+  - kernel/fork.c:dup_mmap
+  - kernel/exit.c:mmap_read_unlock
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:prctl_set_mm
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_exe_file
+  - kernel/sys.c:prctl_set_mm_exe_file
+  - kernel/sched/fair.c:task_numa_work
+  - kernel/futex.c:fault_in_user_writeable
+  - kernel/acct.c:acct_collect
+  - kernel/bpf/stackmap.c:stack_map_get_build_id_offset
+  - kernel/bpf/stackmap.c:do_up_read
+  - kernel/events/core.c:perf_event_addr_filters_apply
+  - kernel/events/uprobes.c:find_active_uprobe
+  - kernel/events/uprobes.c:xol_add_vma
+  - kernel/events/uprobes.c:register_for_each_vma
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:__lock_page_or_retry
+  - mm/filemap.c:__lock_page_or_retry
+  - mm/oom_kill.c:oom_reap_task_mm
+  - mm/shmem.c:shmem_fault
+  - mm/util.c:vm_mmap_pgoff
+  - mm/gup.c:pin_user_pages_locked
+  - mm/gup.c:internal_get_user_pages_fast
+  - mm/gup.c:get_user_pages_unlocked
+  - mm/gup.c:get_user_pages_locked
+  - mm/gup.c:__get_user_pages_remote
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:__mm_populate
+  - mm/memory.c:print_vma_addr
+  - mm/memory.c:__access_remote_vm
+  - mm/memory.c:fault_dirty_shared_page
+  - mm/mincore.c:__do_sys_mincore
+  - mm/mlock.c:__do_sys_munlockall
+  - mm/mlock.c:__do_sys_mlockall
+  - mm/mlock.c:__ia32_sys_munlock
+  - mm/mlock.c:__x64_sys_munlock
+  - mm/mlock.c:do_mlock
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:__do_sys_remap_file_pages
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mprotect.c:__ia32_sys_pkey_free
+  - mm/mprotect.c:__x64_sys_pkey_free
+  - mm/mprotect.c:__do_sys_pkey_alloc
+  - mm/mprotect.c:do_mprotect_pkey
+  - mm/mremap.c:__do_sys_mremap
+  - mm/mremap.c:__do_sys_mremap
+  - mm/msync.c:__do_sys_msync
+  - mm/msync.c:__do_sys_msync
+  - mm/madvise.c:madvise_remove
+  - mm/swapfile.c:unuse_mm
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_migrate_pages
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:lookup_node
+  - mm/mempolicy.c:mpol_rebind_mm
+  - mm/mmu_notifier.c:mmu_notifier_register
+  - mm/ksm.c:__ksm_exit
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:cmp_and_merge_page
+  - mm/ksm.c:unstable_tree_search_insert
+  - mm/ksm.c:try_to_merge_with_ksm_page
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:break_cow
+  - mm/migrate.c:do_pages_stat_array
+  - mm/migrate.c:add_page_for_migration
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:retract_page_tables
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:__khugepaged_exit
+  - mm/memcontrol.c:mem_cgroup_move_charge
+  - mm/memcontrol.c:mem_cgroup_count_precharge
+  - mm/userfaultfd.c:mwriteprotect_range
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/frame_vector.c:get_vaddr_frames
+  - mm/ptdump.c:ptdump_walk_pgd
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:setup_arg_pages
+  - fs/exec.c:__bprm_mm_init
+  - fs/exec.c:__bprm_mm_init
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/userfaultfd.c:userfaultfd_release
+  - fs/userfaultfd.c:userfaultfd_remove
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:aio_setup_ring
+  - fs/io_uring.c:io_uring_create
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/io_uring.c:io_unaccount_mem
+  - fs/binfmt_elf.c:create_elf_tables
+  - fs/compat_binfmt_elf.c:create_elf_tables
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:coredump_wait
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:m_stop
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_lookup
+  - fs/proc/base.c:map_files_get_link
+  - fs/proc/base.c:map_files_d_revalidate
+  - ipc/shm.c:ksys_shmdt
+  - ipc/shm.c:do_shmat
+  - drivers/iommu/intel/svm.c:prq_event_thread
+  - drivers/vfio/vfio_iommu_type1.c:vaddr_get_pfn
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_zap_and_vma_lock
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_zap_and_vma_lock
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/xdp/xdp_umem.c:xdp_umem_pin_pages
+```
+**Symbols:**
+
+```
+ffffffff812961f0-ffffffff8129626c: __mmap_lock_do_trace_released (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void __mmap_lock_do_trace_released(struct mm_struct *mm, bool write);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/mmap_lock.c (ffffffff8129bb60)
+Location: mm/mmap_lock.c:237
+Inline: False
+Direct callers:
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso
+  - arch/x86/entry/vdso/vma.c:vdso_join_timens
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/main.c:sgx_reclaimer_block
+  - arch/x86/kernel/cpu/sgx/virt.c:sgx_vepc_fault
+  - arch/x86/mm/fault.c:do_user_addr_fault
+  - arch/x86/mm/fault.c:__bad_area
+  - kernel/fork.c:dup_mmap
+  - kernel/fork.c:dup_mmap
+  - kernel/exit.c:mmap_read_unlock
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:prctl_set_mm
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sys.c:prctl_set_mm_exe_file
+  - kernel/sys.c:prctl_set_mm_exe_file
+  - kernel/sched/fair.c:task_numa_work
+  - kernel/futex.c:fault_in_user_writeable
+  - kernel/acct.c:acct_collect
+  - kernel/bpf/task_iter.c:task_vma_seq_stop
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/stackmap.c:stack_map_get_build_id_offset
+  - kernel/bpf/stackmap.c:do_up_read
+  - kernel/events/core.c:perf_event_addr_filters_apply
+  - kernel/events/uprobes.c:handle_swbp
+  - kernel/events/uprobes.c:handler_chain
+  - kernel/events/uprobes.c:__create_xol_area
+  - kernel/events/uprobes.c:register_for_each_vma
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:__lock_page_or_retry
+  - mm/filemap.c:__lock_page_or_retry
+  - mm/oom_kill.c:oom_reaper
+  - mm/shmem.c:shmem_fault
+  - mm/util.c:vm_mmap_pgoff
+  - mm/gup.c:pin_user_pages_locked
+  - mm/gup.c:internal_get_user_pages_fast
+  - mm/gup.c:get_user_pages_unlocked
+  - mm/gup.c:get_user_pages_locked
+  - mm/gup.c:__get_user_pages_remote
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:__mm_populate
+  - mm/memory.c:print_vma_addr
+  - mm/memory.c:__access_remote_vm
+  - mm/memory.c:fault_dirty_shared_page
+  - mm/mincore.c:__do_sys_mincore
+  - mm/mlock.c:__do_sys_munlockall
+  - mm/mlock.c:__do_sys_mlockall
+  - mm/mlock.c:__ia32_sys_munlock
+  - mm/mlock.c:__x64_sys_munlock
+  - mm/mlock.c:do_mlock
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:__do_sys_remap_file_pages
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mprotect.c:__ia32_sys_pkey_free
+  - mm/mprotect.c:__x64_sys_pkey_free
+  - mm/mprotect.c:__do_sys_pkey_alloc
+  - mm/mprotect.c:do_mprotect_pkey
+  - mm/mremap.c:__do_sys_mremap
+  - mm/mremap.c:__do_sys_mremap
+  - mm/msync.c:__do_sys_msync
+  - mm/msync.c:__do_sys_msync
+  - mm/swapfile.c:try_to_unuse
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_migrate_pages
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:mpol_rebind_mm
+  - mm/mmu_notifier.c:mmu_notifier_register
+  - mm/ksm.c:__ksm_exit
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:cmp_and_merge_page
+  - mm/ksm.c:unstable_tree_search_insert
+  - mm/ksm.c:try_to_merge_with_ksm_page
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:break_cow
+  - mm/migrate.c:do_pages_stat
+  - mm/migrate.c:add_page_for_migration
+  - mm/huge_memory.c:split_huge_pages_pid
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:retract_page_tables
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:__khugepaged_exit
+  - mm/memcontrol.c:mem_cgroup_move_charge
+  - mm/userfaultfd.c:mwriteprotect_range
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/ptdump.c:ptdump_walk_pgd
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:setup_arg_pages
+  - fs/exec.c:__bprm_mm_init
+  - fs/exec.c:__bprm_mm_init
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/userfaultfd.c:userfaultfd_release
+  - fs/userfaultfd.c:userfaultfd_remove
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:aio_setup_ring
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/binfmt_elf.c:create_elf_tables
+  - fs/compat_binfmt_elf.c:create_elf_tables
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:coredump_wait
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:m_stop
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_lookup
+  - fs/proc/base.c:map_files_get_link
+  - fs/proc/base.c:map_files_d_revalidate
+  - ipc/shm.c:ksys_shmdt
+  - ipc/shm.c:do_shmat
+  - drivers/iommu/intel/svm.c:prq_event_thread
+  - drivers/vfio/vfio_iommu_type1.c:vaddr_get_pfns
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_zap_and_vma_lock
+  - drivers/vfio/pci/vfio_pci.c:vfio_pci_zap_and_vma_lock
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/xdp/xdp_umem.c:xdp_umem_pin_pages
+```
+**Symbols:**
+
+```
+ffffffff8129bb60-ffffffff8129bc02: __mmap_lock_do_trace_released (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void __mmap_lock_do_trace_released(struct mm_struct *mm, bool write);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/mmap_lock.c (ffffffff812dc670)
+Location: mm/mmap_lock.c:241
+Inline: False
+Direct callers:
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso
+  - arch/x86/entry/vdso/vma.c:vdso_join_timens
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/main.c:sgx_reclaimer_block
+  - arch/x86/kernel/cpu/sgx/virt.c:sgx_vepc_fault
+  - arch/x86/mm/fault.c:do_user_addr_fault
+  - arch/x86/mm/fault.c:__bad_area
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:dup_mmap
+  - kernel/fork.c:dup_mmap
+  - kernel/exit.c:mmap_read_unlock
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:prctl_set_mm
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sched/fair.c:task_numa_work
+  - kernel/futex.c:fault_in_user_writeable
+  - kernel/acct.c:acct_collect
+  - kernel/bpf/task_iter.c:task_vma_seq_stop
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/stackmap.c:stack_map_get_build_id_offset
+  - kernel/bpf/stackmap.c:do_up_read
+  - kernel/events/core.c:perf_event_addr_filters_apply
+  - kernel/events/uprobes.c:handler_chain
+  - kernel/events/uprobes.c:find_active_uprobe
+  - kernel/events/uprobes.c:__create_xol_area
+  - kernel/events/uprobes.c:register_for_each_vma
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:__lock_page_or_retry
+  - mm/filemap.c:__lock_page_or_retry
+  - mm/oom_kill.c:__do_sys_process_mrelease
+  - mm/oom_kill.c:oom_reaper
+  - mm/shmem.c:shmem_fault
+  - mm/util.c:vm_mmap_pgoff
+  - mm/gup.c:pin_user_pages_locked
+  - mm/gup.c:internal_get_user_pages_fast
+  - mm/gup.c:get_user_pages_unlocked
+  - mm/gup.c:get_user_pages_locked
+  - mm/gup.c:__get_user_pages_remote
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:__mm_populate
+  - mm/memory.c:print_vma_addr
+  - mm/memory.c:__access_remote_vm
+  - mm/memory.c:fault_dirty_shared_page
+  - mm/mincore.c:__do_sys_mincore
+  - mm/mlock.c:__do_sys_munlockall
+  - mm/mlock.c:__do_sys_mlockall
+  - mm/mlock.c:__ia32_sys_munlock
+  - mm/mlock.c:__x64_sys_munlock
+  - mm/mlock.c:do_mlock
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:__do_sys_remap_file_pages
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mprotect.c:__ia32_sys_pkey_free
+  - mm/mprotect.c:__x64_sys_pkey_free
+  - mm/mprotect.c:__do_sys_pkey_alloc
+  - mm/mprotect.c:do_mprotect_pkey
+  - mm/mremap.c:__do_sys_mremap
+  - mm/mremap.c:__do_sys_mremap
+  - mm/msync.c:__do_sys_msync
+  - mm/msync.c:__do_sys_msync
+  - mm/swapfile.c:try_to_unuse
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_migrate_pages
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:lookup_node
+  - mm/mempolicy.c:mpol_rebind_mm
+  - mm/sparse-vmemmap.c:vmemmap_remap_alloc
+  - mm/sparse-vmemmap.c:vmemmap_remap_free
+  - mm/mmu_notifier.c:mmu_notifier_register
+  - mm/ksm.c:__ksm_exit
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:cmp_and_merge_page
+  - mm/ksm.c:unstable_tree_search_insert
+  - mm/ksm.c:try_to_merge_with_ksm_page
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:break_cow
+  - mm/migrate.c:do_pages_stat
+  - mm/migrate.c:add_page_for_migration
+  - mm/huge_memory.c:split_huge_pages_pid
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:retract_page_tables
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:__khugepaged_exit
+  - mm/memcontrol.c:mem_cgroup_move_charge
+  - mm/memory-failure.c:kill_accessing_process
+  - mm/userfaultfd.c:mwriteprotect_range
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/ptdump.c:ptdump_walk_pgd
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:setup_arg_pages
+  - fs/exec.c:__bprm_mm_init
+  - fs/exec.c:__bprm_mm_init
+  - fs/exec.c:get_arg_page
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/userfaultfd.c:userfaultfd_release
+  - fs/userfaultfd.c:userfaultfd_remove
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:aio_setup_ring
+  - fs/io_uring.c:io_sqe_buffer_register
+  - fs/binfmt_elf.c:create_elf_tables
+  - fs/compat_binfmt_elf.c:create_elf_tables
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:coredump_wait
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:m_stop
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_lookup
+  - fs/proc/base.c:map_files_get_link
+  - fs/proc/base.c:map_files_d_revalidate
+  - ipc/shm.c:ksys_shmdt
+  - ipc/shm.c:do_shmat
+  - security/tomoyo/domain.c:tomoyo_dump_page
+  - drivers/iommu/io-pgfault.c:iopf_handle_single
+  - drivers/vfio/vfio_iommu_type1.c:vaddr_get_pfns
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_zap_and_vma_lock
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_zap_and_vma_lock
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/xdp/xdp_umem.c:xdp_umem_reg
+```
+**Symbols:**
+
+```
+ffffffff812dc670-ffffffff812dc70f: __mmap_lock_do_trace_released (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void __mmap_lock_do_trace_released(struct mm_struct *mm, bool write);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/mmap_lock.c (ffffffff8133c660)
+Location: mm/mmap_lock.c:241
+Inline: False
+Direct callers:
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso
+  - arch/x86/entry/vdso/vma.c:vdso_join_timens
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/main.c:sgx_reclaimer_block
+  - arch/x86/kernel/cpu/sgx/virt.c:sgx_vepc_fault
+  - arch/x86/mm/fault.c:do_user_addr_fault
+  - arch/x86/mm/fault.c:__bad_area
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:dup_mmap
+  - kernel/fork.c:dup_mmap
+  - kernel/exit.c:exit_mm
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:prctl_set_vma
+  - kernel/sys.c:prctl_set_mm
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sched/fair.c:task_numa_work
+  - kernel/futex/core.c:fault_in_user_writeable
+  - kernel/acct.c:acct_collect
+  - kernel/bpf/task_iter.c:do_mmap_read_unlock
+  - kernel/bpf/task_iter.c:bpf_find_vma
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/stackmap.c:stack_map_get_build_id_offset
+  - kernel/events/core.c:perf_event_addr_filters_apply
+  - kernel/events/uprobes.c:handler_chain
+  - kernel/events/uprobes.c:find_active_uprobe
+  - kernel/events/uprobes.c:__create_xol_area
+  - kernel/events/uprobes.c:register_for_each_vma
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/oom_kill.c:__do_sys_process_mrelease
+  - mm/oom_kill.c:oom_reaper
+  - mm/shmem.c:shmem_fault
+  - mm/util.c:vm_mmap_pgoff
+  - mm/gup.c:internal_get_user_pages_fast
+  - mm/gup.c:get_user_pages_unlocked
+  - mm/gup.c:__get_user_pages_remote
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:fault_in_safe_writeable
+  - mm/gup.c:__mm_populate
+  - mm/memory.c:print_vma_addr
+  - mm/memory.c:__access_remote_vm
+  - mm/memory.c:fault_dirty_shared_page
+  - mm/mincore.c:__do_sys_mincore
+  - mm/mlock.c:__do_sys_munlockall
+  - mm/mlock.c:__do_sys_mlockall
+  - mm/mlock.c:__ia32_sys_munlock
+  - mm/mlock.c:__x64_sys_munlock
+  - mm/mlock.c:do_mlock
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:__do_sys_remap_file_pages
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mprotect.c:__ia32_sys_pkey_free
+  - mm/mprotect.c:__x64_sys_pkey_free
+  - mm/mprotect.c:__do_sys_pkey_alloc
+  - mm/mprotect.c:do_mprotect_pkey
+  - mm/mremap.c:__do_sys_mremap
+  - mm/mremap.c:__do_sys_mremap
+  - mm/msync.c:__do_sys_msync
+  - mm/msync.c:__do_sys_msync
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/swapfile.c:try_to_unuse
+  - mm/mempolicy.c:__do_sys_set_mempolicy_home_node
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_migrate_pages
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:mpol_rebind_mm
+  - mm/sparse-vmemmap.c:vmemmap_remap_alloc
+  - mm/sparse-vmemmap.c:vmemmap_remap_free
+  - mm/mmu_notifier.c:mmu_notifier_register
+  - mm/ksm.c:__ksm_exit
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:cmp_and_merge_page
+  - mm/ksm.c:try_to_merge_with_ksm_page
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:break_cow
+  - mm/migrate.c:do_pages_stat
+  - mm/migrate.c:add_page_for_migration
+  - mm/huge_memory.c:split_huge_pages_pid
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:khugepaged_scan_mm_slot
+  - mm/khugepaged.c:retract_page_tables
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:__khugepaged_exit
+  - mm/memcontrol.c:mem_cgroup_move_charge
+  - mm/memcontrol.c:mem_cgroup_can_attach
+  - mm/memory-failure.c:kill_accessing_process
+  - mm/userfaultfd.c:mwriteprotect_range
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/ptdump.c:ptdump_walk_pgd
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:setup_arg_pages
+  - fs/exec.c:get_arg_page
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/userfaultfd.c:userfaultfd_release
+  - fs/userfaultfd.c:userfaultfd_remove
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:aio_setup_ring
+  - fs/binfmt_elf.c:create_elf_tables
+  - fs/compat_binfmt_elf.c:create_elf_tables
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:m_stop
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_lookup
+  - fs/proc/base.c:map_files_get_link
+  - fs/proc/base.c:map_files_d_revalidate
+  - ipc/shm.c:ksys_shmdt
+  - ipc/shm.c:do_shmat
+  - security/tomoyo/domain.c:tomoyo_dump_page
+  - io_uring/io_uring.c:io_pin_pages
+  - drivers/iommu/io-pgfault.c:iopf_handle_single
+  - drivers/vfio/vfio_iommu_type1.c:vaddr_get_pfns
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_zap_and_vma_lock
+  - drivers/vfio/pci/vfio_pci_core.c:vfio_pci_zap_and_vma_lock
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/xdp/xdp_umem.c:xdp_umem_pin_pages
+```
+**Symbols:**
+
+```
+ffffffff8133c660-ffffffff8133c735: __mmap_lock_do_trace_released (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void __mmap_lock_do_trace_released(struct mm_struct *mm, bool write);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/mmap_lock.c (ffffffff813b40d0)
+Location: mm/mmap_lock.c:241
+Inline: False
+Direct callers:
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso
+  - arch/x86/entry/vdso/vma.c:vdso_join_timens
+  - arch/x86/kernel/cpu/sgx/encl.c:sgx_zap_enclave_ptes
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/virt.c:sgx_vepc_fault
+  - arch/x86/mm/fault.c:do_user_addr_fault
+  - arch/x86/mm/fault.c:__bad_area
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:dup_mmap
+  - kernel/fork.c:dup_mmap
+  - kernel/exit.c:exit_mm
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:prctl_set_vma
+  - kernel/sys.c:prctl_set_mm
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sched/fair.c:task_numa_work
+  - kernel/futex/core.c:fault_in_user_writeable
+  - kernel/acct.c:acct_collect
+  - kernel/bpf/task_iter.c:do_mmap_read_unlock
+  - kernel/bpf/task_iter.c:bpf_find_vma
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/stackmap.c:stack_map_get_build_id_offset
+  - kernel/events/core.c:perf_event_addr_filters_apply
+  - kernel/events/uprobes.c:find_active_uprobe
+  - kernel/events/uprobes.c:xol_add_vma
+  - kernel/events/uprobes.c:register_for_each_vma
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/oom_kill.c:__do_sys_process_mrelease
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:walk_mm
+  - mm/shmem.c:shmem_fault
+  - mm/util.c:vm_mmap_pgoff
+  - mm/gup.c:get_user_pages_unlocked
+  - mm/gup.c:__gup_longterm_locked
+  - mm/gup.c:__gup_longterm_locked
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:fault_in_safe_writeable
+  - mm/gup.c:__mm_populate
+  - mm/memory.c:print_vma_addr
+  - mm/memory.c:__access_remote_vm
+  - mm/memory.c:fault_dirty_shared_page
+  - mm/mincore.c:__do_sys_mincore
+  - mm/mlock.c:__do_sys_munlockall
+  - mm/mlock.c:__do_sys_mlockall
+  - mm/mlock.c:__ia32_sys_munlock
+  - mm/mlock.c:__x64_sys_munlock
+  - mm/mlock.c:do_mlock
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:__do_sys_remap_file_pages
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mprotect.c:__ia32_sys_pkey_free
+  - mm/mprotect.c:__x64_sys_pkey_free
+  - mm/mprotect.c:__do_sys_pkey_alloc
+  - mm/mprotect.c:do_mprotect_pkey
+  - mm/mremap.c:__do_sys_mremap
+  - mm/mremap.c:__do_sys_mremap
+  - mm/msync.c:__do_sys_msync
+  - mm/msync.c:__do_sys_msync
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/swapfile.c:try_to_unuse
+  - mm/hugetlb_vmemmap.c:vmemmap_remap_free
+  - mm/mempolicy.c:__do_sys_set_mempolicy_home_node
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_migrate_pages
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:mpol_rebind_mm
+  - mm/mmu_notifier.c:mmu_notifier_register
+  - mm/ksm.c:__ksm_exit
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:cmp_and_merge_page
+  - mm/ksm.c:try_to_merge_with_ksm_page
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:break_cow
+  - mm/migrate.c:do_pages_stat
+  - mm/migrate.c:add_page_for_migration
+  - mm/huge_memory.c:split_huge_pages_pid
+  - mm/khugepaged.c:madvise_collapse
+  - mm/khugepaged.c:madvise_collapse
+  - mm/khugepaged.c:retract_page_tables
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:__collapse_huge_page_swapin
+  - mm/khugepaged.c:__khugepaged_exit
+  - mm/memcontrol.c:mem_cgroup_move_charge
+  - mm/memcontrol.c:mem_cgroup_can_attach
+  - mm/memory-failure.c:kill_accessing_process
+  - mm/userfaultfd.c:mwriteprotect_range
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mcopy_continue
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mfill_zeropage
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/userfaultfd.c:mcopy_atomic
+  - mm/ptdump.c:ptdump_walk_pgd
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:setup_arg_pages
+  - fs/exec.c:get_arg_page
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/userfaultfd.c:userfaultfd_release
+  - fs/userfaultfd.c:userfaultfd_remove
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:aio_setup_ring
+  - fs/binfmt_elf.c:create_elf_tables
+  - fs/compat_binfmt_elf.c:create_elf_tables
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:m_stop
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_lookup
+  - fs/proc/base.c:map_files_get_link
+  - fs/proc/base.c:map_files_d_revalidate
+  - ipc/shm.c:ksys_shmdt
+  - ipc/shm.c:do_shmat
+  - security/tomoyo/domain.c:tomoyo_dump_page
+  - io_uring/rsrc.c:io_pin_pages
+  - drivers/iommu/iommu-sva.c:iommu_sva_handle_iopf
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/xdp/xdp_umem.c:xdp_umem_reg
+```
+**Symbols:**
+
+```
+ffffffff813b40d0-ffffffff813b41a5: __mmap_lock_do_trace_released (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void __mmap_lock_do_trace_released(struct mm_struct *mm, bool write);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/mmap_lock.c (ffffffff813e8d50)
+Location: mm/mmap_lock.c:241
+Inline: False
+Direct callers:
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso
+  - arch/x86/entry/vdso/vma.c:vdso_join_timens
+  - arch/x86/kernel/process_64.c:prctl_enable_tagged_addr
+  - arch/x86/kernel/process_64.c:prctl_enable_tagged_addr
+  - arch/x86/kernel/process_64.c:prctl_enable_tagged_addr
+  - arch/x86/kernel/cpu/sgx/encl.c:sgx_zap_enclave_ptes
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/virt.c:sgx_vepc_fault
+  - arch/x86/mm/fault.c:do_user_addr_fault
+  - arch/x86/mm/fault.c:__bad_area
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:dup_mmap
+  - kernel/fork.c:dup_mmap
+  - kernel/exit.c:exit_mm
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:prctl_set_vma
+  - kernel/sys.c:prctl_set_mm
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sched/fair.c:task_numa_work
+  - kernel/futex/core.c:fault_in_user_writeable
+  - kernel/acct.c:acct_collect
+  - kernel/trace/trace_events_user.c:user_events_ioctl_unreg
+  - kernel/trace/trace_events_user.c:user_events_ioctl_reg
+  - kernel/trace/trace_events_user.c:update_enable_bit_for
+  - kernel/trace/trace_events_user.c:user_event_mm_remove
+  - kernel/trace/trace_events_user.c:user_event_enabler_fault_fixup
+  - kernel/trace/trace_events_user.c:user_event_mm_fault_in
+  - kernel/bpf/task_iter.c:do_mmap_read_unlock
+  - kernel/bpf/task_iter.c:bpf_find_vma
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/stackmap.c:stack_map_get_build_id_offset
+  - kernel/events/core.c:perf_event_addr_filters_apply
+  - kernel/events/uprobes.c:find_active_uprobe
+  - kernel/events/uprobes.c:xol_add_vma
+  - kernel/events/uprobes.c:register_for_each_vma
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/oom_kill.c:__do_sys_process_mrelease
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:walk_mm
+  - mm/shmem.c:shmem_fault
+  - mm/util.c:vm_mmap_pgoff
+  - mm/gup.c:get_user_pages_unlocked
+  - mm/gup.c:get_user_pages
+  - mm/gup.c:get_user_pages_remote
+  - mm/gup.c:__gup_longterm_locked
+  - mm/gup.c:__gup_longterm_locked
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:fault_in_safe_writeable
+  - mm/gup.c:__mm_populate
+  - mm/memory.c:print_vma_addr
+  - mm/memory.c:__access_remote_vm
+  - mm/memory.c:lock_mm_and_find_vma
+  - mm/memory.c:lock_mm_and_find_vma
+  - mm/memory.c:lock_mm_and_find_vma
+  - mm/memory.c:fault_dirty_shared_page
+  - mm/mincore.c:__ia32_sys_mincore
+  - mm/mincore.c:__x64_sys_mincore
+  - mm/mlock.c:__do_sys_munlockall
+  - mm/mlock.c:__do_sys_mlockall
+  - mm/mlock.c:__ia32_sys_munlock
+  - mm/mlock.c:__x64_sys_munlock
+  - mm/mlock.c:do_mlock
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:__do_sys_remap_file_pages
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:do_vmi_munmap
+  - mm/mmap.c:do_vmi_align_munmap
+  - mm/mmap.c:expand_stack
+  - mm/mmap.c:expand_stack
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mprotect.c:__ia32_sys_pkey_free
+  - mm/mprotect.c:__x64_sys_pkey_free
+  - mm/mprotect.c:__do_sys_pkey_alloc
+  - mm/mprotect.c:do_mprotect_pkey
+  - mm/mremap.c:__do_sys_mremap
+  - mm/msync.c:__do_sys_msync
+  - mm/msync.c:__do_sys_msync
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/swapfile.c:try_to_unuse
+  - mm/hugetlb_vmemmap.c:vmemmap_remap_alloc
+  - mm/hugetlb_vmemmap.c:vmemmap_remap_free
+  - mm/mempolicy.c:__do_sys_set_mempolicy_home_node
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_migrate_pages
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:mpol_rebind_mm
+  - mm/mmu_notifier.c:mmu_notifier_register
+  - mm/ksm.c:__ksm_exit
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:cmp_and_merge_page
+  - mm/ksm.c:try_to_merge_with_ksm_page
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:break_cow
+  - mm/migrate.c:do_pages_stat
+  - mm/migrate.c:add_page_for_migration
+  - mm/huge_memory.c:split_huge_pages_pid
+  - mm/khugepaged.c:madvise_collapse
+  - mm/khugepaged.c:madvise_collapse
+  - mm/khugepaged.c:retract_page_tables
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:__collapse_huge_page_swapin
+  - mm/khugepaged.c:__collapse_huge_page_swapin
+  - mm/khugepaged.c:__khugepaged_exit
+  - mm/memcontrol.c:mem_cgroup_move_charge
+  - mm/memcontrol.c:mem_cgroup_can_attach
+  - mm/memory-failure.c:kill_accessing_process
+  - mm/userfaultfd.c:mwriteprotect_range
+  - mm/userfaultfd.c:mfill_atomic_continue
+  - mm/userfaultfd.c:mfill_atomic_continue
+  - mm/userfaultfd.c:mfill_atomic_continue
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/ptdump.c:ptdump_walk_pgd
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:setup_arg_pages
+  - fs/exec.c:get_arg_page
+  - fs/exec.c:get_arg_page
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/userfaultfd.c:userfaultfd_release
+  - fs/userfaultfd.c:userfaultfd_remove
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:aio_setup_ring
+  - fs/binfmt_elf.c:create_elf_tables
+  - fs/compat_binfmt_elf.c:create_elf_tables
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:m_stop
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_lookup
+  - fs/proc/base.c:map_files_get_link
+  - fs/proc/base.c:map_files_d_revalidate
+  - ipc/shm.c:ksys_shmdt
+  - ipc/shm.c:do_shmat
+  - security/tomoyo/domain.c:tomoyo_dump_page
+  - io_uring/rsrc.c:io_pin_pages
+  - drivers/iommu/iommu-sva.c:iommu_sva_handle_iopf
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/xdp/xdp_umem.c:xdp_umem_reg
+```
+**Symbols:**
+
+```
+ffffffff813e8d50-ffffffff813e8e25: __mmap_lock_do_trace_released (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void __mmap_lock_do_trace_released(struct mm_struct *mm, bool write);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/mmap_lock.c (ffffffff814139c0)
+Location: mm/mmap_lock.c:241
+Inline: False
+Direct callers:
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso_once
+  - arch/x86/entry/vdso/vma.c:map_vdso
+  - arch/x86/entry/vdso/vma.c:vdso_join_timens
+  - arch/x86/kernel/process_64.c:prctl_enable_tagged_addr
+  - arch/x86/kernel/process_64.c:prctl_enable_tagged_addr
+  - arch/x86/kernel/process_64.c:prctl_enable_tagged_addr
+  - arch/x86/kernel/cpu/sgx/encl.c:sgx_zap_enclave_ptes
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/ioctl.c:sgx_encl_add_page
+  - arch/x86/kernel/cpu/sgx/virt.c:sgx_vepc_fault
+  - arch/x86/kernel/shstk.c:shstk_pop_sigframe
+  - arch/x86/kernel/shstk.c:shstk_pop_sigframe
+  - arch/x86/kernel/shstk.c:alloc_shstk
+  - arch/x86/mm/fault.c:do_user_addr_fault
+  - arch/x86/mm/fault.c:__bad_area
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:replace_mm_exe_file
+  - kernel/fork.c:dup_mmap
+  - kernel/fork.c:dup_mmap
+  - kernel/exit.c:exit_mm
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:__do_sys_prctl
+  - kernel/sys.c:prctl_set_vma
+  - kernel/sys.c:prctl_set_mm
+  - kernel/sys.c:prctl_set_mm_map
+  - kernel/sched/fair.c:task_numa_work
+  - kernel/futex/core.c:fault_in_user_writeable
+  - kernel/acct.c:acct_collect
+  - kernel/trace/trace_events_user.c:user_events_ioctl_unreg
+  - kernel/trace/trace_events_user.c:update_enable_bit_for
+  - kernel/trace/trace_events_user.c:user_event_enabler_create
+  - kernel/trace/trace_events_user.c:user_event_mm_remove
+  - kernel/trace/trace_events_user.c:user_event_enabler_fault_fixup
+  - kernel/trace/trace_events_user.c:user_event_mm_fault_in
+  - kernel/bpf/task_iter.c:do_mmap_read_unlock
+  - kernel/bpf/task_iter.c:bpf_iter_task_vma_destroy
+  - kernel/bpf/task_iter.c:bpf_find_vma
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/task_iter.c:task_vma_seq_get_next
+  - kernel/bpf/stackmap.c:stack_map_get_build_id_offset
+  - kernel/events/core.c:perf_event_addr_filters_apply
+  - kernel/events/uprobes.c:find_active_uprobe
+  - kernel/events/uprobes.c:xol_add_vma
+  - kernel/events/uprobes.c:register_for_each_vma
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:filemap_fault
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:do_sync_mmap_readahead
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/filemap.c:__folio_lock_or_retry
+  - mm/oom_kill.c:__do_sys_process_mrelease
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:walk_mm
+  - mm/shmem.c:shmem_falloc_wait
+  - mm/util.c:vm_mmap_pgoff
+  - mm/gup.c:get_user_pages_unlocked
+  - mm/gup.c:get_user_pages
+  - mm/gup.c:get_user_pages_remote
+  - mm/gup.c:__gup_longterm_locked
+  - mm/gup.c:__gup_longterm_locked
+  - mm/gup.c:get_dump_page
+  - mm/gup.c:fault_in_safe_writeable
+  - mm/gup.c:__mm_populate
+  - mm/memory.c:print_vma_addr
+  - mm/memory.c:__access_remote_vm
+  - mm/memory.c:lock_mm_and_find_vma
+  - mm/memory.c:lock_mm_and_find_vma
+  - mm/memory.c:lock_mm_and_find_vma
+  - mm/memory.c:fault_dirty_shared_page
+  - mm/mincore.c:__ia32_sys_mincore
+  - mm/mincore.c:__x64_sys_mincore
+  - mm/mlock.c:__do_sys_munlockall
+  - mm/mlock.c:__do_sys_mlockall
+  - mm/mlock.c:__ia32_sys_munlock
+  - mm/mlock.c:__x64_sys_munlock
+  - mm/mlock.c:do_mlock
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:exit_mmap
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:vm_brk_flags
+  - mm/mmap.c:__do_sys_remap_file_pages
+  - mm/mmap.c:__vm_munmap
+  - mm/mmap.c:do_vmi_munmap
+  - mm/mmap.c:do_vmi_align_munmap
+  - mm/mmap.c:expand_stack
+  - mm/mmap.c:expand_stack
+  - mm/mmap.c:__do_sys_brk
+  - mm/mmap.c:__do_sys_brk
+  - mm/mprotect.c:__ia32_sys_pkey_free
+  - mm/mprotect.c:__x64_sys_pkey_free
+  - mm/mprotect.c:__do_sys_pkey_alloc
+  - mm/mprotect.c:do_mprotect_pkey
+  - mm/mremap.c:__do_sys_mremap
+  - mm/msync.c:__do_sys_msync
+  - mm/msync.c:__do_sys_msync
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:do_madvise
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/madvise.c:madvise_vma_behavior
+  - mm/swapfile.c:try_to_unuse
+  - mm/mempolicy.c:__do_sys_set_mempolicy_home_node
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:do_mbind
+  - mm/mempolicy.c:migrate_to_node
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:do_get_mempolicy
+  - mm/mempolicy.c:mpol_rebind_mm
+  - mm/mmu_notifier.c:mmu_notifier_register
+  - mm/ksm.c:__ksm_exit
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:scan_get_next_rmap_item
+  - mm/ksm.c:cmp_and_merge_page
+  - mm/ksm.c:try_to_merge_with_ksm_page
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:unmerge_and_remove_all_rmap_items
+  - mm/ksm.c:break_cow
+  - mm/migrate.c:do_pages_stat
+  - mm/migrate.c:add_page_for_migration
+  - mm/huge_memory.c:split_huge_pages_pid
+  - mm/khugepaged.c:madvise_collapse
+  - mm/khugepaged.c:madvise_collapse
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:collapse_huge_page
+  - mm/khugepaged.c:__collapse_huge_page_swapin
+  - mm/khugepaged.c:__collapse_huge_page_swapin
+  - mm/khugepaged.c:__khugepaged_exit
+  - mm/memcontrol.c:mem_cgroup_move_charge
+  - mm/memcontrol.c:mem_cgroup_can_attach
+  - mm/memory-failure.c:kill_accessing_process
+  - mm/userfaultfd.c:mwriteprotect_range
+  - mm/userfaultfd.c:mfill_atomic_poison
+  - mm/userfaultfd.c:mfill_atomic_poison
+  - mm/userfaultfd.c:mfill_atomic_continue
+  - mm/userfaultfd.c:mfill_atomic_continue
+  - mm/userfaultfd.c:mfill_atomic_continue
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_zeropage
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/userfaultfd.c:mfill_atomic_copy
+  - mm/ptdump.c:ptdump_walk_pgd
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:alloc_bprm
+  - fs/exec.c:exec_mmap
+  - fs/exec.c:setup_arg_pages
+  - fs/exec.c:get_arg_page
+  - fs/exec.c:get_arg_page
+  - fs/userfaultfd.c:userfaultfd_move
+  - fs/userfaultfd.c:userfaultfd_unregister
+  - fs/userfaultfd.c:userfaultfd_register
+  - fs/userfaultfd.c:userfaultfd_release
+  - fs/userfaultfd.c:userfaultfd_remove
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:aio_setup_ring
+  - fs/binfmt_elf.c:create_elf_tables
+  - fs/compat_binfmt_elf.c:create_elf_tables
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/coredump.c:dump_vma_snapshot
+  - fs/proc/task_mmu.c:do_pagemap_scan
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:pagemap_read
+  - fs/proc/task_mmu.c:clear_refs_write
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:show_smaps_rollup
+  - fs/proc/task_mmu.c:m_stop
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_readdir
+  - fs/proc/base.c:proc_map_files_lookup
+  - fs/proc/base.c:map_files_get_link
+  - fs/proc/base.c:map_files_d_revalidate
+  - ipc/shm.c:ksys_shmdt
+  - ipc/shm.c:do_shmat
+  - security/tomoyo/domain.c:tomoyo_dump_page
+  - io_uring/rsrc.c:io_pin_pages
+  - drivers/iommu/iommu-sva.c:iommu_sva_handle_iopf
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/ipv4/tcp.c:tcp_zerocopy_receive
+  - net/xdp/xdp_umem.c:xdp_umem_reg
+```
+**Symbols:**
+
+```
+ffffffff814139c0-ffffffff81413a95: __mmap_lock_do_trace_released (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

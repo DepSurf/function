@@ -1,0 +1,413 @@
+# Function: <code>nh_nlmsg_size</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff819d3bd5)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81a0a745)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81afb9f8)
+Location: net/ipv4/nexthop.c:348
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81b090c8)
+Location: net/ipv4/nexthop.c:476
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81af7258)
+Location: net/ipv4/nexthop.c:826
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81bb6bf9)
+Location: net/ipv4/nexthop.c:826
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81d4a85a)
+Location: net/ipv4/nexthop.c:827
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81f13f1a)
+Location: net/ipv4/nexthop.c:827
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81f73bea)
+Location: net/ipv4/nexthop.c:827
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff8203a3da)
+Location: net/ipv4/nexthop.c:827
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffff800010cc3ce0)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (c0dcf1bc)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (c000000000ddfa84)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffe000818e86)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff819aa4e5)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81963fa5)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81a14d85)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/ipv4/nexthop.c (ffffffff81a1f795)
+Location: net/ipv4/nexthop.c:323
+Inline: True
+Inline callers:
+  - net/ipv4/nexthop.c:nexthop_notify
+```
+</details>
+</li>
+</ul>
+
+## Differences

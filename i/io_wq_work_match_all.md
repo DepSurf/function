@@ -1,0 +1,257 @@
+# Function: <code>io_wq_work_match_all</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+bool io_wq_work_match_all(struct io_wq_work *work, void *data);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io-wq.c (ffffffff813a1ed0)
+Location: fs/io-wq.c:728
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813a1ed0-ffffffff813a1ee0: io_wq_work_match_all (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+bool io_wq_work_match_all(struct io_wq_work *work, void *data);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io-wq.c (ffffffff813f0d10)
+Location: fs/io-wq.c:720
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813f0d10-ffffffff813f0d20: io_wq_work_match_all (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+bool io_wq_work_match_all(struct io_wq_work *work, void *data);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io-wq.c (ffffffff816d9540)
+Location: io_uring/io-wq.c:730
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff816d9540-ffffffff816d9554: io_wq_work_match_all (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+bool io_wq_work_match_all(struct io_wq_work *work, void *data);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io-wq.c (ffffffff817a53c0)
+Location: io_uring/io-wq.c:717
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff817a53c0-ffffffff817a53d4: io_wq_work_match_all (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+bool io_wq_work_match_all(struct io_wq_work *work, void *data);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io-wq.c (ffffffff817e6390)
+Location: io_uring/io-wq.c:716
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff817e6390-ffffffff817e63a4: io_wq_work_match_all (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+bool io_wq_work_match_all(struct io_wq_work *work, void *data);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io-wq.c (ffffffff8182c0f0)
+Location: io_uring/io-wq.c:740
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8182c0f0-ffffffff8182c104: io_wq_work_match_all (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

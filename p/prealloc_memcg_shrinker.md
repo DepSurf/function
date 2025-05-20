@@ -1,0 +1,387 @@
+# Function: <code>prealloc_memcg_shrinker</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8121adcc)
+Location: mm/vmscan.c:195
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8122aa5e)
+Location: mm/vmscan.c:195
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8123892e)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff81267237)
+Location: mm/vmscan.c:211
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff81271c87)
+Location: mm/vmscan.c:204
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff81276efe)
+Location: mm/vmscan.c:348
+Inline: True
+Inline callers:
+  - mm/vmscan.c:prealloc_shrinker
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff812b483e)
+Location: mm/vmscan.c:352
+Inline: True
+Inline callers:
+  - mm/vmscan.c:prealloc_shrinker
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8131082f)
+Location: mm/vmscan.c:354
+Inline: True
+Inline callers:
+  - mm/vmscan.c:prealloc_shrinker
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8137e18f)
+Location: mm/vmscan.c:368
+Inline: True
+Inline callers:
+  - mm/vmscan.c:__prealloc_shrinker
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff813afbd2)
+Location: mm/vmscan.c:353
+Inline: True
+Inline callers:
+  - mm/vmscan.c:__prealloc_shrinker
+```
+</details>
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffff8000102c96cc)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (c04f3698)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (c000000000385c30)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffe0001e8ada)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff81230f7e)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8122403e)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8122ed1e)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In mm/vmscan.c (ffffffff8123e12e)
+Location: mm/vmscan.c:206
+Inline: True
+```
+</details>
+</li>
+</ul>
+
+## Differences

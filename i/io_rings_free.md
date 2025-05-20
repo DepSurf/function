@@ -1,0 +1,151 @@
+# Function: <code>io_rings_free</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Selective Inline ⚠️</summary>
+
+```c
+void io_rings_free(struct io_ring_ctx *ctx);
+```
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io_uring.c (ffffffff817cb600)
+Location: io_uring/io_uring.c:2730
+Inline: True
+Direct callers:
+  - io_uring/io_uring.c:io_allocate_scq_urings
+  - io_uring/io_uring.c:io_ring_ctx_free
+```
+**Symbols:**
+
+```
+ffffffff817cb600-ffffffff817cb6ef: io_rings_free (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Selective Inline ⚠️</summary>
+
+```c
+void io_rings_free(struct io_ring_ctx *ctx);
+```
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io_uring.c (ffffffff81810f50)
+Location: io_uring/io_uring.c:2788
+Inline: True
+Direct callers:
+  - io_uring/io_uring.c:io_allocate_scq_urings
+  - io_uring/io_uring.c:io_ring_ctx_free
+```
+**Symbols:**
+
+```
+ffffffff81810f50-ffffffff818111a6: io_rings_free (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

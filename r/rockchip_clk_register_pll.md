@@ -1,0 +1,146 @@
+# Function: <code>rockchip_clk_register_pll</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: ✅</summary>
+
+```c
+struct clk *rockchip_clk_register_pll(struct rockchip_clk_provider *ctx, enum rockchip_pll_type pll_type, const char *name, const const char * *parent_names, u8 num_parents, int con_offset, int grf_lock_offset, int lock_shift, int mode_offset, int mode_shift, struct rockchip_pll_rate_table *rate_table, long unsigned int flags, u8 clk_pll_flags);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/clk/rockchip/clk-pll.c (ffff8000107ee108)
+Location: drivers/clk/rockchip/clk-pll.c:831
+Inline: False
+Direct callers:
+  - drivers/clk/rockchip/clk.c:rockchip_clk_register_plls
+```
+**Symbols:**
+
+```
+ffff8000107ee108-ffff8000107ee4f0: rockchip_clk_register_pll (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: ✅</summary>
+
+```c
+struct clk *rockchip_clk_register_pll(struct rockchip_clk_provider *ctx, enum rockchip_pll_type pll_type, const char *name, const const char * *parent_names, u8 num_parents, int con_offset, int grf_lock_offset, int lock_shift, int mode_offset, int mode_shift, struct rockchip_pll_rate_table *rate_table, long unsigned int flags, u8 clk_pll_flags);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/clk/rockchip/clk-pll.c (c0907980)
+Location: drivers/clk/rockchip/clk-pll.c:831
+Inline: False
+Direct callers:
+  - drivers/clk/rockchip/clk.c:rockchip_clk_register_plls
+```
+**Symbols:**
+
+```
+c0907980-c0907dac: rockchip_clk_register_pll (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Arch</b>
+<ul>
+</ul>

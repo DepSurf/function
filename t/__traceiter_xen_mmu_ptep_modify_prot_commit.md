@@ -1,0 +1,285 @@
+# Function: <code>__traceiter_xen_mmu_ptep_modify_prot_commit</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+int __traceiter_xen_mmu_ptep_modify_prot_commit(void *__data, struct mm_struct *mm, long unsigned int addr, pte_t *ptep, pte_t pteval);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/trace.c (ffffffff8102bbf0)
+Location: include/trace/events/xen.h:284
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102bbf0-ffffffff8102bc4b: __traceiter_xen_mmu_ptep_modify_prot_commit (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+int __traceiter_xen_mmu_ptep_modify_prot_commit(void *__data, struct mm_struct *mm, long unsigned int addr, pte_t *ptep, pte_t pteval);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/trace.c (ffffffff8102c730)
+Location: include/trace/events/xen.h:284
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102c730-ffffffff8102c789: __traceiter_xen_mmu_ptep_modify_prot_commit (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+int __traceiter_xen_mmu_ptep_modify_prot_commit(void *__data, struct mm_struct *mm, long unsigned int addr, pte_t *ptep, pte_t pteval);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/trace.c (ffffffff81030fe0)
+Location: include/trace/events/xen.h:284
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81030fe0-ffffffff81031039: __traceiter_xen_mmu_ptep_modify_prot_commit (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+int __traceiter_xen_mmu_ptep_modify_prot_commit(void *__data, struct mm_struct *mm, long unsigned int addr, pte_t *ptep, pte_t pteval);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/trace.c (ffffffff81036660)
+Location: include/trace/events/xen.h:284
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81036660-ffffffff810366c8: __traceiter_xen_mmu_ptep_modify_prot_commit (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+int __traceiter_xen_mmu_ptep_modify_prot_commit(void *__data, struct mm_struct *mm, long unsigned int addr, pte_t *ptep, pte_t pteval);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/trace.c (ffffffff8103e530)
+Location: include/trace/events/xen.h:284
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8103e530-ffffffff8103e598: __traceiter_xen_mmu_ptep_modify_prot_commit (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+int __traceiter_xen_mmu_ptep_modify_prot_commit(void *__data, struct mm_struct *mm, long unsigned int addr, pte_t *ptep, pte_t pteval);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/trace.c (ffffffff8103e550)
+Location: include/trace/events/xen.h:284
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8103e550-ffffffff8103e5b8: __traceiter_xen_mmu_ptep_modify_prot_commit (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+int __traceiter_xen_mmu_ptep_modify_prot_commit(void *__data, struct mm_struct *mm, long unsigned int addr, pte_t *ptep, pte_t pteval);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/xen/trace.c (ffffffff81044a20)
+Location: include/trace/events/xen.h:284
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81044a20-ffffffff81044a88: __traceiter_xen_mmu_ptep_modify_prot_commit (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>

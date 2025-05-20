@@ -1,0 +1,557 @@
+# Function: <code>__ia32_sys_perf_event_open</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/events/core.c (ffffffff811dee10)
+Location: kernel/events/core.c:10398
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff811dee10-ffffffff811dee31: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/events/core.c (ffffffff811ef240)
+Location: kernel/events/core.c:10441
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff811ef240-ffffffff811ef261: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/events/core.c (ffffffff81206b60)
+Location: kernel/events/core.c:10788
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81206b60-ffffffff81206b82: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff810cb300)
+Location: kernel/sys_ni.c:295
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81213ed0-ffffffff81213ef2: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff812400f0)
+Location: kernel/sys_ni.c:295
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff812400f0-ffffffff81240112: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff8124a640)
+Location: kernel/sys_ni.c:298
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8124a640-ffffffff8124a662: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff8124e790)
+Location: kernel/sys_ni.c:304
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8124e790-ffffffff8124e7af: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff812894e0)
+Location: kernel/sys_ni.c:300
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff812894e0-ffffffff812894ff: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff812de5e0)
+Location: kernel/sys_ni.c:303
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff812de5e0-ffffffff812de612: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff81346790)
+Location: kernel/sys_ni.c:303
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81346790-ffffffff813467c2: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff81377890)
+Location: kernel/sys_ni.c:196
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81377890-ffffffff813778c2: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff813a0b70)
+Location: kernel/sys_ni.c:200
+Inline: False
+Direct callers:
+  - arch/x86/entry/syscall_32.c:ia32_sys_call
+```
+**Symbols:**
+
+```
+ffffffff813a0b70-ffffffff813a0ba2: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff810c5680)
+Location: kernel/sys_ni.c:295
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8120c520-ffffffff8120c542: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff810b3ea0)
+Location: kernel/sys_ni.c:295
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff811ff2f0-ffffffff811ff312: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff810c4bd0)
+Location: kernel/sys_ni.c:295
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8120a2c0-ffffffff8120a2e2: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+long int __ia32_sys_perf_event_open(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff810cd010)
+Location: kernel/sys_ni.c:295
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81219090-ffffffff812190b2: __ia32_sys_perf_event_open (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+<details>
+<summary>Changed between <code>5.3</code> and <code>5.4</code> ⚠️</summary>
+<ul>
+<li>
+<b>Param added. </b>
+<code>const struct pt_regs *__unused</code>
+</li>
+<li>
+<b>Param removed. </b>
+<code>const struct pt_regs *regs</code>
+</li>
+</ul>
+</details>
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

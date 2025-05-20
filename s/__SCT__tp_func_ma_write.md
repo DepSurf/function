@@ -1,0 +1,180 @@
+# Function: <code>__SCT__tp_func_ma_write</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In None (0)
+Location: None
+Inline: False
+Direct callers:
+  - lib/maple_tree.c:mtree_store_range
+  - lib/maple_tree.c:mas_store_prealloc
+  - lib/maple_tree.c:mas_store_gfp
+  - lib/maple_tree.c:mas_store
+  - lib/maple_tree.c:mas_wr_bnode
+  - lib/maple_tree.c:mas_wr_slot_store
+  - lib/maple_tree.c:mas_wr_node_store
+  - lib/maple_tree.c:mas_is_span_wr
+```
+**Symbols:**
+
+```
+ffffffff820d9688-ffffffff820d9690: __SCT__tp_func_ma_write (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In None (0)
+Location: None
+Inline: False
+Direct callers:
+  - lib/maple_tree.c:mtree_store_range
+  - lib/maple_tree.c:mas_store_prealloc
+  - lib/maple_tree.c:mas_store_gfp
+  - lib/maple_tree.c:mas_store
+  - lib/maple_tree.c:mas_wr_modify
+  - lib/maple_tree.c:mas_wr_bnode
+  - lib/maple_tree.c:mas_wr_node_store
+  - lib/maple_tree.c:mas_is_span_wr
+```
+**Symbols:**
+
+```
+ffffffff8215cc80-ffffffff8215cc88: __SCT__tp_func_ma_write (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In None (0)
+Location: None
+Inline: False
+Direct callers:
+  - lib/maple_tree.c:mtree_store_range
+  - lib/maple_tree.c:mas_store_prealloc
+  - lib/maple_tree.c:mas_store_gfp
+  - lib/maple_tree.c:mas_store
+  - lib/maple_tree.c:mas_wr_bnode
+  - lib/maple_tree.c:mas_wr_append
+  - lib/maple_tree.c:mas_wr_slot_store
+  - lib/maple_tree.c:mas_wr_walk
+  - lib/maple_tree.c:trace_ma_write
+```
+**Symbols:**
+
+```
+ffffffff822405b8-ffffffff822405c0: __SCT__tp_func_ma_write (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

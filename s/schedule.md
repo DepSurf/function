@@ -1,0 +1,6730 @@
+# Function: <code>schedule</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff818203c0)
+Location: kernel/sched/core.c:3202
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - kernel/cpu.c:cpu_hotplug_begin
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:ptrace_stop
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:sys_pause
+  - kernel/kmod.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:wq_unbind_fn
+  - kernel/workqueue.c:worker_thread
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:sys_sched_yield
+  - kernel/sched/wait.c:bit_wait
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/printk/printk.c:do_syslog
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/irq/manage.c:irq_thread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_sched_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup.c:cgroup_subtree_control_write
+  - kernel/cpuset.c:cpuset_hotplug_workfn
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_send_skb
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_killer_disable
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/vmscan.c:kswapd
+  - mm/shmem.c:shmem_fault
+  - mm/backing-dev.c:bdi_unregister
+  - mm/ksm.c:ksm_scan_thread
+  - mm/memory_hotplug.c:mem_hotplug_begin
+  - mm/huge_memory.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:get_super_thawed
+  - fs/pipe.c:pipe_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/inode.c:inode_dio_wait
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:blkdev_get
+  - fs/notify/mark.c:fsnotify_mark_destroy
+  - fs/signalfd.c:signalfd_read
+  - fs/timerfd.c:timerfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/locks.c:locks_mandatory_area
+  - fs/mbcache.c:__mb_cache_entry_find
+  - fs/mbcache.c:mb_cache_entry_get
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:dquot_disable
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgsnd
+  - ipc/msg.c:do_msgrcv
+  - ipc/sem.c:SYSC_semtimedop
+  - block/blk-core.c:blk_queue_enter
+  - block/bsg.c:bsg_get_done_cmd
+  - lib/percpu-refcount.c:__percpu_ref_switch_to_percpu
+  - lib/percpu_ida.c:percpu_ida_alloc
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xb_write
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:extract_entropy_user
+  - drivers/char/random.c:SyS_getrandom
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/hpet.c:hpet_read
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfsd
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/base/regmap/regmap.c:regmap_async_complete
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/rtc/rtc-dev.c:rtc_dev_read
+  - drivers/md/md.c:mddev_detach
+  - drivers/md/md.c:md_make_request
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/bitmap.c:read_page
+  - drivers/md/bitmap.c:bitmap_free
+  - drivers/md/bitmap.c:bitmap_startwrite
+  - drivers/md/bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/core.c:mmc_start_req
+  - net/core/sock.c:__lock_sock
+  - net/netlink/af_netlink.c:netlink_sendmsg
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/packet/af_packet.c:tpacket_snd
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff818203c0-ffffffff81820436: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff8189a820)
+Location: kernel/sched/core.c:3420
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - kernel/cpu.c:cpu_hotplug_begin
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:sys_pause
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/kmod.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:wq_unbind_fn
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:sys_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:bit_wait
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:do_syslog
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cpuset.c:cpuset_hotplug_workfn
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit.c:kauditd_send_skb
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_killer_disable
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/backing-dev.c:bdi_unregister
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/memory_hotplug.c:mem_hotplug_begin
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:get_super_thawed
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:blkdev_get
+  - fs/signalfd.c:signalfd_read
+  - fs/timerfd.c:timerfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:get_unlocked_mapping_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/kernfs/dir.c:__kernfs_remove
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:SYSC_semtimedop
+  - block/blk-core.c:blk_queue_enter
+  - block/bsg.c:bsg_get_done_cmd
+  - lib/percpu-refcount.c:__percpu_ref_switch_to_percpu
+  - lib/percpu_ida.c:percpu_ida_alloc
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xb_write
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:SyS_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfsd
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/base/regmap/regmap.c:regmap_async_complete
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/rtc-dev.c:rtc_dev_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:mddev_detach
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_make_request
+  - drivers/md/bitmap.c:bitmap_free
+  - drivers/md/bitmap.c:bitmap_startwrite
+  - drivers/md/bitmap.c:read_page
+  - drivers/md/bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/core.c:mmc_start_req
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/packet/af_packet.c:tpacket_snd
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff8189a820-ffffffff8189a89f: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff818cee40)
+Location: kernel/sched/core.c:3451
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - kernel/cpu.c:cpu_hotplug_begin
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:sys_pause
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/kmod.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:wq_unbind_fn
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:sys_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:bit_wait
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:do_syslog
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cpuset.c:cpuset_hotplug_workfn
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/backing-dev.c:bdi_unregister
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/memory_hotplug.c:mem_hotplug_begin
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:__get_super_thawed
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:blkdev_get
+  - fs/signalfd.c:signalfd_read
+  - fs/timerfd.c:timerfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:get_unlocked_mapping_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/kernfs/dir.c:__kernfs_remove
+  - fs/ext4/file.c:ext4_file_write_iter
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:SYSC_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/bsg.c:bsg_get_done_cmd
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/percpu_ida.c:percpu_ida_alloc
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/acpi/ec.c:acpi_ec_suspend
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xb_write
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:SyS_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfsd
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/base/regmap/regmap.c:regmap_async_complete
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/rtc-dev.c:rtc_dev_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:mddev_detach
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_make_request
+  - drivers/md/bitmap.c:bitmap_free
+  - drivers/md/bitmap.c:bitmap_startwrite
+  - drivers/md/bitmap.c:read_page
+  - drivers/md/bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/core.c:mmc_start_req
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/packet/af_packet.c:tpacket_snd
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff818cee40-ffffffff818ceebc: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81906390)
+Location: kernel/sched/core.c:3384
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:sys_pause
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/kmod.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:wq_unbind_fn
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:sys_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_workfn
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:__get_super_thawed
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:blkdev_get
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:get_unlocked_mapping_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_file_write_iter
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:SYSC_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/bsg.c:bsg_get_done_cmd
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/percpu_ida.c:percpu_ida_alloc
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/ec.c:__acpi_ec_flush_event
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfsd
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/rtc-dev.c:rtc_dev_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_make_request
+  - drivers/md/bitmap.c:bitmap_wait_behind_writes
+  - drivers/md/bitmap.c:bitmap_free
+  - drivers/md/bitmap.c:bitmap_startwrite
+  - drivers/md/bitmap.c:read_page
+  - drivers/md/bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/core.c:mmc_start_areq
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/packet/af_packet.c:tpacket_snd
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81906390-ffffffff8190640c: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81990420)
+Location: kernel/sched/core.c:3428
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:sys_pause
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:sys_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/sched/wait_bit.c:atomic_t_wait
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_workfn
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/bpf/offload.c:__bpf_prog_offload_destroy
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:__get_super_thawed
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:blkdev_get
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:get_unlocked_mapping_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_file_write_iter
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/bsg.c:bsg_get_done_cmd
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/percpu_ida.c:percpu_ida_alloc
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/ec.c:__acpi_ec_flush_event
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfsd
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/rtc-dev.c:rtc_dev_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:bitmap_free
+  - drivers/md/md-bitmap.c:bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/core.c:mmc_start_areq
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/packet/af_packet.c:tpacket_snd
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81990420-ffffffff8199049a: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff819ecc10)
+Location: kernel/sched/core.c:3538
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_workfn
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:__get_super_thawed
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:blkdev_get
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:entry_wait_revalidate
+  - fs/dax.c:entry_wait
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_file_write_iter
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/bsg.c:bsg_get_done_cmd
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/percpu_ida.c:percpu_ida_alloc
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/ec.c:__acpi_ec_flush_event
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/rtc-dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:bitmap_free
+  - drivers/md/md-bitmap.c:bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/packet/af_packet.c:tpacket_snd
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff819ecc10-ffffffff819ecc8a: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81a27e60)
+Location: kernel/sched/core.c:3522
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/smpboot.c:native_cpu_up
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_write_failed
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed_killable
+  - kernel/locking/rwsem-xadd.c:rwsem_down_read_failed
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_workfn
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:__get_super_thawed
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:blkdev_get
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_file_write_iter
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/ec.c:__acpi_ec_flush_event
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/packet/af_packet.c:tpacket_snd
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81a27e60-ffffffff81a27ecd: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81a985a0)
+Location: kernel/sched/core.c:3940
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_cqring_wait
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:fuse_get_req_nofail_nopages
+  - fs/fuse/dev.c:__fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/ec.c:__acpi_ec_flush_event
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81a985a0-ffffffff81a98648: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81acfef0)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_cqring_wait
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/vfio/vfio.c:vfio_del_group_dev
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81acfef0-ffffffff81acff98: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81bc8840)
+Location: kernel/sched/core.c:4375
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:exit_mm
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:unbind_workers
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_wait_for_interrupt
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:add_unformed_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:xol_take_insn_slot
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_wait_acct_move
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_unmount_inodes
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_uring_cancel_files
+  - fs/io_uring.c:io_cqring_wait
+  - fs/io_uring.c:io_sq_thread
+  - fs/io-wq.c:io_worker_exit
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/kernfs/dir.c:kernfs_drain
+  - fs/ext4/inode.c:ext4_break_layouts
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:journal_kill_thread
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/keyslot-manager.c:blk_ksm_get_slot_for_key
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/klist.c:klist_remove
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:add_ballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:read_reply
+  - drivers/xen/xenbus/xenbus_xs.c:xs_request_enter
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:try_to_generate_entropy
+  - drivers/char/random.c:extract_crng_user
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/vfio/vfio.c:vfio_del_group_dev
+  - drivers/usb/core/devio.c:proc_wait_for_resume
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+```
+**Symbols:**
+
+```
+ffffffff81bc8840-ffffffff81bc88fa: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81c41610)
+Location: kernel/sched/core.c:5145
+Inline: False
+Direct callers:
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/cpu/sgx/main.c:ksgxd
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:exit_mm
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:unbind_workers
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:sched_cpu_wait_empty
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:affine_move_task
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/sched/psi.c:psi_poll_worker
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_wait_for_interrupt
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/entry/common.c:exit_to_user_mode_loop
+  - kernel/entry/kvm.c:xfer_to_guest_mode_work
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:add_unformed_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:xol_take_insn_slot
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_wait_acct_move
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_prepare_to_claim
+  - fs/notify/fsnotify.c:fsnotify_unmount_inodes
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_sqpoll_wait_sq
+  - fs/io_uring.c:__io_uring_task_cancel
+  - fs/io_uring.c:io_uring_cancel_files
+  - fs/io_uring.c:io_sq_thread
+  - fs/io-wq.c:io_worker_exit
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/quota/quota.c:quotactl_block
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/kernfs/dir.c:kernfs_drain
+  - fs/ext4/inode.c:ext4_break_layouts
+  - fs/ext4/fast_commit.c:ext4_fc_wait_committing_inode
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_fc_begin_commit
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:journal_kill_thread
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - fs/fuse/dax.c:alloc_dax_mapping_reclaim
+  - fs/fuse/dax.c:__fuse_dax_fault
+  - fs/fuse/dax.c:fuse_dax_break_layouts
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/keyslot-manager.c:blk_ksm_get_slot_for_key
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/klist.c:klist_remove
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:add_ballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:read_reply
+  - drivers/xen/xenbus/xenbus_xs.c:xs_request_enter
+  - drivers/xen/xenbus/xenbus_probe.c:xenbus_probe_thread
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:try_to_generate_entropy
+  - drivers/char/random.c:extract_crng_user
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfs_work_loop
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_ring_recv
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_xdp
+  - drivers/vfio/vfio.c:vfio_del_group_dev
+  - drivers/usb/core/devio.c:proc_wait_for_resume
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+```
+**Symbols:**
+
+```
+ffffffff81c41610-ffffffff81c416c1: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81c33580)
+Location: kernel/sched/core.c:5221
+Inline: False
+Direct callers:
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/cpu/sgx/main.c:ksgxd
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_crash_gracefully_on_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:exit_mm
+  - kernel/softirq.c:tasklet_kill
+  - kernel/resource.c:__request_region_locked
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:sched_cpu_wait_empty
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:affine_move_task
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/sched/psi.c:psi_poll_worker
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_loop
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/entry/common.c:exit_to_user_mode_loop
+  - kernel/entry/kvm.c:xfer_to_guest_mode_handle_work
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:add_unformed_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:pre_ssout
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_prepare_to_claim
+  - fs/notify/fsnotify.c:fsnotify_unmount_inodes
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:__do_sys_io_uring_enter
+  - fs/io_uring.c:__io_uring_cancel
+  - fs/io_uring.c:io_uring_cancel_sqpoll
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/quota/quota.c:quotactl_block
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/inode.c:ext4_break_layouts
+  - fs/ext4/mmp.c:kmmpd
+  - fs/ext4/fast_commit.c:ext4_fc_perform_commit
+  - fs/ext4/fast_commit.c:ext4_fc_wait_committing_inode
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_fc_begin_commit
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - fs/fuse/dax.c:__fuse_dax_fault
+  - fs/fuse/dax.c:fuse_dax_break_layouts
+  - fs/fuse/dax.c:fuse_setup_new_dax_mapping
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/keyslot-manager.c:blk_ksm_get_slot_for_key
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/klist.c:klist_remove
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_probe.c:xenbus_probe_thread
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:extract_crng_user
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfs_work_loop
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_ring_recv
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_read
+  - drivers/net/xen-netfront.c:xennet_xdp
+  - drivers/vfio/vfio.c:vfio_unregister_group_dev
+  - drivers/vfio/vfio_iommu_type1.c:vfio_wait
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/core/dev.c:napi_threaded_poll
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+```
+**Symbols:**
+
+```
+ffffffff81c33580-ffffffff81c33631: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81d51eb0)
+Location: kernel/sched/core.c:6372
+Inline: False
+Direct callers:
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/cpu/sgx/main.c:ksgxd
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_crash_gracefully_on_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:exit_mm
+  - kernel/softirq.c:tasklet_kill
+  - kernel/resource.c:__request_region_locked
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:sched_cpu_wait_empty
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:affine_move_task
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/sched/psi.c:psi_poll_worker
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_loop
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:syslog_print
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/entry/common.c:exit_to_user_mode_loop
+  - kernel/entry/kvm.c:xfer_to_guest_mode_work
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:add_unformed_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:pre_ssout
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:try_charge_memcg
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:__do_sys_io_uring_enter
+  - fs/io_uring.c:io_uring_cancel_generic
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/quota/quota.c:quotactl_block
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/mmp.c:kmmpd
+  - fs/ext4/fast_commit.c:ext4_fc_perform_commit
+  - fs/ext4/fast_commit.c:ext4_fc_wait_committing_inode
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_fc_begin_commit
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - fs/fuse/inode.c:fuse_sync_fs_writes
+  - fs/fuse/dax.c:__fuse_dax_fault
+  - fs/fuse/dax.c:fuse_dax_break_layouts
+  - fs/fuse/dax.c:fuse_setup_new_dax_mapping
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:__do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/bdev.c:bd_prepare_to_claim
+  - block/blk-core.c:__submit_bio
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/keyslot-manager.c:blk_ksm_get_slot_for_key
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/klist.c:klist_remove
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_probe.c:xenbus_probe_thread
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfs_work_loop
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_read
+  - drivers/vfio/vfio.c:vfio_unregister_group_dev
+  - drivers/vfio/vfio_iommu_type1.c:vfio_wait
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/core/dev.c:napi_threaded_poll
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+```
+**Symbols:**
+
+```
+ffffffff81d51eb0-ffffffff81d51f60: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81f22420)
+Location: kernel/sched/core.c:6537
+Inline: False
+Direct callers:
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/cpu/sgx/main.c:ksgxd
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_crash_gracefully_on_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_block_punit_i2c_access
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/softirq.c:tasklet_kill
+  - kernel/resource.c:__request_region_locked
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:sched_cpu_wait_empty
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:affine_move_task
+  - kernel/sched/build_utility.c:psi_poll_worker
+  - kernel/sched/build_utility.c:do_wait_intr_irq
+  - kernel/sched/build_utility.c:do_wait_intr
+  - kernel/sched/build_utility.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_loop
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:syslog_print
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/entry/common.c:exit_to_user_mode_loop
+  - kernel/entry/kvm.c:xfer_to_guest_mode_handle_work
+  - kernel/module/main.c:add_unformed_module
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_queue
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:pre_ssout
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:try_charge_memcg
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/quota/quota.c:quotactl_block
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/mmp.c:kmmpd
+  - fs/ext4/fast_commit.c:ext4_fc_perform_commit
+  - fs/ext4/fast_commit.c:ext4_fc_wait_committing_inode
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_wait_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_fc_begin_commit
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/inode.c:fuse_sync_fs_writes
+  - fs/fuse/dax.c:__fuse_dax_fault
+  - fs/fuse/dax.c:fuse_dax_break_layouts
+  - fs/fuse/dax.c:fuse_setup_new_dax_mapping
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/bdev.c:bd_prepare_to_claim
+  - block/blk-core.c:__bio_queue_enter
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/blk-crypto-profile.c:blk_crypto_get_keyslot
+  - io_uring/io_uring.c:__do_sys_io_uring_enter
+  - io_uring/io_uring.c:io_uring_cancel_generic
+  - io_uring/io_uring.c:io_sq_thread
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/klist.c:klist_remove
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/pci/vgaarb.c:vga_get
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:xen_alloc_ballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_probe.c:xenbus_probe_thread
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:try_to_generate_entropy
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfs_work_loop
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/net/tun.c:tun_ring_recv
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_read
+  - drivers/vfio/vfio_iommu_type1.c:vfio_wait
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_write_start
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_cond_end_sync
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/core/dev.c:napi_threaded_poll
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+```
+**Symbols:**
+
+```
+ffffffff81f22420-ffffffff81f22524: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff820ccca0)
+Location: kernel/sched/core.c:6678
+Inline: False
+Direct callers:
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/cpu/sgx/main.c:ksgxd
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_crash_gracefully_on_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_block_punit_i2c_access
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/softirq.c:tasklet_unlock_wait
+  - kernel/softirq.c:tasklet_kill
+  - kernel/resource.c:__request_region_locked
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:sched_cpu_wait_empty
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:affine_move_task
+  - kernel/sched/build_utility.c:psi_poll_worker
+  - kernel/sched/build_utility.c:do_wait_intr_irq
+  - kernel/sched/build_utility.c:do_wait_intr
+  - kernel/sched/build_utility.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_loop
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:syslog_print
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:wake_up_and_wait_for_irq_thread_ready
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_one_gp
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/entry/common.c:exit_to_user_mode_loop
+  - kernel/entry/kvm.c:xfer_to_guest_mode_handle_work
+  - kernel/module/main.c:add_unformed_module
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_queue
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:pre_ssout
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/vmscan.c:try_to_inc_max_seq
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:try_charge_memcg
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/quota/quota.c:quotactl_block
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/kernfs/dir.c:kernfs_drain
+  - fs/ext4/mmp.c:kmmpd
+  - fs/ext4/fast_commit.c:ext4_fc_perform_commit
+  - fs/ext4/fast_commit.c:ext4_fc_wait_committing_inode
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_wait_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_fc_begin_commit
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/decompressor_multi.c:squashfs_decompress
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/inode.c:fuse_sync_fs_writes
+  - fs/fuse/dax.c:__fuse_dax_fault
+  - fs/fuse/dax.c:fuse_dax_break_layouts
+  - fs/fuse/dax.c:fuse_setup_new_dax_mapping
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/bdev.c:bd_prepare_to_claim
+  - block/blk-core.c:__bio_queue_enter
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/blk-crypto-profile.c:blk_crypto_get_keyslot
+  - io_uring/io_uring.c:io_uring_cancel_generic
+  - io_uring/sqpoll.c:io_sqpoll_wait_sq
+  - io_uring/sqpoll.c:io_sq_thread
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/pci/vgaarb.c:vga_get
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:xen_alloc_ballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_probe.c:xenbus_probe_thread
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:try_to_generate_entropy
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfs_work_loop
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/net/tun.c:tun_ring_recv
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_read
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_write_start
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_cond_end_sync
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/core/dev.c:napi_threaded_poll
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff820ccca0-ffffffff820ccda4: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff821510b0)
+Location: kernel/sched/core.c:6779
+Inline: False
+Direct callers:
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/cpu/sgx/main.c:ksgxd
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_crash_gracefully_on_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_block_punit_i2c_access
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/softirq.c:tasklet_unlock_wait
+  - kernel/softirq.c:tasklet_kill
+  - kernel/resource.c:__request_region_locked
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/vhost_task.c:vhost_task_fn
+  - kernel/sched/core.c:sched_cpu_wait_empty
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:affine_move_task
+  - kernel/sched/build_utility.c:psi_rtpoll_worker
+  - kernel/sched/build_utility.c:do_wait_intr_irq
+  - kernel/sched/build_utility.c:do_wait_intr
+  - kernel/sched/build_utility.c:bit_wait
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_loop
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:syslog_print
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:wake_up_and_wait_for_irq_thread_ready
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_one_gp
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/entry/common.c:exit_to_user_mode_loop
+  - kernel/entry/kvm.c:xfer_to_guest_mode_handle_work
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_queue
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:pre_ssout
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:try_charge_memcg
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/kernfs/dir.c:kernfs_drain
+  - fs/ext4/mmp.c:kmmpd
+  - fs/ext4/fast_commit.c:ext4_fc_perform_commit
+  - fs/ext4/fast_commit.c:ext4_fc_wait_committing_inode
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_wait_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_fc_begin_commit
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/decompressor_multi.c:squashfs_decompress
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/inode.c:fuse_sync_fs_writes
+  - fs/fuse/dax.c:__fuse_dax_fault
+  - fs/fuse/dax.c:fuse_dax_break_layouts
+  - fs/fuse/dax.c:fuse_setup_new_dax_mapping
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - crypto/jitterentropy-testing.c:jent_raw_hires_read
+  - block/bdev.c:bd_prepare_to_claim
+  - block/blk-core.c:__bio_queue_enter
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/blk-crypto-profile.c:blk_crypto_get_keyslot
+  - io_uring/io_uring.c:io_uring_cancel_generic
+  - io_uring/io_uring.c:io_cqring_wait
+  - io_uring/sqpoll.c:io_sqpoll_wait_sq
+  - io_uring/sqpoll.c:io_sq_thread
+  - io_uring/rsrc.c:io_rsrc_ref_quiesce
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/pci/vgaarb.c:vga_get
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:xen_alloc_ballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_probe.c:xenbus_probe_thread
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_ioctl.c:set_termios
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:serial_core_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:try_to_generate_entropy
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfs_work_loop
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/net/tun.c:tun_ring_recv
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_write
+  - drivers/net/wwan/wwan_core.c:wwan_port_fops_read
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_write_start
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_cond_end_sync
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/core/dev.c:napi_threaded_poll
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff821510b0-ffffffff821511b4: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff82233e60)
+Location: kernel/sched/core.c:6807
+Inline: False
+Direct callers:
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_cycles
+  - arch/x86/kernel/cpu/sgx/main.c:ksgxd
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait_schedule
+  - arch/x86/platform/efi/quirks.c:efi_crash_gracefully_on_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_block_punit_i2c_access
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/softirq.c:tasklet_unlock_wait
+  - kernel/softirq.c:tasklet_kill
+  - kernel/resource.c:__request_region_locked
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__do_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/vhost_task.c:vhost_task_fn
+  - kernel/sched/core.c:sched_cpu_wait_empty
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:affine_move_task
+  - kernel/sched/build_utility.c:psi_rtpoll_worker
+  - kernel/sched/build_utility.c:do_wait_intr_irq
+  - kernel/sched/build_utility.c:do_wait_intr
+  - kernel/sched/build_utility.c:bit_wait
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/percpu-rwsem.c:percpu_rwsem_wait
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_loop
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:syslog_print
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:wake_up_and_wait_for_irq_thread_ready
+  - kernel/rcu/update.c:rcu_tasks_one_gp
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_nocb_rdp_offload
+  - kernel/rcu/tree.c:rcu_nocb_rdp_deoffload
+  - kernel/rcu/tree.c:nocb_cb_wait
+  - kernel/rcu/tree.c:nocb_gp_wait
+  - kernel/rcu/tree.c:nocb_gp_wait
+  - kernel/rcu/tree.c:nocb_gp_wait
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:exp_funnel_lock
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/entry/common.c:irqentry_exit_to_user_mode
+  - kernel/entry/common.c:syscall_exit_to_user_mode
+  - kernel/entry/common.c:syscall_exit_to_user_mode_work
+  - kernel/entry/kvm.c:xfer_to_guest_mode_handle_work
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_multiple
+  - kernel/futex/waitwake.c:futex_wait_queue
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/seccomp.c:recv_wait_event
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:pre_ssout
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd_try_to_sleep
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_falloc_wait
+  - mm/shmem.c:shmem_falloc_wait
+  - mm/shmem.c:shmem_evict_inode
+  - mm/mmu_notifier.c:mmu_interval_notifier_remove
+  - mm/mmu_notifier.c:mmu_interval_read_begin
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged_wait_work
+  - mm/memcontrol.c:try_charge_memcg
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - fs/super.c:grab_super
+  - fs/super.c:super_lock
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:wait_for_partner
+  - fs/pipe.c:pipe_wait_writable
+  - fs/pipe.c:pipe_wait_readable
+  - fs/pipe.c:pipe_write
+  - fs/pipe.c:pipe_read
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/signalfd.c:signalfd_dequeue
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/locks.c:locks_lock_inode_wait
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dqget
+  - fs/quota/dquot.c:invalidate_dquots
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/kernfs/dir.c:kernfs_drain
+  - fs/ext4/mmp.c:kmmpd
+  - fs/ext4/fast_commit.c:ext4_fc_perform_commit
+  - fs/ext4/fast_commit.c:ext4_fc_wait_committing_inode
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_wait_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:journal_reset
+  - fs/jbd2/journal.c:jbd2_fc_begin_commit
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/decompressor_multi.c:squashfs_decompress
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/inode.c:fuse_sync_fs_writes
+  - fs/fuse/dax.c:__fuse_dax_fault
+  - fs/fuse/dax.c:fuse_dax_break_layouts
+  - fs/fuse/dax.c:fuse_setup_new_dax_mapping
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/bdev.c:bd_prepare_to_claim
+  - block/blk-core.c:__bio_queue_enter
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - block/blk-crypto-profile.c:blk_crypto_get_keyslot
+  - io_uring/io_uring.c:io_uring_cancel_generic
+  - io_uring/io_uring.c:io_cqring_wait
+  - io_uring/sqpoll.c:io_sqpoll_wait_sq
+  - io_uring/sqpoll.c:io_sq_thread
+  - io_uring/rsrc.c:io_rsrc_ref_quiesce
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - lib/closure.c:__closure_sync
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/pci/vgaarb.c:vga_get
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:virtballoon_free_page_report
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:xen_alloc_ballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_probe.c:xenbus_probe_thread
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_ioctl.c:set_termios
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:serial_core_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:try_to_generate_entropy
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/devtmpfs.c:devtmpfs_work_loop
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl_common
+  - drivers/scsi/sg.c:sg_read
+  - drivers/scsi/sg.c:open_wait
+  - drivers/scsi/sg.c:open_wait
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/drm/drm_file.c:drm_read
+  - drivers/gpu/drm/drm_vblank_work.c:drm_vblank_work_flush
+  - drivers/gpu/drm/drm_debugfs_crc.c:crtc_crc_read
+  - drivers/net/tun.c:tun_ring_recv
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_write_start
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:stop_sync_thread
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:mddev_suspend
+  - drivers/md/md.c:mddev_suspend
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_cond_end_sync
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:write_file_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/core/dev.c:napi_threaded_poll
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff82233e60-ffffffff82233f62: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffff800010da1bd8)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/arm64/kernel/signal.c:do_notify_resume
+  - virt/kvm/kvm_main.c:kvm_vcpu_block
+  - virt/kvm/arm/arm.c:kvm_arch_vcpu_ioctl_run
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__arm64_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:s2idle_loop
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:uprobe_notify_resume
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:__arm64_sys_io_uring_enter
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__arm64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/media/cec/cec-pin.c:cec_pin_thread_func
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/block.c:mmc_blk_rw_wait
+  - drivers/firmware/arm_sdei.c:sdei_unregister_ghes
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffff800010da1bd8-ffff800010da1c8c: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (c0e99c9c)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/arm/kernel/signal.c:do_work_pending
+  - arch/arm/common/bL_switcher.c:bL_switcher_thread
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:try_to_free_pages
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:do_io_getevents
+  - fs/io_uring.c:__se_sys_io_uring_enter
+  - fs/io_uring.c:io_sq_thread
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:fuse_simple_request
+  - fs/fuse/dev.c:fuse_simple_request
+  - fs/fuse/dev.c:fuse_simple_request
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__se_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/i2c/busses/i2c-imx.c:i2c_imx_xfer
+  - drivers/i2c/busses/i2c-imx.c:i2c_imx_read
+  - drivers/i2c/busses/i2c-imx.c:i2c_imx_bus_busy
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/pps/pps.c:pps_cdev_ioctl
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/block.c:mmc_blk_rw_wait
+  - drivers/mmc/host/cqhci.c:cqhci_wait_for_idle
+  - sound/core/init.c:snd_card_disconnect_sync
+  - sound/core/control.c:snd_ctl_read
+  - sound/core/timer.c:snd_timer_user_read
+  - sound/core/compress_offload.c:snd_compress_wait_for_drain
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+c0e99c9c-c0e99d6c: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (c000000000ee2d80)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/powerpc/kernel/rtasd.c:rtas_log_read
+  - arch/powerpc/platforms/powernv/opal-async.c:opal_async_wait_response_interruptible
+  - arch/powerpc/platforms/powernv/opal-async.c:opal_async_wait_response
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs-writeback.c:wb_wait_for_completion
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_ctx_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:__se_sys_io_uring_enter
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:fuse_dev_do_read
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__se_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/tpm/tpm_ibmvtpm.c:tpm_ibmvtpm_send
+  - drivers/char/tpm/tpm_ibmvtpm.c:tpm_ibmvtpm_recv
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/vfio/vfio.c:vfio_del_group_dev
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:md_bitmap_wait_writes
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/cpufreq/cpufreq.c:cpufreq_freq_transition_begin
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+c000000000ee2d80-c000000000ee2ea4: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffe0008c5318)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:__se_sys_rt_sigsuspend
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/time/posix-cpu-timers.c:do_cpu_nanosleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:__se_sys_io_uring_enter
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - fs/fuse/dir.c:fuse_set_nowrite
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__se_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - drivers/mmc/core/block.c:mmc_blk_rw_wait
+  - drivers/mmc/host/mmc_spi.c:mmc_spi_skip
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffe0008c5318-ffffffe0008c53b2: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81a6ed60)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_cqring_wait
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/nvme/host/core.c:nvme_wait_reset
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81a6ed60-ffffffff81a6ee08: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81a2b140)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/core.c:schedule_user
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_devices_and_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:rcu_nocb_cb_kthread
+  - kernel/rcu/tree.c:nocb_gp_wait
+  - kernel/rcu/tree.c:nocb_gp_wait
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_cqring_wait
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/storvsc_drv.c:storvsc_host_reset_handler
+  - drivers/scsi/storvsc_drv.c:storvsc_dev_remove
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/nvme/host/core.c:nvme_wait_reset
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/vfio/vfio.c:vfio_del_group_dev
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81a2b140-ffffffff81a2b1e8: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81adb170)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_cqring_wait
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/vfio/vfio.c:vfio_del_group_dev
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/netfilter/nf_conntrack_core.c:nf_conntrack_cleanup_net_list
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81adb170-ffffffff81adb218: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void schedule();
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sched/core.c (ffffffff81ae7630)
+Location: kernel/sched/core.c:4143
+Inline: False
+Direct callers:
+  - arch/x86/entry/common.c:exit_to_usermode_loop
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:rdtgroup_pseudo_lock_create
+  - arch/x86/kernel/cpu/resctrl/pseudo_lock.c:pseudo_lock_measure_trigger
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/smpboot.c:do_boot_cpu
+  - arch/x86/kernel/kvm.c:kvm_async_pf_task_wait
+  - arch/x86/platform/efi/quirks.c:efi_recover_from_page_fault
+  - arch/x86/platform/intel/iosf_mbi.c:iosf_mbi_punit_acquire
+  - kernel/exit.c:do_wait
+  - kernel/exit.c:do_exit
+  - kernel/exit.c:do_exit
+  - kernel/resource.c:__request_region
+  - kernel/signal.c:sigsuspend
+  - kernel/signal.c:__x64_sys_pause
+  - kernel/signal.c:get_signal
+  - kernel/signal.c:do_signal_stop
+  - kernel/signal.c:ptrace_stop
+  - kernel/umh.c:usermodehelper_read_trylock
+  - kernel/workqueue.c:workqueue_offline_cpu
+  - kernel/workqueue.c:put_unbound_pool
+  - kernel/workqueue.c:__cancel_work_timer
+  - kernel/workqueue.c:rescuer_thread
+  - kernel/workqueue.c:worker_thread
+  - kernel/kthread.c:kthread_worker_fn
+  - kernel/kthread.c:kthreadd
+  - kernel/kthread.c:kthread
+  - kernel/kthread.c:__kthread_parkme
+  - kernel/async.c:async_synchronize_cookie_domain
+  - kernel/smpboot.c:smpboot_thread_fn
+  - kernel/sched/core.c:io_schedule
+  - kernel/sched/core.c:yield_to
+  - kernel/sched/core.c:do_sched_yield
+  - kernel/sched/core.c:schedule_preempt_disabled
+  - kernel/sched/wait.c:do_wait_intr_irq
+  - kernel/sched/wait.c:do_wait_intr
+  - kernel/sched/wait_bit.c:bit_wait
+  - kernel/locking/rwsem.c:rwsem_down_write_slowpath
+  - kernel/locking/rwsem.c:rwsem_down_read_slowpath
+  - kernel/locking/percpu-rwsem.c:percpu_down_write
+  - kernel/locking/rtmutex.c:rt_mutex_slowlock
+  - kernel/locking/rtmutex.c:__rt_mutex_slowlock
+  - kernel/power/process.c:thaw_kernel_threads
+  - kernel/power/process.c:thaw_processes
+  - kernel/power/suspend.c:suspend_enter
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:load_image_lzo
+  - kernel/power/swap.c:lzo_decompress_threadfn
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:save_image_lzo
+  - kernel/power/swap.c:lzo_compress_threadfn
+  - kernel/power/swap.c:crc32_threadfn
+  - kernel/power/swap.c:hib_wait_io
+  - kernel/printk/printk.c:devkmsg_read
+  - kernel/irq/manage.c:irq_thread
+  - kernel/irq/manage.c:synchronize_irq
+  - kernel/rcu/update.c:rcu_tasks_kthread
+  - kernel/rcu/sync.c:rcu_sync_enter
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:synchronize_rcu_expedited
+  - kernel/rcu/tree.c:rcu_gp_kthread
+  - kernel/freezer.c:__refrigerator
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/timer.c:schedule_timeout
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:schedule_hrtimeout_range_clock
+  - kernel/time/hrtimer.c:do_nanosleep
+  - kernel/time/alarmtimer.c:alarmtimer_do_nsleep
+  - kernel/futex.c:futex_wait_queue_me
+  - kernel/module.c:load_module
+  - kernel/cgroup/cgroup.c:cgroup_lock_and_drain_offline
+  - kernel/cgroup/cpuset.c:cpuset_hotplug_update_tasks
+  - kernel/pid_namespace.c:zap_pid_ns_processes
+  - kernel/audit.c:kauditd_thread
+  - kernel/audit_tree.c:prune_tree_thread
+  - kernel/trace/ring_buffer.c:ring_buffer_wait
+  - kernel/bpf/cpumap.c:cpu_map_kthread_run
+  - kernel/events/core.c:perf_event_free_task
+  - kernel/events/uprobes.c:handle_swbp
+  - mm/oom_kill.c:oom_reaper
+  - mm/vmscan.c:kswapd
+  - mm/vmscan.c:throttle_direct_reclaim
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_fault
+  - mm/shmem.c:shmem_evict_inode
+  - mm/compaction.c:kcompactd
+  - mm/ksm.c:ksm_scan_thread
+  - mm/khugepaged.c:khugepaged
+  - mm/memcontrol.c:try_charge
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/memcontrol.c:mem_cgroup_oom_synchronize
+  - mm/zsmalloc.c:zs_destroy_pool
+  - fs/super.c:__get_super_thawed
+  - fs/exec.c:de_thread
+  - fs/exec.c:de_thread
+  - fs/pipe.c:pipe_wait
+  - fs/dcache.c:d_alloc_parallel
+  - fs/inode.c:inode_dio_wait
+  - fs/inode.c:__wait_on_freeing_inode
+  - fs/file.c:expand_files
+  - fs/fs-writeback.c:inode_sleep_on_writeback
+  - fs/fs_pin.c:pin_kill
+  - fs/block_dev.c:bd_start_claiming
+  - fs/notify/fsnotify.c:fsnotify_sb_delete
+  - fs/notify/group.c:fsnotify_destroy_group
+  - fs/notify/fanotify/fanotify.c:fanotify_handle_event
+  - fs/signalfd.c:signalfd_read
+  - fs/eventfd.c:eventfd_write
+  - fs/eventfd.c:eventfd_read
+  - fs/userfaultfd.c:userfaultfd_read
+  - fs/userfaultfd.c:userfaultfd_event_wait_completion
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/userfaultfd.c:handle_userfault
+  - fs/aio.c:read_events
+  - fs/io_uring.c:io_cqring_wait
+  - fs/io_uring.c:io_sq_thread
+  - fs/dax.c:wait_entry_unlocked
+  - fs/dax.c:get_unlocked_entry
+  - fs/locks.c:locks_mandatory_area
+  - fs/coredump.c:do_coredump
+  - fs/quota/dquot.c:dquot_disable
+  - fs/quota/dquot.c:dqget
+  - fs/kernfs/dir.c:kernfs_remove_self
+  - fs/ext4/file.c:ext4_unwritten_wait
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:jbd2_journal_lock_updates
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:start_this_handle
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:add_transaction_credits
+  - fs/jbd2/transaction.c:wait_transaction_locked
+  - fs/jbd2/commit.c:jbd2_journal_commit_transaction
+  - fs/jbd2/journal.c:jbd2_journal_destroy
+  - fs/jbd2/journal.c:jbd2_log_wait_commit
+  - fs/jbd2/journal.c:kjournald2
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/squashfs/cache.c:squashfs_cache_get
+  - fs/ecryptfs/kthread.c:ecryptfs_threadfn
+  - fs/ecryptfs/miscdev.c:ecryptfs_miscdev_read
+  - fs/fuse/dev.c:fuse_wait_aborted
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:request_wait_answer
+  - fs/fuse/dev.c:fuse_get_req
+  - ipc/msg.c:do_msgrcv
+  - ipc/msg.c:do_msgsnd
+  - ipc/sem.c:do_semtimedop
+  - security/apparmor/apparmorfs.c:ns_revision_read
+  - block/blk-core.c:blk_queue_enter
+  - block/blk-mq.c:blk_mq_freeze_queue_wait
+  - lib/percpu-refcount.c:__percpu_ref_switch_mode
+  - drivers/gpio/gpiolib.c:lineevent_read
+  - drivers/pci/access.c:pci_wait_cfg
+  - drivers/pci/hotplug/cpci_hotplug_core.c:event_thread
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_disable_slot
+  - drivers/pci/hotplug/pciehp_ctrl.c:pciehp_sysfs_enable_slot
+  - drivers/acpi/ec.c:acpi_ec_stop
+  - drivers/acpi/cppc_acpi.c:cppc_set_perf
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_release
+  - drivers/acpi/acpi_dbg.c:acpi_aml_write_log
+  - drivers/virtio/virtio_balloon.c:tell_host
+  - drivers/xen/balloon.c:alloc_xenballooned_pages
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_comms.c:xenbus_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xenwatch_thread
+  - drivers/xen/xenbus/xenbus_xs.c:xs_suspend
+  - drivers/xen/xenbus/xenbus_xs.c:xs_talkv
+  - drivers/xen/xenbus/xenbus_dev_frontend.c:xenbus_file_read
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_io.c:tty_open
+  - drivers/tty/tty_port.c:tty_port_block_til_ready
+  - drivers/tty/vt/selection.c:paste_selection
+  - drivers/tty/hvc/hvc_console.c:khvcd
+  - drivers/tty/serial/serial_core.c:uart_remove_one_port
+  - drivers/tty/serial/serial_core.c:uart_wait_modem_status
+  - drivers/char/random.c:add_hwgenerator_randomness
+  - drivers/char/random.c:__ia32_sys_getrandom
+  - drivers/char/random.c:__x64_sys_getrandom
+  - drivers/char/random.c:urandom_read
+  - drivers/char/virtio_console.c:wait_port_writable
+  - drivers/char/virtio_console.c:port_fops_read
+  - drivers/char/hpet.c:hpet_read
+  - drivers/base/dd.c:wait_for_device_probe
+  - drivers/base/power/runtime.c:__pm_runtime_barrier
+  - drivers/base/power/runtime.c:rpm_resume
+  - drivers/base/power/runtime.c:rpm_suspend
+  - drivers/base/power/wakeup.c:pm_get_wakeup_count
+  - drivers/nvdimm/bus.c:wait_nvdimm_bus_probe_idle
+  - drivers/nvdimm/bus.c:nd_bus_remove
+  - drivers/scsi/scsi_error.c:scsi_error_handler
+  - drivers/scsi/scsi_error.c:scsi_block_when_processing_errors
+  - drivers/scsi/sg.c:sg_ioctl
+  - drivers/scsi/sg.c:sg_open
+  - drivers/scsi/sg.c:sg_open
+  - drivers/ata/libata-eh.c:ata_port_wait_eh
+  - drivers/gpu/vga/vgaarb.c:vga_get
+  - drivers/net/tun.c:tun_do_read
+  - drivers/net/ppp/ppp_generic.c:ppp_read
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:xennet_remove
+  - drivers/net/xen-netfront.c:netfront_probe
+  - drivers/vfio/vfio.c:vfio_del_group_dev
+  - drivers/usb/core/devio.c:usbdev_do_ioctl
+  - drivers/usb/core/devio.c:reap_as
+  - drivers/usb/host/uhci-hcd.c:uhci_hcd_endpoint_disable
+  - drivers/input/mousedev.c:mousedev_read
+  - drivers/input/evdev.c:evdev_read
+  - drivers/input/misc/uinput.c:uinput_read
+  - drivers/input/misc/uinput.c:uinput_request_reserve_slot
+  - drivers/rtc/dev.c:rtc_dev_read
+  - drivers/media/cec/cec-adap.c:cec_thread_func
+  - drivers/media/cec/cec-api.c:cec_ioctl
+  - drivers/media/cec/cec-api.c:cec_receive_msg
+  - drivers/media/cec/cec-pin.c:cec_pin_thread_func
+  - drivers/pps/pps.c:pps_cdev_pps_fetch
+  - drivers/ptp/ptp_chardev.c:ptp_read
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_do_sync
+  - drivers/md/md.c:md_ioctl
+  - drivers/md/md.c:do_md_stop
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_set_readonly
+  - drivers/md/md.c:md_super_wait
+  - drivers/md/md.c:md_flush_request
+  - drivers/md/md.c:md_handle_request
+  - drivers/md/md-bitmap.c:md_bitmap_wait_behind_writes
+  - drivers/md/md-bitmap.c:md_bitmap_free
+  - drivers/md/md-bitmap.c:md_bitmap_startwrite
+  - drivers/md/md-bitmap.c:read_page
+  - drivers/md/md-bitmap.c:write_page
+  - drivers/md/dm.c:dm_wait_event
+  - drivers/md/dm-kcopyd.c:dm_kcopyd_client_destroy
+  - drivers/mmc/core/core.c:__mmc_claim_host
+  - net/core/sock.c:__lock_sock
+  - net/netlink/genetlink.c:genl_unregister_family
+  - net/unix/garbage.c:wait_for_unix_gc
+  - net/rfkill/core.c:rfkill_fop_read
+  - lib/klist.c:klist_remove
+```
+**Symbols:**
+
+```
+ffffffff81ae7630-ffffffff81ae76f7: schedule (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+No changes between <code>amd64</code> and <code>arm64</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>armhf</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>ppc64el</code> ✅
+</li>
+<li>
+No changes between <code>amd64</code> and <code>riscv64</code> ✅
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

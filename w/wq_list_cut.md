@@ -1,0 +1,272 @@
+# Function: <code>wq_list_cut</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io-wq.c (ffffffff81389f08)
+Location: fs/io-wq.h:55
+Inline: True
+Inline callers:
+  - fs/io-wq.c:io_wqe_cancel_pending_work
+  - fs/io-wq.c:io_get_next_work
+  - fs/io-wq.c:io_get_next_work
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io-wq.c (ffffffff8139ad47)
+Location: fs/io-wq.h:64
+Inline: True
+Inline callers:
+  - fs/io-wq.c:io_wqe_cancel_pending_work
+  - fs/io-wq.c:io_get_next_work
+  - fs/io-wq.c:io_get_next_work
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io_uring.c (ffffffff81391f42)
+Location: fs/io-wq.h:57
+Inline: True
+Inline callers:
+  - fs/io_uring.c:io_req_task_work_add
+```
+```
+In fs/io-wq.c (ffffffff813a2117)
+Location: fs/io-wq.h:57
+Inline: True
+Inline callers:
+  - fs/io-wq.c:io_wqe_cancel_pending_work
+  - fs/io-wq.c:io_worker_handle_work
+  - fs/io-wq.c:io_worker_handle_work
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In fs/io-wq.c (ffffffff813f1418)
+Location: fs/io-wq.h:57
+Inline: True
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/io_uring.c (ffffffff816d673c)
+Location: io_uring/io-wq.h:99
+Inline: True
+Inline callers:
+  - io_uring/io_uring.c:io_do_iopoll
+```
+```
+In io_uring/io-wq.c (ffffffff816d9ea5)
+Location: io_uring/io-wq.h:99
+Inline: True
+Inline callers:
+  - io_uring/io-wq.c:io_acct_cancel_pending_work
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/rw.c (ffffffff817a4da5)
+Location: io_uring/slist.h:74
+Inline: True
+Inline callers:
+  - io_uring/rw.c:io_do_iopoll
+```
+```
+In io_uring/io-wq.c (ffffffff817a5f15)
+Location: io_uring/slist.h:74
+Inline: True
+Inline callers:
+  - io_uring/io-wq.c:io_acct_cancel_pending_work
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/rw.c (ffffffff817e5d72)
+Location: io_uring/slist.h:55
+Inline: True
+Inline callers:
+  - io_uring/rw.c:io_do_iopoll
+```
+```
+In io_uring/io-wq.c (ffffffff817e6a95)
+Location: io_uring/slist.h:55
+Inline: True
+Inline callers:
+  - io_uring/io-wq.c:io_acct_cancel_pending_work
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In io_uring/rw.c (ffffffff8182a0b6)
+Location: io_uring/slist.h:55
+Inline: True
+Inline callers:
+  - io_uring/rw.c:io_do_iopoll
+```
+```
+In io_uring/io-wq.c (ffffffff8182c855)
+Location: io_uring/slist.h:55
+Inline: True
+Inline callers:
+  - io_uring/io-wq.c:io_acct_cancel_pending_work
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

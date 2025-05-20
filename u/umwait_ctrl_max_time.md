@@ -1,0 +1,355 @@
+# Function: <code>umwait_ctrl_max_time</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8104840a)
+Location: arch/x86/kernel/cpu/umwait.c:108
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff81048cda)
+Location: arch/x86/kernel/cpu/umwait.c:114
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8104ce7a)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8104c2da)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8104de1a)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8105561a)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff810615b9)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8106ffb9)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff81071bc9)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff810793e9)
+Location: arch/x86/kernel/cpu/umwait.c:109
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff81048e4a)
+Location: arch/x86/kernel/cpu/umwait.c:114
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8103813a)
+Location: arch/x86/kernel/cpu/umwait.c:114
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff81048c8a)
+Location: arch/x86/kernel/cpu/umwait.c:114
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/umwait.c (ffffffff8104a09a)
+Location: arch/x86/kernel/cpu/umwait.c:114
+Inline: True
+Inline callers:
+  - arch/x86/kernel/cpu/umwait.c:max_time_store
+  - arch/x86/kernel/cpu/umwait.c:max_time_show
+```
+</details>
+</li>
+</ul>
+
+## Differences

@@ -1,0 +1,122 @@
+# Function: <code>generic_mbus_win_cfg_offset</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Selective Inline ⚠️</summary>
+
+```c
+unsigned int generic_mbus_win_cfg_offset(int win);
+```
+
+**Collision:** Unique Static
+
+**Inline:** Selective
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/bus/mvebu-mbus.c (c0824af0)
+Location: drivers/bus/mvebu-mbus.c:539
+Inline: True
+Inline callers:
+  - drivers/bus/mvebu-mbus.c:armada_xp_mbus_win_remap_offset
+  - drivers/bus/mvebu-mbus.c:generic_mbus_win_remap_8_offset
+  - drivers/bus/mvebu-mbus.c:generic_mbus_win_remap_4_offset
+  - drivers/bus/mvebu-mbus.c:generic_mbus_win_remap_2_offset
+```
+**Symbols:**
+
+```
+c08249f0-c0824a0c: generic_mbus_win_cfg_offset (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Arch</b>
+<ul>
+</ul>

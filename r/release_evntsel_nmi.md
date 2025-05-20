@@ -1,0 +1,687 @@
+# Function: <code>release_evntsel_nmi</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff8104eeb0)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:149
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8104eeb0-ffffffff8104ef2f: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff8104f040)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:149
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8104f040-ffffffff8104f0bb: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81051840)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:149
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81051840-ffffffff810518bb: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81051360)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:149
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81051360-ffffffff810513de: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81055040)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:150
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81055040-ffffffff810550ba: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81057e40)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:150
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81057e40-ffffffff81057ec9: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff8105db20)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:152
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8105db20-ffffffff8105dba0: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81061090)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:152
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81061090-ffffffff81061116: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81061900)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:152
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81061900-ffffffff81061986: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81067380)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:160
+Inline: False
+Direct callers:
+  - arch/x86/events/core.c:reserve_pmc_hardware
+```
+**Symbols:**
+
+```
+ffffffff81067380-ffffffff81067410: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81068fc0)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:160
+Inline: False
+Direct callers:
+  - arch/x86/events/core.c:reserve_pmc_hardware
+```
+**Symbols:**
+
+```
+ffffffff81068fc0-ffffffff81069050: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81069b00)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:151
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81069b00-ffffffff81069b94: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81074210)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:151
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81074210-ffffffff810742a4: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81082a30)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:151
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81082a30-ffffffff81082adb: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff810954e0)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:151
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810954e0-ffffffff8109558b: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81098470)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:151
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81098470-ffffffff81098515: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff8109fa10)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:151
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8109fa10-ffffffff8109fab5: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81061480)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:152
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81061480-ffffffff81061506: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff810518e0)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:152
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810518e0-ffffffff81051966: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff810618b0)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:152
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810618b0-ffffffff81061936: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+void release_evntsel_nmi(unsigned int msr);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/cpu/perfctr-watchdog.c (ffffffff81062e60)
+Location: arch/x86/kernel/cpu/perfctr-watchdog.c:152
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81062e60-ffffffff81062ee6: release_evntsel_nmi (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

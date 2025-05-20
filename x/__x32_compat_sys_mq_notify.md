@@ -1,0 +1,415 @@
+# Function: <code>__x32_compat_sys_mq_notify</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff813e1c10)
+Location: ipc/mqueue.c:1423
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813e1c10-ffffffff813e1c8b: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff813fc7e0)
+Location: ipc/mqueue.c:1423
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff813fc7e0-ffffffff813fc85b: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff81429470)
+Location: ipc/mqueue.c:1478
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81429470-ffffffff814294eb: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff814431a0)
+Location: ipc/mqueue.c:1473
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff814431a0-ffffffff8144321b: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff81493ad0)
+Location: kernel/sys_ni.c:199
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81493ad0-ffffffff81493b4a: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff814b1430)
+Location: kernel/sys_ni.c:201
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff814b1430-ffffffff814b14aa: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *__unused);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In kernel/sys_ni.c (ffffffff814b72b0)
+Location: kernel/sys_ni.c:202
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff814b72b0-ffffffff814b732c: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff8143b780)
+Location: ipc/mqueue.c:1473
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8143b780-ffffffff8143b7fb: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff8142c1f0)
+Location: ipc/mqueue.c:1473
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8142c1f0-ffffffff8142c26b: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff81437920)
+Location: ipc/mqueue.c:1473
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81437920-ffffffff8143799b: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+long int __x32_compat_sys_mq_notify(const struct pt_regs *regs);
+```
+
+**Collision:** Unique Global
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In ipc/mqueue.c (ffffffff8144f020)
+Location: ipc/mqueue.c:1473
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8144f020-ffffffff8144f09b: __x32_compat_sys_mq_notify (STB_GLOBAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+<details>
+<summary>Changed between <code>5.4</code> and <code>5.8</code> ⚠️</summary>
+<ul>
+<li>
+<b>Param added. </b>
+<code>const struct pt_regs *__unused</code>
+</li>
+<li>
+<b>Param removed. </b>
+<code>const struct pt_regs *regs</code>
+</li>
+</ul>
+</details>
+</li>
+<li>
+No changes between <code>5.8</code> and <code>5.11</code> ✅
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

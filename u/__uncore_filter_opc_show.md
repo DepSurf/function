@@ -1,0 +1,699 @@
+# Function: <code>__uncore_filter_opc_show</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101a230)
+Location: arch/x86/events/intel/uncore_snbep.c:300
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101a230-ffffffff8101a261: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff810195d0)
+Location: arch/x86/events/intel/uncore_snbep.c:300
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810195d0-ffffffff81019601: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff810198f0)
+Location: arch/x86/events/intel/uncore_snbep.c:369
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810198f0-ffffffff81019921: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81017d40)
+Location: arch/x86/events/intel/uncore_snbep.c:368
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81017d40-ffffffff81017d71: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff810184f0)
+Location: arch/x86/events/intel/uncore_snbep.c:369
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810184f0-ffffffff81018521: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81018e80)
+Location: arch/x86/events/intel/uncore_snbep.c:369
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81018e80-ffffffff81018eb1: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81019650)
+Location: arch/x86/events/intel/uncore_snbep.c:369
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81019650-ffffffff81019681: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101ae60)
+Location: arch/x86/events/intel/uncore_snbep.c:437
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101ae60-ffffffff8101ae91: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101b7e0)
+Location: arch/x86/events/intel/uncore_snbep.c:432
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101b7e0-ffffffff8101b811: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101ced0)
+Location: arch/x86/events/intel/uncore_snbep.c:469
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101ced0-ffffffff8101cf01: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct device *dev, struct device_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101d3c0)
+Location: arch/x86/events/intel/uncore_snbep.c:498
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101d3c0-ffffffff8101d3f1: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct device *dev, struct device_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101e870)
+Location: arch/x86/events/intel/uncore_snbep.c:498
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101e870-ffffffff8101e8a1: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct device *dev, struct device_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81021810)
+Location: arch/x86/events/intel/uncore_snbep.c:518
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81021810-ffffffff81021841: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct device *dev, struct device_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff81025180)
+Location: arch/x86/events/intel/uncore_snbep.c:518
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff81025180-ffffffff810251b1: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct device *dev, struct device_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8102a660)
+Location: arch/x86/events/intel/uncore_snbep.c:520
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102a660-ffffffff8102a691: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct device *dev, struct device_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8102a690)
+Location: arch/x86/events/intel/uncore_snbep.c:520
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8102a690-ffffffff8102a6c1: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct device *dev, struct device_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff810307f0)
+Location: arch/x86/events/intel/uncore_snbep.c:520
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff810307f0-ffffffff81030821: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101b7e0)
+Location: arch/x86/events/intel/uncore_snbep.c:432
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101b7e0-ffffffff8101b811: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>azure</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101ae30)
+Location: arch/x86/events/intel/uncore_snbep.c:432
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101ae30-ffffffff8101ae61: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101b7a0)
+Location: arch/x86/events/intel/uncore_snbep.c:432
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101b7a0-ffffffff8101b7d1: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: ✅</summary>
+
+```c
+ssize_t __uncore_filter_opc_show(struct kobject *kobj, struct kobj_attribute *attr, char *page);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/events/intel/uncore_snbep.c (ffffffff8101b9e0)
+Location: arch/x86/events/intel/uncore_snbep.c:432
+Inline: False
+```
+**Symbols:**
+
+```
+ffffffff8101b9e0-ffffffff8101ba11: __uncore_filter_opc_show (STB_LOCAL)
+```
+</details>
+</li>
+</ul>
+
+## Differences
+<b>Regular</b>
+<ul>
+<li>
+No changes between <code>4.4</code> and <code>4.8</code> ✅
+</li>
+<li>
+No changes between <code>4.8</code> and <code>4.10</code> ✅
+</li>
+<li>
+No changes between <code>4.10</code> and <code>4.13</code> ✅
+</li>
+<li>
+No changes between <code>4.13</code> and <code>4.15</code> ✅
+</li>
+<li>
+No changes between <code>4.15</code> and <code>4.18</code> ✅
+</li>
+<li>
+No changes between <code>4.18</code> and <code>5.0</code> ✅
+</li>
+<li>
+No changes between <code>5.0</code> and <code>5.3</code> ✅
+</li>
+<li>
+No changes between <code>5.3</code> and <code>5.4</code> ✅
+</li>
+<li>
+No changes between <code>5.4</code> and <code>5.8</code> ✅
+</li>
+<li>
+<details>
+<summary>Changed between <code>5.8</code> and <code>5.11</code> ⚠️</summary>
+<ul>
+<li>
+<b>Param added. </b>
+<code>struct device *dev</code>
+</li>
+<li>
+<b>Param removed. </b>
+<code>struct kobject *kobj</code>
+</li>
+<li>
+<b>Param type changed. </b>
+<code>struct kobj_attribute *attr</code> ➡️ <code>struct device_attribute *attr</code>
+</li>
+</ul>
+</details>
+</li>
+<li>
+No changes between <code>5.11</code> and <code>5.13</code> ✅
+</li>
+<li>
+No changes between <code>5.13</code> and <code>5.15</code> ✅
+</li>
+<li>
+No changes between <code>5.15</code> and <code>5.19</code> ✅
+</li>
+<li>
+No changes between <code>5.19</code> and <code>6.2</code> ✅
+</li>
+<li>
+No changes between <code>6.2</code> and <code>6.5</code> ✅
+</li>
+<li>
+No changes between <code>6.5</code> and <code>6.8</code> ✅
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+No changes between <code>generic</code> and <code>aws</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>azure</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>gcp</code> ✅
+</li>
+<li>
+No changes between <code>generic</code> and <code>lowlatency</code> ✅
+</li>
+</ul>

@@ -1,0 +1,241 @@
+# Function: <code>__bpf_sk_cgroup_id</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81a23305)
+Location: net/core/filter.c:4057
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81a2dd35)
+Location: net/core/filter.c:4465
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81a157f5)
+Location: net/core/filter.c:4404
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81acacb5)
+Location: net/core/filter.c:4462
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81c48475)
+Location: net/core/filter.c:4753
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81dfc505)
+Location: net/core/filter.c:4771
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81e6d205)
+Location: net/core/filter.c:4825
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In net/core/filter.c (ffffffff81f2c9b5)
+Location: net/core/filter.c:4899
+Inline: True
+Inline callers:
+  - net/core/filter.c:bpf_sk_cgroup_id
+  - net/core/filter.c:bpf_skb_cgroup_id
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

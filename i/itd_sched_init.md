@@ -1,0 +1,521 @@
+# Function: <code>itd_sched_init</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+<details>
+<summary>In <code>4.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff8163bfc6)
+Location: drivers/usb/host/ehci-sched.c:1208
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:ehci_urb_enqueue
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff8169ca21)
+Location: drivers/usb/host/ehci-sched.c:1206
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:ehci_urb_enqueue
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.10</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff816cab41)
+Location: drivers/usb/host/ehci-sched.c:1205
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:ehci_urb_enqueue
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff816df192)
+Location: drivers/usb/host/ehci-sched.c:1205
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:ehci_urb_enqueue
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff8174b8e7)
+Location: drivers/usb/host/ehci-sched.c:1192
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:ehci_urb_enqueue
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>4.18</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff8178c429)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:ehci_urb_enqueue
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.0</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff817b2c29)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:ehci_urb_enqueue
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.3</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff817efdd0)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff81820cc0)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff818eed85)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff818f7d85)
+Location: drivers/usb/host/ehci-sched.c:1179
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff818db349)
+Location: drivers/usb/host/ehci-sched.c:1179
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff81976969)
+Location: drivers/usb/host/ehci-sched.c:1179
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff81ad261f)
+Location: drivers/usb/host/ehci-sched.c:1177
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff81c5d243)
+Location: drivers/usb/host/ehci-sched.c:1177
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff81cc48bc)
+Location: drivers/usb/host/ehci-sched.c:1177
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff81d797ac)
+Location: drivers/usb/host/ehci-sched.c:1178
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_urb_transaction
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffff800010a5b134)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (c0b2e144)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>ppc64el</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (c000000000b28160)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>riscv64</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffe000673646)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+<details>
+<summary>In <code>aws</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff817d90a0)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>gcp</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff81815b40)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/usb/host/ehci-hcd.c (ffffffff8182fb90)
+Location: drivers/usb/host/ehci-sched.c:1193
+Inline: True
+Inline callers:
+  - drivers/usb/host/ehci-hcd.c:itd_submit
+```
+</details>
+</li>
+</ul>
+
+## Differences

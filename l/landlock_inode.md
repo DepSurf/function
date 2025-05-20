@@ -1,0 +1,221 @@
+# Function: <code>landlock_inode</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/landlock/fs.c (ffffffff815390ca)
+Location: security/landlock/fs.h:53
+Inline: True
+Inline callers:
+  - security/landlock/fs.c:landlock_append_fs_rule
+  - security/landlock/fs.c:release_inode
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/landlock/fs.c (ffffffff81596e45)
+Location: security/landlock/fs.h:53
+Inline: True
+Inline callers:
+  - security/landlock/fs.c:hook_inode_free_security
+  - security/landlock/fs.c:landlock_append_fs_rule
+  - security/landlock/fs.c:release_inode
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/landlock/fs.c (ffffffff816392d5)
+Location: security/landlock/fs.h:54
+Inline: True
+Inline callers:
+  - security/landlock/fs.c:hook_inode_free_security
+  - security/landlock/fs.c:collect_domain_accesses
+  - security/landlock/fs.c:check_access_path_dual
+  - security/landlock/fs.c:check_access_path_dual
+  - security/landlock/fs.c:check_access_path_dual
+  - security/landlock/fs.c:landlock_append_fs_rule
+  - security/landlock/fs.c:release_inode
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/landlock/fs.c (ffffffff816f0925)
+Location: security/landlock/fs.h:78
+Inline: True
+Inline callers:
+  - security/landlock/fs.c:hook_inode_free_security
+  - security/landlock/fs.c:collect_domain_accesses
+  - security/landlock/fs.c:is_access_to_paths_allowed
+  - security/landlock/fs.c:is_access_to_paths_allowed
+  - security/landlock/fs.c:is_access_to_paths_allowed
+  - security/landlock/fs.c:landlock_append_fs_rule
+  - security/landlock/fs.c:release_inode
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/landlock/fs.c (ffffffff8172adc5)
+Location: security/landlock/fs.h:78
+Inline: True
+Inline callers:
+  - security/landlock/fs.c:hook_inode_free_security
+  - security/landlock/fs.c:collect_domain_accesses
+  - security/landlock/fs.c:is_access_to_paths_allowed
+  - security/landlock/fs.c:is_access_to_paths_allowed
+  - security/landlock/fs.c:is_access_to_paths_allowed
+  - security/landlock/fs.c:landlock_append_fs_rule
+  - security/landlock/fs.c:release_inode
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Full Inline ⚠️</summary>
+
+**Collision:** Unique Static
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In security/landlock/fs.c (ffffffff8176c875)
+Location: security/landlock/fs.h:78
+Inline: True
+Inline callers:
+  - security/landlock/fs.c:hook_inode_free_security
+  - security/landlock/fs.c:find_rule
+  - security/landlock/fs.c:landlock_append_fs_rule
+  - security/landlock/fs.c:release_inode
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences

@@ -1,0 +1,148 @@
+# Function: <code>omap2_mcspi_rx_dma</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.11</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.19</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.2</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.5</code>: Absent ⚠️
+</li>
+<li>
+In <code>6.8</code>: Absent ⚠️
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+<details>
+<summary>In <code>arm64</code>: ✅</summary>
+
+```c
+unsigned int omap2_mcspi_rx_dma(struct spi_device *spi, struct spi_transfer *xfer, struct dma_slave_config cfg, unsigned int es);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/spi/spi-omap2-mcspi.c (ffff8000109cdb48)
+Location: drivers/spi/spi-omap2-mcspi.c:427
+Inline: False
+Direct callers:
+  - drivers/spi/spi-omap2-mcspi.c:omap2_mcspi_txrx_dma
+  - drivers/spi/spi-omap2-mcspi.c:omap2_mcspi_txrx_dma
+```
+**Symbols:**
+
+```
+ffff8000109cdb48-ffff8000109cdfd4: omap2_mcspi_rx_dma (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>armhf</code>: ✅</summary>
+
+```c
+unsigned int omap2_mcspi_rx_dma(struct spi_device *spi, struct spi_transfer *xfer, struct dma_slave_config cfg, unsigned int es);
+```
+
+**Collision:** Unique Static
+
+**Inline:** No
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In drivers/spi/spi-omap2-mcspi.c (c0ab69f8)
+Location: drivers/spi/spi-omap2-mcspi.c:427
+Inline: False
+Direct callers:
+  - drivers/spi/spi-omap2-mcspi.c:omap2_mcspi_txrx_dma
+  - drivers/spi/spi-omap2-mcspi.c:omap2_mcspi_txrx_dma
+```
+**Symbols:**
+
+```
+c0ab69f8-c0ab6e88: omap2_mcspi_rx_dma (STB_LOCAL)
+```
+</details>
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+In <code>lowlatency</code>: Absent ⚠️
+</li>
+</ul>
+
+## Differences
+<b>Arch</b>
+<ul>
+</ul>

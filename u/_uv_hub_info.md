@@ -1,0 +1,3244 @@
+# Function: <code>_uv_hub_info</code>
+
+## Status
+<b>Regular</b>
+<ul>
+<li>
+In <code>4.4</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.8</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.10</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.13</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.15</code>: Absent ⚠️
+</li>
+<li>
+In <code>4.18</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.0</code>: Absent ⚠️
+</li>
+<li>
+In <code>5.3</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>5.4</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff828bd31d)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_disable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_disable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_enable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_enable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+```
+```
+In arch/x86/platform/uv/tlb_uv.c (ffffffff828c9aac)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff81098779)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff81098965)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff828ca120)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.8</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff82ce19d1)
+Location: arch/x86/include/asm/uv/uv_hub.h:211
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_disable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_disable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_enable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_enable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+```
+```
+In arch/x86/platform/uv/tlb_uv.c (ffffffff8109d1a4)
+Location: arch/x86/include/asm/uv/uv_hub.h:211
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/tlb_uv.c:activation_descriptor_init
+  - arch/x86/platform/uv/tlb_uv.c:activation_descriptor_init
+  - arch/x86/platform/uv/tlb_uv.c:activation_descriptor_init
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff8109df56)
+Location: arch/x86/include/asm/uv/uv_hub.h:211
+Inline: True
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff8109e0e5)
+Location: arch/x86/include/asm/uv/uv_hub.h:211
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.11</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff82fce770)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_tsc_check_sync
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_tsc_check_sync
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_tsc_check_sync
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_tsc_check_sync
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_tsc_check_sync
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_hub_type_set
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff81099b27)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff81099c55)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff8109ada5)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.13</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff831d91e4)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_hub_type_set
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff8109a33d)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff8109a445)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff8109b4e1)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.15</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff832bc854)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_hub_type_set
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff810aa39c)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810aa4c5)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff810ab857)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>5.19</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff8346e16c)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_local_mmr_address
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_hub_type_set
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff810bfe10)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810bff75)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff810c1333)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.2</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff83e93d29)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_soc_phys_ram_to_gpa
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff810dbd20)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810dbec5)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff810ddb73)
+Location: arch/x86/include/asm/uv/uv_hub.h:200
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.5</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff836b75d2)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff810e7133)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_irq.c:uv_setup_irq
+  - arch/x86/platform/uv/uv_irq.c:uv_setup_irq
+  - arch/x86/platform/uv/uv_irq.c:uv_domain_alloc
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+  - arch/x86/platform/uv/uv_irq.c:uv_program_mmr
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810e7495)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff810e9222)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+```
+</details>
+</li>
+<li>
+<details>
+<summary>In <code>6.8</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff838e7eec)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_mn
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_low_mmrs
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmr_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:get_lowmem_redirect
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_set_system_type
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_apic_socketid_shift
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:early_get_pnodeid
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff810ef4e3)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_irq.c:uv_setup_irq
+  - arch/x86/platform/uv/uv_irq.c:uv_setup_irq
+  - arch/x86/platform/uv/uv_irq.c:uv_domain_alloc
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff810ef825)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_rtc_allocate_timers
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff810f1577)
+Location: arch/x86/include/asm/uv/uv_hub.h:201
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_check_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup_mmrs
+```
+</details>
+</li>
+</ul>
+<b>Arch</b>
+<ul>
+<li>
+In <code>arm64</code>: Absent ⚠️
+</li>
+<li>
+In <code>armhf</code>: Absent ⚠️
+</li>
+<li>
+In <code>ppc64el</code>: Absent ⚠️
+</li>
+<li>
+In <code>riscv64</code>: Absent ⚠️
+</li>
+</ul>
+<b>Flavor</b>
+<ul>
+<li>
+In <code>aws</code>: Absent ⚠️
+</li>
+<li>
+In <code>azure</code>: Absent ⚠️
+</li>
+<li>
+In <code>gcp</code>: Absent ⚠️
+</li>
+<li>
+<details>
+<summary>In <code>lowlatency</code>: Duplicate, Full Inline ⚠️</summary>
+
+**Collision:** Static Duplication
+
+**Inline:** Full
+
+**Transformation:** False
+
+**Instances:**
+
+```
+In arch/x86/kernel/apic/x2apic_uv_x.c (ffffffff828be34a)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_system_init_hub
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:build_socket_tables
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_init_hub_info
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_disable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_disable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_enable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat_enable
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_heartbeat
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_mmioh_high_uv34
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:map_gru_high
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_send_IPI_one
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_wakeup_secondary
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_acpi_madt_oem_check
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_early_read_mmr
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+  - arch/x86/kernel/apic/x2apic_uv_x.c:uv_gam_range
+```
+```
+In arch/x86/platform/uv/tlb_uv.c (ffffffff828caae9)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:uv_bau_init
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:init_per_cpu
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:enable_timeouts
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:uv_flush_tlb_others
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:read_status
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv2_3_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:uv1_wait_completion
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:read_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_gmmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_sw_ack
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_misc_control
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_last
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:write_mmr_proc_payload_first
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_gpa_to_soc_phys_ram
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+  - arch/x86/platform/uv/tlb_uv.c:uv_soc_phys_ram_to_gpa
+```
+```
+In arch/x86/platform/uv/uv_irq.c (ffffffff81099c49)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+```
+```
+In arch/x86/platform/uv/uv_time.c (ffffffff81099e35)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_read_rtc
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+  - arch/x86/platform/uv/uv_time.c:uv_setup_intr
+```
+```
+In arch/x86/platform/uv/uv_nmi.c (ffffffff828cb15d)
+Location: arch/x86/include/asm/uv/uv_hub.h:210
+Inline: True
+Inline callers:
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_nmi_setup
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+  - arch/x86/platform/uv/uv_nmi.c:uv_handle_nmi
+```
+</details>
+</li>
+</ul>
+
+## Differences
