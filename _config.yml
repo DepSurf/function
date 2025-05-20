@@ -14,10 +14,3 @@ relative_links:
 # https://github.com/benbalter/jekyll-readme-index
 readme_index:
   enable: false
-
-# https://github.com/benbalter/jekyll-optional-front-matter
-# optional_front_matter:
-#   enabled: false
-
-plugins:
-  - jekyll-sitemap
